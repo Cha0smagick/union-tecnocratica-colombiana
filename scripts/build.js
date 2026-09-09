@@ -26,7 +26,9 @@ const PAGES = [
   'estatutos/index.html',
   'calculadoras/index.html',
   'newsletter/index.html',
-  'inscripcion/index.html'
+  'inscripcion/index.html',
+  'contacto/index.html',
+  'prensa/index.html'
 ];
 
 const ASSETS_DIRS = [
@@ -261,7 +263,9 @@ function generateRedirects() {
 /estatutos /estatutos/ 301
 /calculadoras /calculadoras/ 301
 /newsletter /newsletter/ 301
-/inscripcion /inscripcion/ 301`;
+/inscripcion /inscripcion/ 301
+/contacto /contacto/ 301
+/prensa /prensa/ 301`;
 
   fs.writeFileSync(path.join(DIST, '_redirects'), redirects);
   log('Redirects generados (_redirects)', 'success');

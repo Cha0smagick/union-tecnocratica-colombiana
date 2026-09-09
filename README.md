@@ -2,16 +2,15 @@
 
 > **Partido político de extremo centro neutral** — *Tecnología como cura. Greenpunk. Fusión naturaleza-máquina. Transhumanismo responsable. IA como bien común.*
 
-[![Deploy UTC](https://github.com/UTC-Colombia/union-tecnocratica-colombiana/actions/workflows/deploy.yml/badge.svg)](https://github.com/UTC-Colombia/union-tecnocratica-colombiana/actions/workflows/deploy.yml)
+[![Deploy UTC](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml/badge.svg)](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![Greenpunk Certified](https://img.shields.io/badge/Greenpunk-Certified-00FF88)](https://utc.org.co)
 
 ---
 
 ## 🌐 Sitio Web Oficial
 
-**🔗 [utc.org.co](https://utc.org.co)** — Desplegado automáticamente en **GitHub Pages** desde la rama `main`.
+**🔗 [https://cha0smagick.github.io/union-tecnocratica-colombiana/](https://cha0smagick.github.io/union-tecnocratica-colombiana/)** — Desplegado automáticamente en **GitHub Pages** desde la rama `main`.
 
 ---
 
@@ -39,7 +38,7 @@ La **Unión Tecnocrática Colombiana** es un partido político colombiano de **e
 ### Instalación
 ```bash
 # Clonar repositorio
-git clone https://github.com/UTC-Colombia/union-tecnocratica-colombiana.git
+git clone https://github.com/cha0smagick/union-tecnocratica-colombiana.git
 cd union-tecnocratica-colombiana
 
 # Instalar dependencias
@@ -117,30 +116,29 @@ union-tecnocratica-colombiana/
 
 ---
 
-## 🎨 Sistema de Diseño (Greenpunk)
+## 🎨 Sistema de Diseño (Greenpunk 2.0)
 
-### Paleta de Colores
+### Paleta de Colores (oklch)
 ```css
 /* Tokens principales en src/styles/tokens.css */
---navy: #0B1026;        /* Fondo principal */
---bg-light: #131A3A;    /* Cards, secciones */
---amber: #FFB03A;       /* Acento principal / CTA */
---cyan: #35C4D9;        /* Acento secundario / Tech */
---gaia: #00FF88;        /* Naturaleza / Greenpunk */
---white: #F5F7FF;       /* Texto principal */
---muted: #8A93B8;       /* Texto secundario */
+--bg-deep: oklch(0.08 0.02 280);      /* Fondo profundo */
+--bg-base: oklch(0.12 0.03 270);      /* Fondo base */
+--gaia: oklch(0.58 0.18 145);         /* Verde bioluminiscente */
+--tech: oklch(0.65 0.2 200);          /* Cian tecnológico */
+--accent: oklch(0.62 0.22 300);       /* Magenta/violeta */
+--amber: oklch(0.72 0.16 85);         /* Ámbar orgánico */
 ```
 
 ### Tipografía
-- **Display/Headers:** `Space Grotesk` (Variable font, wght 300-700)
-- **Body/UI:** `IBM Plex Sans` (Variable font, wght 300-700)
-- **Mono/Code:** `JetBrains Mono` (Variable font, wght 300-700)
+- **Display/Headers:** `Space Grotesk` (Variable font, wght 300-800)
+- **Body/UI:** `IBM Plex Sans` (Variable font, wght 100-700)
+- **Mono/Code:** `JetBrains Mono` (Variable font, wght 100-800)
 
 ### Principios Visuales
 - **Fusión naturaleza-máquina:** Circuitos orgánicos, patrones de micelio, bioluminiscencia
 - **Accesibilidad WCAG 2.2 AA:** Contraste, landmarks ARIA, skip links, focus visible
-- **Mobile-first:** Breakpoints 320px / 768px / 1024px / 1440px
-- **Performance:** Fonts preload, CSS crítico inline, images optimizadas
+- **Mobile-first:** Breakpoints 400px / 560px / 768px / 1024px / 1280px / 1440px / 1680px
+- **Performance:** Fonts preload, CSS crítico inline, @layer cascade, will-change optimizations
 
 ---
 
@@ -150,12 +148,16 @@ El script de build ejecuta automáticamente:
 
 1. **Limpia** `dist/`
 2. **Copia** todo `public/` → `dist/`
-3. **Optimiza HTML** (minificación: comentarios, espacios, tags)
-4. **Genera** `sitemap.xml` con todas las páginas
-5. **Genera** `robots.txt` con sitemap reference
-6. **Genera** `_headers` (Netlify/Cloudflare) — Security headers + Cache policy
-7. **Genera** `_redirects` (Netlify) — Trailing slashes + legacy URLs
-8. **Verifica** archivos requeridos y páginas
+3. **Copia** `src/styles/` → `dist/styles/`
+4. **Copia** `src/scripts/` → `dist/scripts/`
+5. **Optimiza HTML** (minificación: comentarios, espacios, tags)
+6. **Inyecta** `<base href="/union-tecnocratica-colombiana/">`
+7. **Reescribe** URLs absolutas internas al base path
+8. **Genera** `sitemap.xml` con todas las páginas
+9. **Genera** `robots.txt` con sitemap reference
+10. **Genera** `_headers` (Netlify/Cloudflare) — Security headers + Cache policy
+11. **Genera** `_redirects` (Netlify) — Trailing slashes + legacy URLs
+12. **Verifica** archivos requeridos y páginas
 
 **Salida:** Carpeta `dist/` lista para despliegue estático en cualquier hosting.
 
@@ -182,8 +184,7 @@ El workflow `.github/workflows/deploy.yml`:
 
 ### Verificar Despliegue
 - **Actions tab:** Ver logs del workflow "Build and Deploy UTC"
-- **Settings → Pages:** Ver URL del sitio desplegado (`https://<user>.github.io/union-tecnocratica-colombiana/` o dominio custom)
-- **Dominio personalizado:** Agregar `CNAME` en `public/` si usas `utc.org.co`
+- **Settings → Pages:** Ver URL del sitio desplegado (`https://cha0smagick.github.io/union-tecnocratica-colombiana/`)
 
 ---
 
@@ -193,7 +194,7 @@ El workflow `.github/workflows/deploy.yml`:
 |------|-------------|---------|
 | `/` | Home: Hero, 6 pilares, fundadores preview, visión/misión, cronograma, newsletter, CTA | `public/index.html` |
 | `/manifiesto/` | Manifiesto completo con 6 pilares detallados | `public/manifiesto/index.html` |
-| `/fundadores/` | Perfiles completos de Alejandro Quintero y Fabian Sorza | `public/fundadores/index.html` |
+| `/fundadores/` | Perfiles completos de los fundadores | `public/fundadores/index.html` |
 | `/vision-mision/` | Visión 2035+ y Misión operativa detallada | `public/vision-mision/index.html` |
 | `/objetivos/` | 6 objetivos estratégicos con KPIs medibles | `public/objetivos/index.html` |
 | `/cronograma/` | 5 fases / 12 años / hitos trimestrales | `public/cronograma/index.html` |
@@ -201,6 +202,8 @@ El workflow `.github/workflows/deploy.yml`:
 | `/calculadoras/` | Calculadoras: pobreza, corrupción, longevidad, IA | `public/calculadoras/index.html` |
 | `/newsletter/` | Suscripción "Código Fuente" (semanal, lunes 06:00 UTC) | `public/newsletter/index.html` |
 | `/inscripcion/` | Formulario militancia activa + wallet opcional | `public/inscripcion/index.html` |
+| `/contacto/` | Información de contacto y formularios | `public/contacto/index.html` |
+| `/prensa/` | Kit de prensa y recursos para medios | `public/prensa/index.html` |
 
 ---
 
@@ -214,6 +217,7 @@ El workflow `.github/workflows/deploy.yml`:
 - Alt text en todas las imágenes significativas
 - Labels asociados a todos los inputs
 - Responsive sin pérdida de funcionalidad (320px+)
+- `prefers-reduced-motion` y `prefers-contrast` support
 
 ---
 
@@ -244,7 +248,7 @@ La UTC es **open source** y **colaborativa**. Cada militante es un contributor.
 
 ### Estándares de Código
 - **HTML:** Semántico, accesible, validado por `npm run validate`
-- **CSS:** Tokens en `tokens.css`, móvil-first, BEM modificado
+- **CSS:** Tokens en `tokens.css`, móvil-first, @layer cascade, BEM modificado
 - **JS:** ES Modules, vanilla, sin dependencias runtime
 - **Commits:** Conventional Commits (`feat:`, `fix:`, `docs:`, `style:`, `refactor:`)
 
@@ -261,28 +265,10 @@ La UTC es **open source** y **colaborativa**. Cada militante es un contributor.
 
 ---
 
-## 🌐 Dominio Personalizado (utc.org.co)
-
-Si configuras dominio propio:
-
-1. Agrega `CNAME` en `public/`:
-   ```
-   utc.org.co
-   ```
-2. En DNS del dominio:
-   - `A` → `185.199.108.153` (GitHub Pages)
-   - `A` → `185.199.109.153`
-   - `A` → `185.199.110.153`
-   - `A` → `185.199.111.153`
-   - `CNAME www` → `<user>.github.io`
-3. En **Settings → Pages → Custom domain**: `utc.org.co` + **Enforce HTTPS**
-
----
-
 ## 📊 Métricas y Monitoreo
 
 - **Build time:** ~10-15s en GitHub Actions
-- **Bundle size:** ~200-500 KB (HTML + CSS + JS + assets)
+- **Bundle size:** ~550 KB (HTML + CSS + JS + assets + fonts)
 - **Lighthouse target:** Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 90, SEO ≥ 90
 - **Core Web Vitals:** LCP < 2.5s, FID < 100ms, CLS < 0.1
 
@@ -290,16 +276,15 @@ Si configuras dominio propio:
 
 ## 📞 Contacto
 
-| Canal | Enlace |
+> **Canales en construcción** — Se habilitarán progresivamente.
+
+| Canal | Estado |
 |-------|--------|
-| 🌐 Web | [utc.org.co](https://utc.org.co) |
-| 📧 General | [contacto@utc.org.co](mailto:contacto@utc.org.co) |
-| 📰 Prensa | [prensa@utc.org.co](mailto:prensa@utc.org.co) |
-| ⚖️ Legal | [legal@utc.org.co](mailto:legal@utc.org.co) |
-| 💻 Tecnología | [tecnologia@utc.org.co](mailto:tecnologia@utc.org.co) |
+| 🌐 Web | ✅ [GitHub Pages](https://cha0smagick.github.io/union-tecnocratica-colombiana/) |
+| 📧 General | 🚧 En construcción — ver sección [Contacto](/contacto/) |
+| 📰 Prensa | 🚧 En construcción — ver sección [Prensa](/prensa/) |
 | 🐦 X/Twitter | [@UTC_Colombia](https://twitter.com/UTC_Colombia) |
-| 🐙 GitHub | [UTC-Colombia](https://github.com/UTC-Colombia) |
-| 💬 Matrix | [#utc:matrix.org](https://matrix.to/#/#utc:matrix.org) |
+| 🐙 GitHub | [cha0smagick/union-tecnocratica-colombiana](https://github.com/cha0smagick/union-tecnocratica-colombiana) |
 
 ---
 
@@ -313,7 +298,7 @@ Ver [LICENSE](LICENSE) para detalles.
 
 ---
 
-**Fundadores:** [Alejandro Quintero Ruiz](https://github.com/UTC-Colombia) & [Fabian Sorza Cepeda](https://github.com/UTC-Colombia)  
+**Fundadores:** Alejandro Quintero Ruiz & Fabian Sorza Cepeda  
 **Personería jurídica:** En trámite ante CNE  
 **Símbolos:** Registrados ante SIC  
 **Infraestructura:** Servidores propios (Ecoparques), Kubernetes autogestionado, blockchain permissioned. **Cero GAFAM en datos críticos.**
