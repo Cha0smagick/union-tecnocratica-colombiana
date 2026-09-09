@@ -1,0 +1,152 @@
+{
+  "reglamento": {
+    "titulo": "REGLAMENTO INTERNO DE LA UNIÓN TECNOCRÁTICA COLOMBIANA",
+    "version": "1.0",
+    "fechaAprobacion": "2024-01-20",
+    "basadoEn": "Estatutos UTC v1.0, Artículos 9, 11, 12, 13",
+    "capitulos": [
+      {
+        "numero": "I",
+        "titulo": "FUNCIONAMIENTO DE ÓRGANOS COLEGIADOS",
+        "articulos": [
+          {
+            "numero": 1,
+            "titulo": "Congreso Tecnocrático Nacional - Convocatoria",
+            "texto": "El Consejo de Arquitectos convoca con 90 días de antelación mínima. Convocatoria incluye: orden del día, documentos base (publicados en repositorio git UTC), credenciales de delegados (verificación biométrica + firma digital), plataforma de votación (blockchain UTC-Vote). Quórum: 50%+1 delegados acreditados 24h antes. Delegados no presentes pueden delegar voto en otro delegado de su misma región (poder notarizado digital)."
+          },
+          {
+            "numero": 2,
+            "titulo": "Consejo de Arquitectos - Sesiones",
+            "texto": "Sesiones quincenales obligatorias (miércoles 19:00, híbrido presencial/VR). Extraordinarias a solicitud de 3+ miembros o fundadores (24h notificación). Actas en blockchain (IPFS + anchor Bitcoin), públicas tras 48h (salvo materia reservada: seguridad, inteligencia, negociaciones). Decisiones por mayoría simple; empate resuelto por voto dirimente del Coordinador General (rotatorio trimestral). Temas reservados requieren 2/3 para clasificación."
+          },
+          {
+            "numero": 3,
+            "titulo": "Tribunal Ético Algorítmico - Procedimiento",
+            "texto": "Denuncia: cualquier militante vía canal seguro (anónimo opcional, firma digital obligatoria para trazabilidad). Admisión: 72h para verificar competencia ratione materiae. Instrucción: 30 días hábiles (ampliable 15 por complejidad). Pruebas: logs algorítmicos, testimonio experto, auditoría código, peritaje datos. Audiencia: virtual, grabada, partes con derecho a réplica técnica. Fallo: vinculante, ejecutorio en 5 días, apelable solo ante Congreso (mayoría 2/3). Sanciones: amonestación, suspensión derechos (máx 2 años), expulsión, inhabilitación cargos públicos UTC."
+          }
+        ]
+      },
+      {
+        "numero": "II",
+        "titulo": "CÉLULAS BASE Y NODOS DIGITALES",
+        "articulos": [
+          {
+            "numero": 4,
+            "titulo": "Constitución de célula",
+            "texto": "Mínimo 5 militantes activos en radio ≤ 5km o comunidad de interés (universidad, empresa, barrio, gremio). Acta fundacional digital (firmas biométricas). Nombre: 'Célula [Nombre Territorio/Temática] UTC'. Coordinador elegido por mayoría simple (mandato 6 meses, reelección 1 vez). Registro ante Coordinación Regional en 15 días."
+          },
+          {
+            "numero": 5,
+            "titulo": "Funcionamiento célula",
+            "texto": "Reunión semanal obligatoria (60-90 min). Orden del día: 1) Métricas célula (asistencia, formación, reclutamiento, acciones), 2) Análisis coyuntura local (datos abiertos + percepción), 3) Acción táctica (campaña, denuncia, servicio, formación), 4) Formación técnica (rotación: IA, bio, gobernanza, ética), 5) Rendición cuentas coordinador. Acta en blockchain. Asistencia < 60% tres meses consecutivos → célula en observación; < 40% → disolución y redistribución militantes."
+          },
+          {
+            "numero": 6,
+            "titulo": "Nodos digitales",
+            "texto": "Equivalentes a células para militantes digitales. Mínimo 10 militantes. Reunión en VR/Metaverso UTC (plataforma propia, soberana). Temáticas: IA/ML, Biotecnología/Longevidad, Energía/Clima, Gobernanza/Blockchain, Educación/EdTech, Salud/HealthTech, Arte/Greenpunk. Coordinador técnico + coordinador político. Participación cuenta igual que presencial para todos los efectos."
+          },
+          {
+            "numero": 7,
+            "titulo": "Red de células - Coordinación Regional",
+            "texto": "Coordinador Regional convoca Asamblea Regional mensual (coordinadores de célula + 1 delegado por célula > 20 militantes). Funciones: alinear estrategia territorial, resolver conflictos inter-células, asignar recursos regionales, elegir delegados a Congreso (método Schulze). Coordinador Regional rinde cuentas trimestrales ante Consejo de Arquitectos (dashboard algorítmico: métricas por célula, territorio, demográfica)."
+          }
+        ]
+      },
+      {
+        "numero": "III",
+        "titulo": "FORMACIÓN Y CERTIFICACIÓN TECNOCRÁTICA",
+        "articulos": [
+          {
+            "numero": 8,
+            "titulo": "Currículo obligatorio militante activo",
+            "texto": "MÓDULO 1 - FUNDAMENTOS (40h): Manifiesto/Estatutos/Reglamento (10h), Pensamiento algorítmico y lógica formal (10h), Ética transhumanista y derechos digitales (10h), Historia del tecnocracia y partidos pirata (10h). MÓDULO 2 - HERRAMIENTAS (60h): Python para análisis de datos (20h), IA/ML básico con modelos abiertos (20h), Blockchain y contratos inteligentes (10h), Visualización y storytelling con datos (10h). MÓDULO 3 - ESPECIALIZACIÓN (40h mínimo, uno obligatorio): Gobernanza algorítmica / Biotecnología y longevidad / Energía y clima / Salud digital / Educación transhumanista / Economía de datos / Seguridad y justicia híbrida / Greenpunk y diseño de sistemas vivos. MÓDULO 4 - PRÁCTICA SUPERVISADA (20h): Proyecto real en célula/nodo con mentor certificado."
+          },
+          {
+            "numero": 9,
+            "titulo": "Certificación y recertificación",
+            "texto": "Examen final: teórico (test adaptativo IA, 80% acierto), práctico (proyecto auditado), ético (casos dilemmas, evaluación por Tribunal). Certificado UTC-Nivel 1 (vigencia 2 años). Niveles superiores: Nivel 2 (mentor, 500h práctica), Nivel 3 (arquitecto, 2000h + publicación técnica), Nivel 4 (fundador emérito, vitalicio). Recertificación: 40h formación continua + proyecto de impacto medible cada 2 años. Base de certificaciones en blockchain (credenciales verificables W3C VC)."
+          },
+          {
+            "numero": 10,
+            "titulo": "Academia UTC",
+            "texto": "La UTC opera su propia plataforma educativa (Moodle + IPFS + credenciales blockchain), gratuita para militantes, de pago para externos (ingresos al partido). Alianzas con universidades para reconocimiento académico (microcredenciales). Profesores: militantes Nivel 3+ + expertos invitados. Currículo actualizado trimestralmente por comité técnico (IA monitoriza papers, patentes, repositorios)."
+          }
+        ]
+      },
+      {
+        "numero": "IV",
+        "titulo": "CAMPAÑAS Y COMUNICACIÓN",
+        "articulos": [
+          {
+            "numero": 11,
+            "titulo": "Principios de comunicación UTC",
+            "texto": "1. VERDAD MEDIBLE: Cada claim = métrica + fuente + metodología. 2. LENGUAJE TÉCNICO ACCESIBLE: Jerga explicada, analogías greenpunk, visualizaciones obligatorias. 3. PSICOLOGÍA BASADA EN EVIDENCIA: Framing, anclaje, prueba social, aversión a pérdida — usadas éticamente para movilizar hacia bienestar medible. 4. INFILTRACIÓN NARRATIVA: Ocupamos los memes de la derecha (orden, seguridad, patria) y la izquierda (justicia, igualdad, comunidad) redefiniéndolos técnicamente. 5. CERO SLACKTIVISM: Cada like = acción medible (firma, donación, formación, voto, denuncia). 6. TRANSPARENCIA DE ALGORITMOS DE DIFUSIÓN: Nuestros bots se identifican, nuestros ads muestran código de segmentación."
+          },
+          {
+            "numero": 12,
+            "titulo": "Campañas electorales",
+            "texto": "Candidatos: militantes Nivel 2+ con certificación en Gobernanza Algorítmica. Selección: primarias abiertas (voto ponderado militantes + simpatizantes registrados) + filtro Tribunal Ético. Programa: generado algorítmicamente desde diagnóstico territorial (datos abiertos + encuestas + sensores) + validación células. Financiamiento: 100% aportes militancia + cooperativas datos (cero financiación privada opaca). Rendición: gasto por voto obtenido, ROI por acción, auditoría post-electoral obligatoria."
+          },
+          {
+            "numero": 13,
+            "titulo": "Newsletter semanal 'CÓDIGO FUENTE'",
+            "texto": "Publicación: cada lunes 06:00 UTC. Contenido: 1) Métrica de la semana (KPI nacional + análisis), 2) Acción técnica explicada (qué hicimos, código, datos), 3) Análisis coyuntura (política, economía, tech) con framing UTC, 4) Formación micro (1 concepto técnico + ejercicio), 5) Convocatoria acción (firma, test, reunión, donación), 6) Métricas partido (militantes, células, fondos, KPIs). Formato: HTML responsive + plain text + PDF + audio (voz GonzaloNeural). Suscripción: double opt-in + wallet address opcional (para dividendos datos). Baja: 1-click, datos borrados en 30 días (RGPD/Ley 1581)."
+          }
+        ]
+      },
+      {
+        "numero": "V",
+        "titulo": "GESTIÓN DE DATOS Y SOBERANÍA DIGITAL",
+        "articulos": [
+          {
+            "numero": 14,
+            "titulo": "Infraestructura tecnológica propia",
+            "texto": "La UTC no usa GAFAM para datos críticos. Infraestructura: servidores propios (Ecoparques), Kubernetes autogestionado, bases de datos PostgreSQL + TimescaleDB + IPFS, blockchain permissioned (Hyperledger Fabric) para votación/contabilidad, Matrix/Element para mensajería, Jitsi para videoconferencia, GitLab para código/documentos. Nubes públicas solo para edge computing no sensible (CDN, modelos IA inference)."
+          },
+          {
+            "numero": 15,
+            "titulo": "Protección de datos militantes",
+            "texto": "Datos mínimos: nombre, documento, contacto, wallet, certificaciones, célula, métricas participación. Cifrado en reposo (AES-256) y tránsito (TLS 1.3). Acceso: need-to-know, loggeado, auditable. Derecho al olvido: solicitud → borrado en 30 días (salvo obligación legal). Brecha de seguridad: notificación en 4h a afectados + CNE + Tribunal Ético. Responsable: Coordinador de Soberanía Digital (Nivel 3+)."
+          },
+          {
+            "numero": 16,
+            "titulo": "Cooperativas de datos territoriales",
+            "texto": "Cada Coordinación Regional promueve una cooperativa de datos (ley 79/1988 + DAO). Militantes aportan datos anonimizados (salud, movilidad, consumo, ambiental) → valorizados por IA UTC → dividendos distribuidos (70% militantes, 20% partido, 10% reserva). Gobernanza: 1 militante = 1 voto + peso por datos aportados (sqrt). Auditoría: trimestral, pública."
+          }
+        ]
+      },
+      {
+        "numero": "VI",
+        "titulo": "SEGURIDAD Y CONTRAINTELIGENCIA",
+        "articulos": [
+          {
+            "numero": 17,
+            "titulo": "Seguridad operacional",
+            "texto": "Militantes con cargos públicos o visibilidad alta: formación OPSEC obligatoria (20h/año). Comunicaciones sensibles: solo Matrix (E2EE) o Signal. Dispositivos: GrapheneOS / Linux hardened, sin apps propietarias. Reuniones físicas: detector de micrófonos, bolsas Faraday, rotación ubicaciones. Viajes: protocolo de viaje seguro. Compromiso: protocolo de aislamiento, denuncia, recuperación de credenciales (shamir secret sharing)."
+          },
+          {
+            "numero": 18,
+            "titulo": "Contrainteligencia algorítmica",
+            "texto": "Sistema IA monitorea: 1) Infiltrados (patrones anomalos en red social interna), 2) Desinformación (bots externos amplificando anti-UTC), 3) Corrupción interna (anomalías financieras, acceso indebido), 4) Amenazas físicas (OSINT + sensores). Alertas: automáticas a Tribunal Ético + Consejo Arquitectos. Falsos positivos: penalizan al modelo (RLHF interno)."
+          }
+        ]
+      },
+      {
+        "numero": "VII",
+        "titulo": "DISPOSICIONES TRANSITORIAS Y FINALES",
+        "articulos": [
+          {
+            "numero": 19,
+            "titulo": "Régimen transitorio (año 1)",
+            "texto": "1. Fundadores asumen roles de Consejo de Arquitectos provisional. 2. Primera elección Congreso: mes 12. 3. Certificaciones Nivel 1: exención examen teórico para fundadores + primeros 1000 militantes (solo práctico + ético). 4. Células: mínimo 3 militantes durante primer semestre. 5. Cuotas: voluntarias primer año (mínimo sugerido 50.000 COP). 6. Infraestructura: migración progresiva a servidores propios (meta 100% mes 18)."
+          },
+          {
+            "numero": 20,
+            "titulo": "Vigencia y actualización",
+            "texto": "Reglamento vigente tras aprobación Consejo de Arquitectos (mayoría 2/3) y ratificación Congreso (mayoría simple). Modificaciones: propuesta 10% militantes o 1/3 Consejo → consulta vinculante militantes (voto ponderado) → aprobación Consejo. Versión en git: main branch = vigente, tags = versiones históricas."
+          }
+        ]
+      }
+    ]
+  }
+}

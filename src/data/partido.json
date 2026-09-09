@@ -1,0 +1,187 @@
+{
+  "partido": {
+    "nombre": "Unión Tecnocrática Colombiana",
+    "sigla": "UTC",
+    "lema": "MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS",
+    "fundacion": "2024",
+    "fundadores": [
+      {
+        "nombre": "Alejandro Quintero Ruiz",
+        "rol": "Fundador y Coordinador General",
+        "bio": "Ingeniero de sistemas, visionario tecnocrático, arquitecto de la fusión naturaleza-máquina. Dedica su vida a demostrar que la tecnología, bien aplicada, es la cura a los males estructurales de Colombia.",
+        "areas": ["Arquitectura tecnocrática", "Autodominio transhumanista", "Sistemas de gobernanza algorítmica"]
+      },
+      {
+        "nombre": "Fabian Sorza Cepeda",
+        "rol": "Fundador y Director de Operaciones",
+        "bio": "Estratega político, experto en psicología de masas y comunicación tecnológica. Convierte la complejidad técnica en narrativa movilizadora. Cree que el poder pertenece a quienes entienden los datos.",
+        "areas": ["Psicología política tecnológica", "Comunicación greenpunk", "Movilización de militancia"]
+      }
+    ],
+    "colores": {
+      "primario": "#1A0B2E",
+      "negro": "#000000",
+      "acento": "#8B3AFF",
+      "gaia": "#00D47A",
+      "tecnologico": "#00F0FF",
+      "advertencia": "#FFB000",
+      "texto": "#F5F0FF"
+    },
+    "simbolos": {
+      "logo": "/assets/identity/logo-utc.svg",
+      "bandera": "/assets/identity/bandera-utc.svg",
+      "mascota": "/assets/identity/mascota-tecno-guacamaya.svg",
+      "escudo": "/assets/identity/escudo-heraldico-utc.svg"
+    }
+  },
+  "manifiesto": {
+    "preambulo": "Colombia no necesita más políticos. Necesita ingenieros de la realidad. Cada peso mal gastado es una vida que no se salvó. Cada kilovatio desperdiciado es un niño que no estudió. Cada hectárea deforestada es un futuro que se quemó. La política tradicional es un código legacy: bugueado, ineficiente, corrupto por diseño. Nosotros somos el patch. La tecnocracia no es fría: es la única forma de amor que escala. Medimos. Proyectamos. Evolucionamos.",
+    "pilares": [
+      {
+        "id": "tecnologia-cura",
+        "titulo": "LA TECNOLOGÍA COMO CURA",
+        "texto": "La pobreza no es falta de recursos, es falta de asignación óptima. La corrupción no es moral, es un exploit de sistema mal diseñado. La violencia no es cultural, es un fallo de asignación de oportunidades. La tecnología —IA, blockchain, sensores, automatización— no es herramienta: es el sistema inmune de la nación. Cada algoritmo bien escrito es una vacuna contra la miseria. Cada sensor instalado es un anticuerpo contra la corrupción. Cada ciudad inteligente es un órgano regenerado.",
+        "referencias": ["Manifiesto Pirata: información libre", "Partido Pirata: democracia líquida", "Unabomber: crítica al sistema tecnológico (invertida)"]
+      },
+      {
+        "id": "greenpunk-fusion",
+        "titulo": "GREENPUNK: FUSIÓN NATURALEZA-MÁQUINA",
+        "texto": "No hay dicotomía. El silicio nace de la arena. La electricidad fluye como la savia. Los circuitos imitan las redes miceliales. La IA aprende como la evolución. Nuestra estética es bioluminiscencia: árboles que son servidores, ríos que son cables de fibra óptica, pájaros que son drones de monitoreo. La Tecno-Guacamaya no vigila: cuida. Gaia no es mitología: es la biosfera instrumentada. Cada hectárea tiene su gemelo digital. Cada especie tiene su blockchain de existencia. Proteger la naturaleza es proteger el hardware de la civilización.",
+        "referencias": ["Solarpunk", "Ecopunk", "Biofilia tecnológica"]
+      },
+      {
+        "id": "transhumanismo-autodominio",
+        "titulo": "AUTODOMINIO TRANSHUMANISTA",
+        "texto": "El ser humano no es el final de la evolución: es el puente. Órganos artificiales impresos en 3D. Interfaces neurales que expanden la cognición. Longevidad como derecho, no privilegio. La muerte es un bug que podemos depurar. Pero —y esto es innegociable— la tecnología sirve al humano, no el humano a la máquina. Quien entrega su agencia a un algoritmo se convierte en NPC. Quien usa la tecnología para expandir su voluntad se convierte en arquitecto. La educación obligatoria en IA, programación, biotecnología: no para crear trabajadores, para crear dioses menores responsables.",
+        "referencias": ["Transhumanismo", "Neuralink", "Bioprinting", "Filosofía de la extensión de vida"]
+      },
+      {
+        "id": "neutralidad-estrategica",
+        "titulo": "NEUTRALIDAD ESTRATÉGICA: EXTREMO CENTRO COMO SUIZA",
+        "texto": "La neutralidad no es pasividad. Es la posición de máxima maniobrabilidad. La derecha tiene razón en el orden, la izquierda en la justicia. Ambas fallan en la implementación. Nosotros tomamos lo que funciona: mercados libres con guardrails algorítmicos, Estado fuerte pero automatizado, seguridad implacable con debido proceso híbrido, propiedad privada con renta básica universal financiada por eficiencia. No somos centristas tibios: somos cirujanos que cortan lo podrido sin importar la ideología del tumor. Malvados con la corrupción, buenos con el vulnerable. En justa proporción.",
+        "referencias": ["Modelo suizo", "Democracia directa", "Tecnocracia constitucional"]
+      },
+      {
+        "id": "ia-bien-comun",
+        "titulo": "IA COMO BIEN COMÚN: SILICON VALLEYS SIN GENTRIFICACIÓN",
+        "texto": "El conocimiento no se cerca. La IA es electricidad del siglo XXI: debe ser ubicua, barata, controlada por quien la usa. Cada colombiano —desde el campesino en el Chocó hasta el estudiante en Bogotá— tiene derecho a GPU, a modelos abiertos, a entrenamiento local. Creamos Ecoparques Tecnológicos: clústeres de computación verde alimentados por solar/eólica, refrigerados por ríos, gobernados por cooperativas de datos. Sin alquileres abusivos. Sin desplazamiento. La riqueza se genera donde vive la gente. El campesino que usa IA para optimizar su cosecha vale más que el trader que la usa para especular.",
+        "referencias": ["Open Source", "Federated Learning", "Data Cooperatives", "Digital Commons"]
+      },
+      {
+        "id": "seguridad-hibrida",
+        "titulo": "SEGURIDAD: JUICIOS HÍBRIDOS HUMANO-IA",
+        "texto": "El delito es una variable optimizable. Cámaras con visión por computadora en cada esquina. Patrones predictivos que previenen, no solo reaccionan. Jueces humanos para la empatía, IA para la consistencia, precedentes, cálculos de reincidencia basados en datos —no en prejuicios. Reincidencia: penas escalonadas matemáticamente. Primera vez: rehabilitación obligatoria + restitución algorítmica. Segunda: aislamiento productivo (trabajo forzoso remunerado para víctimas). Tercera: expulsión del contrato social (isla tecnológica autosostenible). Protección animal y especies: patrimonio de la humanidad, delito equiparado a lesa humanidad. La crueldad es un indicador de psicopatía social: se detecta, se trata, se aisla.",
+        "referencias": ["Justicia predictiva", "Restorative justice", "Derechos de la naturaleza"]
+      },
+      {
+        "id": "calculo-tecnocratico",
+        "titulo": "CÁLCULO TECNOCRÁTICO: TODO SE MIDE, TODO SE PROYECTA",
+        "texto": "Salud: años de vida ajustados por calidad (AVAC) por peso invertido. Energía: kWh per cápita vs. huella de carbono vs. resiliencia. Territorio: hectáreas productivas vs. conservación vs. expansión urbana. Vivienda: metros cuadrados dignos por hogar vs. costo de ciclo de vida. Seguridad vial: muertos por 100k veh-km → objetivo cero (Visión Cero algorítmica). Ciudades inteligentes: sensores por habitante, latencia de respuesta, huella ecológica per cápita. Automatización vial: vehículos autónomos coordinados por semáforos inteligentes, cero semáforos tontos. Cada decisión de política pública: función objetivo, restricciones, datos abiertos, auditoría continua. El lenguaje de la tecnología es imperativo. El lenguaje matemático es la única lengua oficial de la administración.",
+        "referencias": ["Investigación de operaciones", "Análisis costo-beneficio", "Gobernanza basada en evidencia"]
+      }
+    ],
+    "cierre": "No prometemos paraíso. Prometemos ingeniería. El paraíso es una variable dependiente de buenas decisiones sostenidas. Únete. Calcula. Construye. La Unión Tecnocrática Colombiana no es un partido: es un sistema operativo para la nación. Versión 1.0. En beta permanente. Porque la evolución no tiene release final."
+  },
+  "vision": "Una Colombia donde cada niño nace con su gemelo digital de salud, donde la selva amazónica es el centro de datos más valioso del planeta, donde la IA es tan accesible como el agua, donde vivir 150 años en plenitud es la norma, donde el peso colombiano es la moneda de reserva de la biodiversidad global, donde la política es una API transparente y el ciudadano es el root user de su destino.",
+  "mision": "Diseñar, implementar y auditar el sistema operativo de Colombia 2.0: infraestructura tecnocrática verde, justicia algorítmica híbrida, educación transhumanista universal, economía de datos soberana, longevidad como derecho constitucional. Entregar resultados medibles cada trimestre. Ser juzgados por métricas, no por discursos.",
+  "objetivos": [
+    {
+      "id": "obj1",
+      "titulo": "INFRAESTRUCTURA TECNOCRÁTICA VERDE",
+      "meta": "100% territorio con gemelo digital para 2030. Conectividad 1Gbps simétrico en 100% municipios. 80% matriz energética renovable con almacenamiento distribuido.",
+      "indicadores": ["Cobertura fibra óptica", "Latencia promedio", "kWh renovables", "Huella carbono per cápita"]
+    },
+    {
+      "id": "obj2",
+      "titulo": "JUSTICIA ALGORÍTMICA HÍBRIDA",
+      "meta": "Reducir impunidad del 92% al <5% para 2028. Tiempo promedio juicio: 6 meses. Reincidencia: <10%. Cero corrupción judicial detectada por auditoría IA.",
+      "indicadores": ["Tasa impunidad", "Tiempo proceso", "Tasa reincidencia", "Alertas corrupción IA"]
+    },
+    {
+      "id": "obj3",
+      "titulo": "EDUCACIÓN TRANSHUMANISTA UNIVERSAL",
+      "meta": "100% población alfabetizada en IA y programación para 2027. 50% población con certificación en biotecnología básica. 1 millón de desarrolladores IA nativos para 2030.",
+      "indicadores": ["Alfabetización digital", "Certificaciones biotech", "Desarrolladores IA", "Patentes per cápita"]
+    },
+    {
+      "id": "obj4",
+      "titulo": "ECONOMÍA DE DATOS SOBERANA",
+      "meta": "PIB per cápita > $25,000 USD para 2035. Gini < 0.35. Renta básica universal = 40% salario medio financiada por ganancias de eficiencia. Cero deuda externa neta.",
+      "indicadores": ["PIB per cápita", "Coeficiente Gini", "Cobertura RBU", "Deuda/PIB"]
+    },
+    {
+      "id": "obj5",
+      "titulo": "LONGEVIDAD COMO DERECHO",
+      "meta": "Esperanza de vida en plenitud > 100 años para 2040. Órganos artificiales disponibles on-demand. Interfaces neurales de consumo masivo. Cero muertes por enfermedades curables.",
+      "indicadores": ["Esperanza vida sana", "Acceso órganos bioimpresos", "Adopción BCI", "Mortalidad evitable"]
+    },
+    {
+      "id": "obj6",
+      "titulo": "GAIA INSTRUMENTADA",
+      "meta": "100% especies nativas registradas en blockchain de existencia. Cero deforestación neta. 50% territorio en conservación activa con sensores. Amazonas: reserva de computación cuántica mundial.",
+      "indicadores": ["Especies registradas", "Tasa deforestación", "Área sensores", "Créditos biodiversidad"]
+    }
+  ],
+  "cronograma": [
+    {
+      "fase": 1,
+      "periodo": "2024-2025",
+      "titulo": "FUNDACIÓN Y ARQUITECTURA",
+      "hitos": [
+        "Constitución legal del partido (acta, estatutos, personería jurídica)",
+        "Lanzamiento web UTC + calculadoras tecnocráticas v1",
+        "Reclutamiento 10,000 militantes fundadores (firma digital blockchain)",
+        "Primer Congreso Tecnocrático: definición de arquitectura nacional",
+        "Alianzas con universidades, centros de investigación, cooperativas tech"
+      ]
+    },
+    {
+      "fase": 2,
+      "periodo": "2026-2027",
+      "titulo": "EXPANSIÓN Y INFILTRACIÓN INSTITUCIONAL",
+      "hitos": [
+        "Candidaturas a concejos municipales en 500+ municipios (lista cerrada, meritocracia)",
+        "Campaña 'IA para Todos': 1 millón de colombianos entrenados gratis",
+        "Primer Ecoparque Tecnológico operativo (Chocó: computación verde + biodiversidad)",
+        "Ley de Datos Soberanos presentada al Congreso (iniciativa popular)",
+        "Sistema de justicia híbrida piloto en 3 ciudades (Medellín, Bucaramanga, Manizales)"
+      ]
+    },
+    {
+      "fase": 3,
+      "periodo": "2028-2030",
+      "titulo": "CONSOLIDACIÓN DE PODER TECNOCRÁTICO",
+      "hitos": [
+        "Bancada de 30+ congresistas UTC (bloque de voto algorítmico: cada voto justificado por datos)",
+        "Presidencia de comisiones clave: Hacienda, Ciencia, Ambiente, Justicia",
+        "Implementación nacional de Gemelo Digital Colombia",
+        "Renta Básica Universal fase 1: 20% población vulnerable",
+        "Primera fábrica de órganos bioimpresos en Latinoamérica (Bogotá)"
+      ]
+    },
+    {
+      "fase": 4,
+      "periodo": "2031-2035",
+      "titulo": "TRANSFORMACIÓN ESTRUCTURAL",
+      "hitos": [
+        "Reforma constitucional: Artículo 1 reescrito — 'Colombia es una República Tecnocrática Ecológica'",
+        "Automatización vial nacional completa (Visión Cero: 0 muertes viales)",
+        "Renta Básica Universal 100% población",
+        "Esperanza de vida en plenitud > 90 años",
+        "Colombia: hub mundial de computación verde y biodiversidad digital"
+      ]
+    },
+    {
+      "fase": 5,
+      "periodo": "2036+",
+      "titulo": "EVOLUCIÓN PERMANENTE",
+      "hitos": [
+        "Primer ciudadano colombiano con 150 años de vida activa",
+        "Interfaz neural masiva: democracia directa continua (voto diario en microdecisiones)",
+        "Expansión del modelo UTC a 10+ naciones (Federación Tecnocrática Latinoamericana)",
+        "Misión orbital colombiana: minería de asteroides para recursos críticos",
+        "Versión 2.0 del Sistema Operativo Nacional: post-escasez, post-fronteras, post-mortalidad"
+      ]
+    }
+  ]
+}

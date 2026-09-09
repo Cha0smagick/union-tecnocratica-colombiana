@@ -1,0 +1,136 @@
+{
+  "estatutos": {
+    "titulo": "ESTATUTOS DE LA UNIÓN TECNOCRÁTICA COLOMBIANA",
+    "version": "1.0",
+    "fechaAprobacion": "2024-01-15",
+    "preambulo": "Nosotros, los fundadores y militantes de la Unión Tecnocrática Colombiana, conscientes de que la política tradicional ha fallado en su función elemental —la asignación óptima de recursos para el bienestar general—, y de que la tecnología, aplicada con rigor científico y ética transhumanista, constituye el único camino viable para superar la pobreza, la corrupción, la violencia y la destrucción ecológica que aquejan a Colombia, nos constituimos en partido político bajo los siguientes estatutos, que tienen rango de ley interna y obligan a todos los afiliados.",
+    "titulos": [
+      {
+        "numero": "I",
+        "titulo": "DENOMINACIÓN, NATURALEZA Y PRINCIPIOS",
+        "articulos": [
+          {
+            "numero": 1,
+            "titulo": "Denominación",
+            "texto": "El partido se denomina UNIÓN TECNOCRÁTICA COLOMBIANA, abreviadamente UTC. Su sigla, logo, bandera, escudo y mascota (Tecno-Guacamaya) son propiedad intelectual colectiva de la militancia, registrados ante la Superintendencia de Industria y Comercio."
+          },
+          {
+            "numero": 2,
+            "titulo": "Naturaleza jurídica",
+            "texto": "La UTC es una asociación política de carácter nacional, personería jurídica propia, patrimonio independiente, duración indefinida, y autonomía frente a cualquier poder público, privado, religioso o extranjero. Su domicilio principal es Bogotá D.C., sin perjuicio de sedes departamentales, municipales y nodos digitales."
+          },
+          {
+            "numero": 3,
+            "titulo": "Principios rectores",
+            "texto": "1. TECNOCRACIA ÉTICA: El poder de decisión reside en quien demuestra competencia técnica, no en quien acumula votos por clientelismo. 2. NEUTRALIDAD ESTRATÉGICA: No somos de izquierda ni de derecha: somos de lo que funciona, medido por indicadores verificables. 3. GREENPUNK: La tecnología sirve a la vida. La naturaleza es infraestructura crítica. 4. TRANSHUMANISMO RESPONSABLE: Extensión de la vida y expansión cognitiva como derechos, con agencia humana soberana. 5. IA COMO BIEN COMÚN: Código abierto, datos soberanos, computación distribuida. 6. JUSTICIA ALGORÍTMICA HÍBRIDA: Eficiencia de la máquina, empatía del humano. 7. MERITOCRACIA RADICAL: Cargos por competencia certificada, no por lealtad. 8. TRANSPARENCIA ALGORÍTMICA: Cada decisión pública deja rastro auditable en blockchain. 9. AUTONOMÍA REGIONAL FEDERADA: Cada territorio gestiona sus recursos con rendición de cuentas algorítmica. 10. COMERCIO LIBRE CON APALANCAMIENTO API: Mercados abiertos, dinero programable, ganancia compartida."
+          },
+          {
+            "numero": 4,
+            "titulo": "Definición de 'Malvados en justa proporción'",
+            "texto": "La UTC asume que la neutralidad axiológica es imposible. Definimos 'mal' como toda acción que reduce la función de bienestar social agregado (medida en AVAC/año per cápita) y 'bien' como toda acción que la aumenta. Actuamos con severidad implacable contra la corrupción, el clientelismo, la destrucción ecológica deliberada, la negación de derechos fundamentales y la incompetencia certificada. Actuamos con generosidad radical hacia el vulnerable, el emprendedor honesto, el científico, el cuidador, el educador. No hay término medio con quien roba al pueblo: hay algoritmo que detecta, juicio que condena, restitución que ejecuta."
+          }
+        ]
+      },
+      {
+        "numero": "II",
+        "titulo": "AFILIACIÓN, DERECHOS Y DEBERES",
+        "articulos": [
+          {
+            "numero": 5,
+            "titulo": "Categorías de afiliación",
+            "texto": "1. MILITANTE FUNDADOR: Quien suscribe el acta constitutiva o se afilia en el primer año. Derecho a voto doble en congresos. 2. MILITANTE ACTIVO: Quien completa formación tecnocrática básica (40h IA, 20h gobernanza algorítmica, 10h ética transhumanista), paga cuota mensual (0.5% ingreso declarado, mínimo 50.000 COP), y participa en al menos una célula local o nodo digital mensual. 3. MILITANTE DIGITAL: Residente en el exterior o con movilidad reducida. Participa vía nodo digital certificado. 4. SIMpatizANTE REGISTRADO: Suscribe manifiesto, recibe newsletter, vota en consultas abiertas (peso 0.25). 5. ALIADO INSTITUCIONAL: Universidades, centros de investigación, cooperativas, empresas B-Corp que firman convenio de colaboración."
+          },
+          {
+            "numero": 6,
+            "titulo": "Derechos del militante activo",
+            "texto": "1. Votar y ser elegido en todos los órganos de dirección (peso 1.0). 2. Acceso gratuito a toda la formación UTC (IA, biotecnología, gobernanza, longevidad). 3. Prioridad en Ecoparques Tecnológicos, vivienda digna, salud extendida. 4. Participación en presupuesto participativo algorítmico de su territorio. 5. Derecho a réplica algorítmica: si un algoritmo le perjudica, derecho a auditoría humana en 48h. 6. Dividendo de datos: participación en ganancias de cooperativas de datos de su región. 7. Protección jurídica prioritaria del partido ante persecución política."
+          },
+          {
+            "numero": 7,
+            "titulo": "Deberes del militante activo",
+            "texto": "1. Estudiar y aplicar el Manifiesto y Estatutos. 2. Completar formación continua: mínimo 20h/año actualización tecnocrática. 3. Pagar cuota mensual puntualmente (blockchain, trazable). 4. Participar en célula/nodo: mínimo 1 reunión/mes (presencial o VR). 5. Denunciar corrupción e ineficiencia vía canal seguro (whistleblower blockchain). 6. No ocupar cargos públicos sin certificación de competencia UTC. 7. No recibir financiamiento de fuentes opacas (narco, contratistas corruptos, gobiernos extranjeros hostiles). 8. Resolver conflictos internos por mediación algorítmica antes que judicial."
+          },
+          {
+            "numero": 8,
+            "titulo": "Pérdida de la calidad de militante",
+            "texto": "1. Por renuncia voluntaria (firma digital, efecto inmediato). 2. Por incumplimiento de 3+ deberes en 12 meses (proceso automático: notificación → 30 días corrección → suspensión → expulsión si persiste). 3. Por condena judicial firme por delitos contra la administración pública, lesa humanidad, narcotráfico, o corrupción algorítmica certificada. 4. Por traición ideológica: promover políticas que reducen función de bienestar social (evaluado por tribunal ético algorítmico + 2/3 asamblea). 5. Reingreso: posible tras 2 años y re-certificación completa."
+          }
+        ]
+      },
+      {
+        "numero": "III",
+        "titulo": "ORGANIZACIÓN Y ESTRUCTURA",
+        "articulos": [
+          {
+            "numero": 9,
+            "titulo": "Órganos de dirección",
+            "texto": "1. CONGRESO TECNOCRÁTICO NACIONAL: Máxima autoridad. Se reúne cada 2 años. Composición: delegados por célula (1 por 50 militantes), fundadores (voto doble), expertos invitados (voto consultivo). Decide: línea política, estatutos, alianzas, presupuesto, tribunal ético. 2. CONSEJO DE ARQUITECTOS (Dirección Ejecutiva): 9 miembros elegidos por Congreso (método Schulze, ponderado por competencia certificada). Funciones: ejecución estratégica, designación de coordinadores, auditoría continua, gestión de crisis. Mandato: 2 años, reelección 1 vez. 3. TRIBUNAL ÉTICO ALGORÍTMICO: 7 miembros (3 juristas, 2 éticos IA, 2 científicos datos). Elegidos por Congreso. Funciones: resolver conflictos, certificar competencia, auditar algoritmos públicos, sancionar desviaciones. Mandato: 4 años, no reelección inmediata. 4. COORDINACIONES REGIONALES: 32 departamentos + Bogotá + 5 regiones especiales (Amazonía, Pacífico, Orinoquía, Caribe, Fronteras). Coordinador elegido por militantes de la región (voto ponderado por formación). 5. CÉLULAS BASE: Unidad mínima: 5-50 militantes en territorio contiguo o comunidad de interés. Reunión semanal obligatoria. 6. NODOS DIGITALES: Células virtuales para militantes digitales, diáspora, temáticas (IA, biotech, energía, etc.)."
+          },
+          {
+            "numero": 10,
+            "titulo": "Fundadores - Cláusula de estabilidad",
+            "texto": "Alejandro Quintero Ruiz y Fabian Sorza Cepeda, como Fundadores, tienen veto suspensivo (1 vez por mandato) sobre decisiones que alteren los Principios Rectores (Art. 3) o la estructura federal. Veto reversible por 3/4 del Congreso. Esta cláusula expira en 2030 o cuando la UTC alcance 1 millón de militantes activos, lo primero que ocurra."
+          },
+          {
+            "numero": 11,
+            "titulo": "Método de toma de decisiones",
+            "texto": "1. DECISIONES ESTRATÉGICAS (línea política, alianzas, estatutos): Congreso, mayoría calificada 60% ponderado por competencia. 2. DECISIONES OPERATIVAS (campañas, presupuesto, nombramientos): Consejo de Arquitectos, mayoría simple + veto fundadores. 3. DECISIONES TÉCNICAS (algoritmos, métricas, estándares): Comités técnicos especializados, consenso rough (rough consensus = objeciones técnicas no resueltas bloquean). 4. DECISIONES TERRITORIALES: Coordinación Regional + células afectadas, voto ponderado. 5. EMERGENCIAS: Consejo de Arquitectos por unanimidad, ratificación en 72h por Congreso virtual."
+          }
+        ]
+      },
+      {
+        "numero": "IV",
+        "titulo": "RÉGIMEN ECONÓMICO Y TRANSPARENCIA",
+        "articulos": [
+          {
+            "numero": 12,
+            "titulo": "Fuentes de financiamiento",
+            "texto": "1. Cuotas de militantes (mínimo 80% ingresos). 2. Donaciones de personas naturales (trazables, límite 50 SMMLV/año). 3. Rendimientos de cooperativas de datos y Ecoparques Tecnológicos (propiedad colectiva militancia). 4. Servicios de auditoría algorítmica a entidades públicas/privadas (brazo consultivo UTC). 5. Merchandising, eventos, certificaciones. PROHIBIDO: dinero de contratistas del Estado, multinacionales extractivas, gobiernos extranjeros, lavado de activos."
+          },
+          {
+            "numero": 13,
+            "titulo": "Transparencia radical",
+            "texto": "1. Libro de contabilidad en blockchain público (permissioned: militantes validadores). 2. Cada gasto > 1 SMMLV requiere aprobación algorítmica (costo-beneficio > 1.5) + firma digital 2/3 Consejo. 3. Auditoría trimestral por firma externa + auditoría continua por IA UTC. 4. Publicación mensual de KPIs financieros: costo por militante, ROI formación, eficiencia gasto campaña, reserva de valor. 5. Cualquier militante puede solicitar auditoría forense de cualquier período (costo a cargo del solicitante si no halla irregularidades)."
+          }
+        ]
+      },
+      {
+        "numero": "V",
+        "titulo": "POLÍTICA DE ALIANZAS Y FRentes",
+        "articulos": [
+          {
+            "numero": 14,
+            "titulo": "Alianzas tácticas",
+            "texto": "La UTC puede firmar acuerdos programáticos con cualquier fuerza política que acepte: (a) auditoría algorítmica de su gestión, (b) transparencia blockchain de financiación, (c) métricas de cumplimiento público, (d) cláusula de ruptura automática si incumple. No hay alianzas estratégicas permanentes: solo convergencias puntuales en proyectos medibles."
+          },
+          {
+            "numero": 15,
+            "titulo": "Frente Amplio Tecnocrático",
+            "texto": "La UTC impulsa la creación de un Frente Amplio Tecnocrático Latinoamericano: partidos/alianzas en cada país con estatutos mirror, plataforma tecnológica compartida, mercado común de datos y energía, moneda digital respaldada por biodiversidad. Objetivo 2035: Federación Tecnocrática del Sur."
+          }
+        ]
+      },
+      {
+        "numero": "VI",
+        "titulo": "DISPOSICIONES FINALES",
+        "articulos": [
+          {
+            "numero": 16,
+            "titulo": "Reforma de estatutos",
+            "texto": "Solo por Congreso Tecnocrático Nacional, mayoría 2/3 ponderado, con quórum 50%+1 de delegados acreditados. Propuesta requiere firma de 10% militantes activos o 1/3 Consejo de Arquitectos."
+          },
+          {
+            "numero": 17,
+            "titulo": "Disolución",
+            "texto": "Solo por Congreso con 3/4 ponderado. Patrimonio líquido se destina a: 40% fundaciones de longevidad/biotecnología abierta, 30% conservación Amazonía/Chocó, 20% becas transhumanistas para juventud vulnerable, 10% archivo digital UTC perpetuo."
+          },
+          {
+            "numero": 18,
+            "titulo": "Vigencia",
+            "texto": "Estatutos entran en vigencia tras aprobación en Congreso Fundacional y registro ante CNE. Derogan cualquier versión anterior. Versión actual: 1.0 (Genesis Block)."
+          }
+        ]
+      }
+    ]
+  }
+}

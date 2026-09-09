@@ -1,0 +1,180 @@
+# Build and Deploy to GitHub Pages
+# Unión Tecnocrática Colombiana - CI/CD Pipeline
+
+name: Build and Deploy UTC
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Lint y validación en PRs
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint HTML
+        run: npm run lint:html
+
+      - name: Lint CSS
+        run: npm run lint:css
+
+      - name: Validate HTML structure
+        run: |
+          # Verificar que todas las páginas tienen estructura básica
+          for page in public/*/index.html public/index.html; do
+            if [ -f "$page" ]; then
+              echo "Validando $page..."
+              # Verificar doctype
+              if ! head -1 "$page" | grep -q "<!DOCTYPE html>"; then
+                echo "ERROR: $page no tiene doctype HTML5"
+                exit 1
+              fi
+              # Verificar meta viewport
+              if ! grep -q 'viewport' "$page"; then
+                echo "WARNING: $page sin meta viewport"
+              fi
+              # Verificar título
+              if ! grep -q '<title>' "$page"; then
+                echo "ERROR: $page sin title"
+                exit 1
+              fi
+            fi
+          done
+          echo "Validación HTML exitosa"
+
+  # Test de accesibilidad básica
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check accessibility basics
+        run: |
+          # Verificar contraste, alt texts, landmarks, etc.
+          echo "Verificando accesibilidad básica..."
+          for page in dist/*/index.html dist/index.html; do
+            if [ -f "$page" ]; then
+              echo "Comprobando $page..."
+              # Alt en imágenes
+              if grep -q '<img' "$page"; then
+                if grep -q '<img[^>]*alt=' "$page"; then
+                  echo "  ✓ Imágenes con alt"
+                else
+                  echo "  ⚠ Imágenes sin alt detectadas"
+                fi
+              fi
+              # Landmarks ARIA
+              if grep -q 'role=' "$page"; then
+                echo "  ✓ Roles ARIA presentes"
+              fi
+              # Skip links
+              if grep -q 'Saltar al contenido' "$page" || grep -q 'skip to main' "$page"; then
+                echo "  ✓ Skip link presente"
+              fi
+              # Form labels
+              if grep -q '<input' "$page" && ! grep -q '<label' "$page"; then
+                echo "  ⚠ Inputs sin label asociado"
+              fi
+            fi
+          done
+          echo "Verificación a11y completada"
+
+  # Verificar enlaces rotos (solo en main)
+  link-check:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check internal links
+        run: |
+          echo "Verificando enlaces internos..."
+          # Usar lychee para verificar enlaces
+          npx lychee --verbose --max-concurrency 10 --exclude-mail --exclude-pattern "linkedin.com|twitter.com|github.com|matrix.org" "dist/**/*.html" || true

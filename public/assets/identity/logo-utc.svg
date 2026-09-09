@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" aria-label="Logo Unión Tecnocrática Colombiana - Árbol de la Vida tecnocrático con colibrí mecánico">
+  <defs>
+    <!-- Gradientes principales -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#1A0B2E"/>
+      <stop offset="100%" stop-color="#0D0518"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B3AFF"/>
+      <stop offset="100%" stop-color="#6B2ACC"/>
+    </linearGradient>
+    <linearGradient id="gaiaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D47A"/>
+      <stop offset="100%" stop-color="#00A860"/>
+    </linearGradient>
+    <linearGradient id="techGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#00C0CC"/>
+    </linearGradient>
+    <radialGradient id="glowAccent" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(139,58,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(139,58,255,0)"/>
+    </radialGradient>
+    <radialGradient id="glowGaia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0,212,122,0.3)"/>
+      <stop offset="100%" stop-color="rgba(0,212,122,0)"/>
+    </radialGradient>
+
+    <!-- Filtros de brillo -->
+    <filter id="bloomAccent" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bloomGaia" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Patrones de circuito -->
+    <pattern id="circuitPattern" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M0 16 L32 16 M16 0 L16 32" stroke="url(#accentGrad)" stroke-width="0.5" opacity="0.3"/>
+      <circle cx="16" cy="16" r="3" fill="url(#accentGrad)" opacity="0.5"/>
+    </pattern>
+    <pattern id="organicPattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M12 0 Q12 12 0 12 M12 24 Q12 12 24 12 M0 12 Q12 12 12 24 M24 12 Q12 12 12 0" stroke="url(#gaiaGrad)" stroke-width="0.4" opacity="0.2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo con gradiente y patrones -->
+  <rect width="512" height="512" fill="url(#bgGrad)"/>
+  <rect width="512" height="512" fill="url(#circuitPattern)" opacity="0.15"/>
+  <rect width="512" height="512" fill="url(#organicPattern)" opacity="0.1"/>
+
+  <!-- Brillo central radial -->
+  <ellipse cx="256" cy="256" rx="200" ry="150" fill="url(#glowAccent)" opacity="0.3"/>
+  <ellipse cx="256" cy="380" rx="180" ry="80" fill="url(#glowGaia)" opacity="0.2"/>
+
+  <!-- RAÍCES (Naturaleza/Gaia) - Espiral de Fibonacci inversa -->
+  <g id="raices" filter="url(#bloomGaia)">
+    <path d="M256 380 Q180 420 120 460 Q60 480 20 470" stroke="url(#gaiaGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M256 380 Q330 420 390 460 Q450 480 490 470" stroke="url(#gaiaGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M256 380 Q200 430 140 490" stroke="url(#gaiaGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M256 380 Q310 430 370 490" stroke="url(#gaiaGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M256 380 Q230 440 190 500" stroke="url(#gaiaGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+    <path d="M256 380 Q280 440 320 500" stroke="url(#gaiaGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Nódulos radiculares (puntos de conexión) -->
+    <g fill="url(#gaiaGrad)">
+      <circle cx="120" cy="460" r="6" opacity="0.9"/>
+      <circle cx="390" cy="460" r="6" opacity="0.9"/>
+      <circle cx="140" cy="490" r="4" opacity="0.7"/>
+      <circle cx="370" cy="490" r="4" opacity="0.7"/>
+      <circle cx="190" cy="500" r="3" opacity="0.5"/>
+      <circle cx="320" cy="500" r="3" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- TRONCO (Constitución/Ley) - Proporción áurea -->
+  <g id="tronco">
+    <path d="M226 380 Q210 300 236 200 Q250 150 276 200 Q300 300 286 380" fill="url(#accentGrad)" opacity="0.9"/>
+    <path d="M236 200 Q245 170 256 140 Q267 170 276 200" fill="#8B3AFF" opacity="0.7"/>
+
+    <!-- Circuitos en el tronco (ley codificada) -->
+    <g stroke="rgba(0,0,0,0.3)" stroke-width="1.5" fill="none">
+      <path d="M236 350 Q246 330 256 310 Q266 330 276 350"/>
+      <path d="M236 300 Q248 280 256 260 Q264 280 276 300"/>
+      <path d="M236 250 Q250 230 256 210 Q262 230 276 250"/>
+    </g>
+
+    <!-- Texto constitucional en binario sutil -->
+    <text x="256" y="290" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.15)" letter-spacing="1">LEX • ORDO • RATIO</text>
+  </g>
+
+  <!-- COPAS / RAMAS (IA/Tecnología) - Red neuronal expandida -->
+  <g id="copas" filter="url(#bloomAccent)">
+    <!-- Rama principal izquierda (recursiva) -->
+    <path d="M236 200 Q160 160 100 140 Q50 120 30 150" stroke="url(#techGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M100 140 Q60 100 40 70" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M100 140 Q120 100 140 80" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M60 100 Q40 60 30 40" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M60 100 Q80 60 100 50" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M120 100 Q100 60 80 40" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M120 100 Q140 60 160 50" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Rama principal derecha -->
+    <path d="M276 200 Q350 160 410 140 Q460 120 480 150" stroke="url(#techGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M410 140 Q450 100 470 70" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M410 140 Q390 100 370 80" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M450 100 Q470 60 480 40" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M450 100 Q430 60 410 50" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M390 100 Q410 60 430 40" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M390 100 Q370 60 350 50" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Rama central ascendente (AGI) -->
+    <path d="M256 200 Q256 100 256 50" stroke="url(#accentGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="1">
+      <animate attributeName="stroke-width" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M246 100 Q230 60 220 40" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M266 100 Q280 60 290 40" stroke="url(#techGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M240 60 Q220 30 210 20" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M270 60 Q290 30 300 20" stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Nodos neuronales (puntos de conexión IA) -->
+    <g fill="url(#techGrad)">
+      <circle cx="100" cy="140" r="7" opacity="0.9"><animate attributeName="r" values="7;9;7" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="410" cy="140" r="7" opacity="0.9"><animate attributeName="r" values="7;9;7" dur="2s" repeatCount="indefinite" begin="0.5s"/></circle>
+      <circle cx="256" cy="50" r="10" fill="url(#accentGrad)" opacity="1"><animate attributeName="r" values="10;13;10" dur="2.5s" repeatCount="indefinite"/></circle>
+      <circle cx="60" cy="100" r="5" opacity="0.7"/>
+      <circle cx="140" cy="100" r="5" opacity="0.7"/>
+      <circle cx="370" cy="100" r="5" opacity="0.7"/>
+      <circle cx="450" cy="100" r="5" opacity="0.7"/>
+      <circle cx="230" cy="60" r="4" opacity="0.6"/>
+      <circle cx="280" cy="60" r="4" opacity="0.6"/>
+      <circle cx="220" cy="30" r="3" opacity="0.5"/>
+      <circle cx="290" cy="30" r="3" opacity="0.5"/>
+    </g>
+
+    <!-- Partículas de datos flotando -->
+    <g fill="url(#techGrad)" opacity="0.6">
+      <circle cx="80" cy="180" r="2"><animate attributeName="cy" values="180;170;180" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="180" cy="120" r="1.5"><animate attributeName="cy" values="120;110;120" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="330" cy="180" r="2"><animate attributeName="cy" values="180;170;180" dur="4s" repeatCount="indefinite" begin="1s"/></circle>
+      <circle cx="430" cy="120" r="1.5"><animate attributeName="cy" values="120;110;120" dur="3s" repeatCount="indefinite" begin="1.5s"/></circle>
+      <circle cx="256" cy="150" r="2.5"><animate attributeName="cy" values="150;140;150" dur="3.5s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- COLIBRÍ MECÁNICO (Mascota - Colombia) -->
+  <g id="colibri" transform="translate(256, 120)" filter="url(#bloomAccent)">
+    <!-- Cuerpo principal -->
+    <ellipse cx="0" cy="0" rx="18" ry="12" fill="url(#accentGrad)" opacity="0.95"/>
+    <ellipse cx="0" cy="0" rx="15" ry="9" fill="url(#techGrad)" opacity="0.7"/>
+
+    <!-- Ala (geométrica, angular) -->
+    <path d="M-18 -2 Q-40 -20 -50 0 Q-40 20 -18 2" fill="url(#techGrad)" opacity="0.8" stroke="url(#accentGrad)" stroke-width="0.5">
+      <animate attributeName="d" values="M-18 -2 Q-40 -20 -50 0 Q-40 20 -18 2; M-18 -2 Q-45 -25 -55 0 Q-45 25 -18 2; M-18 -2 Q-40 -20 -50 0 Q-40 20 -18 2" dur="0.3s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Plumas/aletas mecánicas en el ala -->
+    <g stroke="url(#accentGrad)" stroke-width="1" fill="none" opacity="0.7">
+      <path d="M-25 -5 Q-35 -15 -40 -5"/>
+      <path d="M-25 0 Q-38 -10 -45 0"/>
+      <path d="M-25 5 Q-35 15 -40 5"/>
+    </g>
+
+    <!-- Cabeza y pico -->
+    <ellipse cx="15" cy="-5" rx="10" ry="8" fill="url(#accentGrad)" opacity="0.95"/>
+    <path d="M25 -5 Q35 -8 42 -5 Q35 -2 25 -5" fill="url(#techGrad)" opacity="0.9"/>
+    <path d="M25 -7 Q32 -10 38 -7" stroke="url(#gaiaGrad)" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+    <!-- Ojo cámara (sensor) -->
+    <circle cx="18" cy="-7" r="4" fill="#000"/>
+    <circle cx="19" cy="-8" r="2" fill="#00F0FF">
+      <animate attributeName="r" values="2;3;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="19" cy="-8" r="1" fill="#FFF" opacity="0.8"/>
+
+    <!-- Patrones de circuito en el cuerpo -->
+    <g stroke="rgba(0,240,255,0.4)" stroke-width="0.5" fill="none">
+      <path d="M-10 -5 Q0 -10 10 -5"/>
+      <path d="M-10 0 Q0 -5 10 0"/>
+      <path d="M-10 5 Q0 10 10 5"/>
+      <path d="M-5 -8 L-5 8"/>
+      <path d="M0 -8 L0 8"/>
+      <path d="M5 -8 L5 8"/>
+    </g>
+
+    <!-- Cola -->
+    <path d="M-18 0 Q-25 5 -28 0 Q-25 -5 -18 0" fill="url(#accentGrad)" opacity="0.8"/>
+    <path d="M-22 0 Q-26 3 -27 0 Q-26 -3 -22 0" fill="url(#techGrad)" opacity="0.6"/>
+  </g>
+
+  <!-- ESTRELLAS CONSTITUCIONALES (3 vértices triángulo áureo) -->
+  <g id="estrellas" fill="url(#techGrad)">
+    <!-- Vértice 1: Fundadores (superior) -->
+    <polygon points="256,60 262,80 282,80 266,94 270,114 256,100 242,114 246,94 230,80 250,80" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Vértice 2: Pueblo (inferior izquierda) -->
+    <polygon points="120,340 124,352 136,352 126,360 128,372 120,364 112,372 114,360 104,352 116,352" opacity="0.7" fill="url(#gaiaGrad)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Vértice 3: IA (inferior derecha) -->
+    <polygon points="392,340 396,352 408,352 398,360 400,372 392,364 384,372 386,360 376,352 388,352" opacity="0.7" fill="url(#accentGrad)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- LÍNEA DE VIDA / GAIA (franja inferior) -->
+  <rect x="0" y="500" width="512" height="12" fill="url(#gaiaGrad)">
+    <animate attributeName="height" values="12;16;12" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- TEXTO UTC (opcional, para versión con texto) -->
+  <g id="texto-utc" opacity="0">
+    <text x="256" y="470" text-anchor="middle" font-family="Space Grotesk" font-size="24" font-weight="700" fill="url(#gradient-text-primary)" letter-spacing="0.15em">UNIÓN TECNOCRÁTICA COLOMBIANA</text>
+    <text x="256" y="495" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#8B3AFF" letter-spacing="0.3em">MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS</text>
+  </g>
+</svg>

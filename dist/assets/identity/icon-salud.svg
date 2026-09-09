@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B3AFF"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+  </defs>
+  <!-- SALUD: Caduceo tecnocrático -->
+  <path d="M12 2 L12 22" stroke="url(#iconGrad)"/>
+  <path d="M5 8 L19 8" stroke="url(#iconGrad)"/>
+  <path d="M5 16 L19 16" stroke="url(#iconGrad)"/>
+  <ellipse cx="12" cy="5" rx="5" ry="3" stroke="url(#iconGrad)" fill="none"/>
+  <ellipse cx="12" cy="19" rx="5" ry="3" stroke="url(#iconGrad)" fill="none"/>
+  <circle cx="12" cy="12" r="3" fill="url(#iconGrad)" opacity="0.3"/>
+</svg>

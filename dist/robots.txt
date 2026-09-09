@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://utc.org.co/sitemap.xml
+
+# UTC - Unión Tecnocrática Colombiana
+# Partido político de extremo centro neutral
+# Tecnología como cura. Greenpunk. Fusión naturaleza-máquina.

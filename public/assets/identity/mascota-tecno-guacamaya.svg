@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" aria-label="Tecno-Guacamaya - Mascota oficial UTC: guacamaya cibernética, vigilancia tecnológica al servicio de la vida">
+  <defs>
+    <linearGradient id="macawBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B3AFF"/>
+      <stop offset="30%" stop-color="#A85FFF"/>
+      <stop offset="60%" stop-color="#00D47A"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+    <linearGradient id="macawFeather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#8B3AFF"/>
+      <stop offset="100%" stop-color="#00D47A"/>
+    </linearGradient>
+    <linearGradient id="macawEye" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#8B3AFF"/>
+    </linearGradient>
+    <radialGradient id="macawGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(139,58,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(139,58,255,0)"/>
+    </radialGradient>
+    <filter id="macawBloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="featherPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M8 0 Q8 8 0 8 M8 16 Q8 8 16 8" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="512" height="512" fill="none"/>
+
+  <!-- Brillo trasero -->
+  <ellipse cx="256" cy="280" rx="200" ry="180" fill="url(#macawGlow)" opacity="0.3"/>
+
+  <!-- CUERPO PRINCIPAL -->
+  <g id="body" filter="url(#macawBloom)">
+    <!-- Torso aerodinámico -->
+    <path d="M256 180 Q200 220 180 300 Q160 350 200 380 Q240 410 256 400 Q272 410 312 380 Q352 350 332 300 Q312 220 256 180" fill="url(#macawBody)" opacity="0.95"/>
+
+    <!-- Placas de armadura biomecánica en el pecho -->
+    <g fill="none" stroke="rgba(0,240,255,0.4)" stroke-width="1">
+      <path d="M220 240 Q256 260 292 240"/>
+      <path d="M215 270 Q256 290 297 270"/>
+      <path d="M210 300 Q256 320 302 300"/>
+      <path d="M205 330 Q256 350 307 330"/>
+    </g>
+
+    <!-- Circuito neural visible bajo la piel -->
+    <g stroke="rgba(0,240,255,0.3)" stroke-width="0.8" fill="none">
+      <path d="M256 200 Q256 250 256 300"/>
+      <path d="M220 240 Q256 260 292 240"/>
+      <path d="M215 270 Q256 290 297 270"/>
+      <path d="M230 300 Q256 320 282 300"/>
+    </g>
+  </g>
+
+  <!-- ALAS DESPLEGADAS (geométricas, angulares, iridiscentes) -->
+  <g id="wings" filter="url(#macawBloom)">
+    <!-- Ala izquierda -->
+    <path d="M180 300 Q100 250 40 280 Q-20 300 20 350 Q60 380 140 360 Q160 340 180 300" fill="url(#macawFeather)" opacity="0.9" stroke="rgba(255,255,255,0.2)" stroke-width="0.5">
+      <animate attributeName="d" values="M180 300 Q100 250 40 280 Q-20 300 20 350 Q60 380 140 360 Q160 340 180 300; M180 300 Q90 240 30 270 Q-30 290 10 340 Q50 370 130 350 Q150 330 180 300; M180 300 Q100 250 40 280 Q-20 300 20 350 Q60 380 140 360 Q160 340 180 300" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Plumas primarias izquierda (segmentadas, mecánicas) -->
+    <g fill="url(#macawFeather)" opacity="0.85">
+      <path d="M40 280 Q20 260 10 270 Q0 280 10 290 Q20 300 40 280"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite"/></path>
+      <path d="M60 285 Q40 265 30 275 Q20 285 30 295 Q40 305 60 285"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.1s"/></path>
+      <path d="M80 290 Q60 270 50 280 Q40 290 50 300 Q60 310 80 290"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.2s"/></path>
+      <path d="M100 295 Q80 275 70 285 Q60 295 70 305 Q80 315 100 295"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.3s"/></path>
+      <path d="M120 300 Q100 280 90 290 Q80 300 90 310 Q100 320 120 300"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.4s"/></path>
+      <path d="M140 305 Q120 285 110 295 Q100 305 110 315 Q120 325 140 305"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.5s"/></path>
+    </g>
+
+    <!-- Circuitos en el ala izquierda -->
+    <g stroke="rgba(0,240,255,0.5)" stroke-width="1" fill="none">
+      <path d="M180 300 Q100 250 40 280"/>
+      <path d="M180 300 Q120 280 80 290"/>
+      <path d="M140 305 Q100 285 80 290"/>
+      <path d="M100 295 Q80 275 70 285"/>
+      <path d="M60 285 Q40 265 30 275"/>
+    </g>
+
+    <!-- Ala derecha (espejo) -->
+    <path d="M332 300 Q412 250 472 280 Q532 300 492 350 Q452 380 372 360 Q352 340 332 300" fill="url(#macawFeather)" opacity="0.9" stroke="rgba(255,255,255,0.2)" stroke-width="0.5">
+      <animate attributeName="d" values="M332 300 Q412 250 472 280 Q532 300 492 350 Q452 380 372 360 Q352 340 332 300; M332 300 Q422 240 482 270 Q542 290 502 340 Q462 370 382 350 Q362 330 332 300; M332 300 Q412 250 472 280 Q532 300 492 350 Q452 380 372 360 Q352 340 332 300" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Plumas primarias derecha -->
+    <g fill="url(#macawFeather)" opacity="0.85">
+      <path d="M472 280 Q492 260 502 270 Q512 280 502 290 Q492 300 472 280"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite"/></path>
+      <path d="M452 285 Q472 265 482 275 Q492 285 482 295 Q472 305 452 285"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.1s"/></path>
+      <path d="M432 290 Q452 270 462 280 Q472 290 462 300 Q452 310 432 290"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.2s"/></path>
+      <path d="M412 295 Q432 275 442 285 Q452 295 442 305 Q432 315 412 295"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.3s"/></path>
+      <path d="M392 300 Q412 280 422 290 Q432 300 422 310 Q412 320 392 300"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.4s"/></path>
+      <path d="M372 305 Q392 285 402 295 Q412 305 402 315 Q392 325 372 305"><animate attributeName="opacity" values="0.85;0.6;0.85" dur="0.8s" repeatCount="indefinite" begin="0.5s"/></path>
+    </g>
+
+    <!-- Circuitos ala derecha -->
+    <g stroke="rgba(0,240,255,0.5)" stroke-width="1" fill="none">
+      <path d="M332 300 Q412 250 472 280"/>
+      <path d="M332 300 Q392 280 432 290"/>
+      <path d="M372 305 Q412 285 432 290"/>
+      <path d="M412 295 Q432 275 442 285"/>
+      <path d="M452 285 Q472 265 482 275"/>
+    </g>
+  </g>
+
+  <!-- CABEZA -->
+  <g id="head" transform="translate(256, 160)" filter="url(#macawBloom)">
+    <!-- Cráneo biomecánico -->
+    <ellipse cx="0" cy="0" rx="55" ry="45" fill="url(#macawBody)" opacity="0.95"/>
+    <ellipse cx="0" cy="0" rx="48" ry="38" fill="url(#macawFeather)" opacity="0.3"/>
+
+    <!-- Pico superior (nanotecnológico, adaptativo) -->
+    <path d="M0 -35 Q15 -45 35 -40 Q50 -35 55 -25 Q50 -15 35 -20 Q15 -15 0 -15" fill="url(#macawFeather)" opacity="0.95" stroke="rgba(255,255,255,0.3)" stroke-width="0.5">
+      <animate attributeName="d" values="M0 -35 Q15 -45 35 -40 Q50 -35 55 -25 Q50 -15 35 -20 Q15 -15 0 -15; M0 -35 Q15 -50 35 -45 Q50 -40 55 -28 Q50 -15 35 -20 Q15 -15 0 -15; M0 -35 Q15 -45 35 -40 Q50 -35 55 -25 Q50 -15 35 -20 Q15 -15 0 -15" dur="3s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Pico inferior -->
+    <path d="M0 -15 Q10 -20 25 -18 Q35 -15 35 -8 Q25 0 0 0 Q-25 0 -35 -8 Q-35 -15 -25 -18 Q-10 -20 0 -15" fill="#1A0B2E" opacity="0.9"/>
+
+    <!-- OJO CÁMARA (sensor multispectral) -->
+    <g transform="translate(-15, -10)">
+      <!-- Esclerótica biomecánica -->
+      <ellipse cx="0" cy="0" rx="18" ry="16" fill="#0D0518"/>
+      <ellipse cx="0" cy="0" rx="16" ry="14" fill="#000"/>
+
+      <!-- Iris: apertura de diafragma mecánico -->
+      <g id="iris">
+        <circle cx="0" cy="0" r="12" fill="url(#macawEye)" opacity="0.9"/>
+        <!-- Diafragma hexagonal -->
+        <polygon points="0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5" fill="none" stroke="#00F0FF" stroke-width="1.5" opacity="0.8">
+          <animate attributeName="points" values="0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5; 0,-8 7,-4 7,4 0,8 -7,4 -7,-4; 0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5" dur="2s" repeatCount="indefinite"/>
+        </polygon>
+        <!-- Pupila: sensor activo -->
+        <circle cx="0" cy="0" r="4" fill="#000">
+          <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Reflejo de datos -->
+        <circle cx="-3" cy="-3" r="1.5" fill="#00F0FF" opacity="0.8"/>
+        <circle cx="2" cy="2" r="1" fill="#8B3AFF" opacity="0.6"/>
+      </g>
+
+      <!-- Anillo de escaneo (liDAR visual) -->
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#00D47A" stroke-width="1" stroke-dasharray="4 4" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Ojo derecho (simétrico) -->
+    <g transform="translate(30, 0)">
+      <ellipse cx="0" cy="0" rx="18" ry="16" fill="#0D0518"/>
+      <ellipse cx="0" cy="0" rx="16" ry="14" fill="#000"/>
+      <g>
+        <circle cx="0" cy="0" r="12" fill="url(#macawEye)" opacity="0.9"/>
+        <polygon points="0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5" fill="none" stroke="#00F0FF" stroke-width="1.5" opacity="0.8">
+          <animate attributeName="points" values="0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5; 0,-8 7,-4 7,4 0,8 -7,4 -7,-4; 0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+        </polygon>
+        <circle cx="0" cy="0" r="4" fill="#000">
+          <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+        </circle>
+        <circle cx="-3" cy="-3" r="1.5" fill="#00F0FF" opacity="0.8"/>
+        <circle cx="2" cy="2" r="1" fill="#8B3AFF" opacity="0.6"/>
+      </g>
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#00D47A" stroke-width="1" stroke-dasharray="4 4" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Cresta/corona neural (antena 5G/cuántica) -->
+    <g fill="url(#macawFeather)" opacity="0.9">
+      <path d="M-30 -40 Q-35 -55 -30 -60 Q-25 -55 -20 -40">
+        <animate attributeName="d" values="M-30 -40 Q-35 -55 -30 -60 Q-25 -55 -20 -40; M-30 -40 Q-35 -58 -30 -63 Q-25 -58 -20 -40; M-30 -40 Q-35 -55 -30 -60 Q-25 -55 -20 -40" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M-10 -42 Q-15 -60 -10 -65 Q-5 -60 0 -42">
+        <animate attributeName="d" values="M-10 -42 Q-15 -60 -10 -65 Q-5 -60 0 -42; M-10 -42 Q-15 -63 -10 -68 Q-5 -63 0 -42; M-10 -42 Q-15 -60 -10 -65 Q-5 -60 0 -42" dur="2.5s" repeatCount="indefinite" begin="0.3s"/>
+      </path>
+      <path d="M10 -40 Q5 -55 10 -60 Q15 -55 20 -40">
+        <animate attributeName="d" values="M10 -40 Q5 -55 10 -60 Q15 -55 20 -40; M10 -40 Q5 -58 10 -63 Q15 -58 20 -40; M10 -40 Q5 -55 10 -60 Q15 -55 20 -40" dur="2.5s" repeatCount="indefinite" begin="0.6s"/>
+      </path>
+      <path d="M30 -38 Q25 -52 30 -57 Q35 -52 40 -38">
+        <animate attributeName="d" values="M30 -38 Q25 -52 30 -57 Q35 -52 40 -38; M30 -38 Q25 -55 30 -60 Q35 -55 40 -38; M30 -38 Q25 -52 30 -57 Q35 -52 40 -38" dur="2.5s" repeatCount="indefinite" begin="0.9s"/>
+      </path>
+    </g>
+
+    <!-- Circuitos faciales (patrón de reconocimiento) -->
+    <g stroke="rgba(0,240,255,0.2)" stroke-width="0.5" fill="none">
+      <path d="M-40 -20 Q0 -30 40 -20"/>
+      <path d="M-45 0 Q0 -10 45 0"/>
+      <path d="M-40 20 Q0 10 40 20"/>
+      <path d="M-55 -10 L-55 20"/>
+      <path d="M-20 -30 L-20 30"/>
+      <path d="M20 -30 L20 30"/>
+      <path d="M55 -10 L55 20"/>
+    </g>
+  </g>
+
+  <!-- COLA (abanico de plumas direccionales) -->
+  <g id="tail" filter="url(#macawBloom)">
+    <g fill="url(#macawFeather)" opacity="0.85">
+      <path d="M220 380 Q200 420 210 450 Q220 470 240 450 Q260 470 270 450 Q290 470 300 450 Q320 470 330 450 Q340 420 320 380">
+        <animate attributeName="d" values="M220 380 Q200 420 210 450 Q220 470 240 450 Q260 470 270 450 Q290 470 300 450 Q320 470 330 450 Q340 420 320 380; M220 380 Q190 410 200 440 Q210 460 230 440 Q250 460 270 440 Q290 460 310 440 Q320 460 330 440 Q340 410 320 380; M220 380 Q200 420 210 450 Q220 470 240 450 Q260 470 270 450 Q290 470 300 450 Q320 470 330 450 Q340 420 320 380" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Plumas de cola individuales (control de vuelo vectorial) -->
+    <g stroke="url(#macawFeather)" stroke-width="2" fill="none" opacity="0.7">
+      <path d="M256 380 Q240 420 240 460"><animate attributeName="stroke-dashoffset" values="0;-50;0" dur="2s" repeatCount="indefinite"/></path>
+      <path d="M256 380 Q230 420 220 450"><animate attributeName="stroke-dashoffset" values="0;-50;0" dur="2s" repeatCount="indefinite" begin="0.2s"/></path>
+      <path d="M256 380 Q270 420 270 460"><animate attributeName="stroke-dashoffset" values="0;-50;0" dur="2s" repeatCount="indefinite" begin="0.4s"/></path>
+      <path d="M256 380 Q280 420 290 450"><animate attributeName="stroke-dashoffset" values="0;-50;0" dur="2s" repeatCount="indefinite" begin="0.6s"/></path>
+    </g>
+  </g>
+
+  <!-- GARRAS NANOTECNOLÓGICAS (retráctiles) -->
+  <g id="talons" filter="url(#macawBloom)">
+    <g transform="translate(200, 400)" fill="url(#macawFeather)" opacity="0.9">
+      <path d="M0 0 L-5 20 L-3 22 L2 20 Z"><animate attributeName="d" values="M0 0 L-5 20 L-3 22 L2 20 Z; M0 0 L-8 30 L-5 33 L2 25 Z; M0 0 L-5 20 L-3 22 L2 20 Z" dur="2s" repeatCount="indefinite"/></path>
+      <path d="M0 0 L5 20 L3 22 L-2 20 Z"><animate attributeName="d" values="M0 0 L5 20 L3 22 L-2 20 Z; M0 0 L8 30 L5 33 L-2 25 Z; M0 0 L5 20 L3 22 L-2 20 Z" dur="2s" repeatCount="indefinite" begin="0.5s"/></path>
+    </g>
+    <g transform="translate(312, 400)" fill="url(#macawFeather)" opacity="0.9">
+      <path d="M0 0 L-5 20 L-3 22 L2 20 Z"><animate attributeName="d" values="M0 0 L-5 20 L-3 22 L2 20 Z; M0 0 L-8 30 L-5 33 L2 25 Z; M0 0 L-5 20 L-3 22 L2 20 Z" dur="2s" repeatCount="indefinite" begin="1s"/></path>
+      <path d="M0 0 L5 20 L3 22 L-2 20 Z"><animate attributeName="d" values="M0 0 L5 20 L3 22 L-2 20 Z; M0 0 L8 30 L5 33 L-2 25 Z; M0 0 L5 20 L3 22 L-2 20 Z" dur="2s" repeatCount="indefinite" begin="1.5s"/></path>
+    </g>
+  </g>
+
+  <!-- PARTÍCULAS DE DATOS AMBIENTALES -->
+  <g fill="#00F0FF" opacity="0.5">
+    <circle cx="100" cy="200" r="2"><animate attributeName="cy" values="200;190;200" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="200" r="2"><animate attributeName="cy" values="200;190;200" dur="5s" repeatCount="indefinite" begin="1s"/></circle>
+    <circle cx="80" cy="400" r="1.5"><animate attributeName="cy" values="400;390;400" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="400" r="1.5"><animate attributeName="cy" values="400;390;400" dur="4s" repeatCount="indefinite" begin="1.5s"/></circle>
+    <circle cx="256" cy="100" r="2.5"><animate attributeName="cy" values="100;90;100" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="256" cy="480" r="2"><animate attributeName="cy" values="480;470;480" dur="5s" repeatCount="indefinite" begin="2s"/></circle>
+  </g>
+
+  <!-- TEXTO IDENTIFICATIVO (opcional) -->
+  <g id="label" opacity="0" transform="translate(256, 480)">
+    <text text-anchor="middle" font-family="Space Grotesk" font-size="18" font-weight="700" fill="url(#macawBody)" letter-spacing="0.1em">TECNO-GUACAMAYA</text>
+    <text text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#00F0FF" letter-spacing="0.2em" y="20">VIGILANCIA • LIBERTAD • TECNOLOGÍA PARA LA VIDA</text>
+  </g>
+</svg>

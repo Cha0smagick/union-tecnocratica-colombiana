@@ -1,0 +1,14 @@
+# Redirects for UTC
+# Single Page App fallback (si se usa SPA)
+# /* /index.html 200
+
+# Legacy URLs
+/manifiesto /manifiesto/ 301
+/fundadores /fundadores/ 301
+/vision-mision /vision-mision/ 301
+/objetivos /objetivos/ 301
+/cronograma /cronograma/ 301
+/estatutos /estatutos/ 301
+/calculadoras /calculadoras/ 301
+/newsletter /newsletter/ 301
+/inscripcion /inscripcion/ 301

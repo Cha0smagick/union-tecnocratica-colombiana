@@ -1,0 +1,52 @@
+{
+  "name": "Unión Tecnocrática Colombiana",
+  "short_name": "UTC",
+  "description": "Partido político de extremo centro neutral. Tecnología como cura. Greenpunk. Fusión naturaleza-máquina.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#1A0B2E",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/identity/logo-utc.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/identity/logo-utc.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["government", "politics", "education"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Manifiesto",
+      "short_name": "Manifiesto",
+      "description": "Leer el manifiesto fundacional",
+      "url": "/manifiesto/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Calculadora",
+      "short_name": "Calculadora",
+      "description": "Simuladores tecnocráticos",
+      "url": "/calculadoras/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Inscripción",
+      "short_name": "Inscripción",
+      "description": "Convertirte en militante activo",
+      "url": "/inscripcion/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

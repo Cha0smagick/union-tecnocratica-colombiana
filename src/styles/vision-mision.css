@@ -1,0 +1,291 @@
+/* ==========================================================================
+   UNIÓN TECNOCRÁTICA COLOMBIANA — VISION-MISION.CSS
+   Estilos para la página de visión y misión
+   ========================================================================== */
+
+@import url('tokens.css');
+@import url('global.css');
+@import url('components.css');
+
+/* === VM SECTION === */
+.vm-section { padding: var(--space-8) 0 var(--space-16); }
+
+/* === VM CARD MAIN === */
+.vm-card-main {
+  margin-bottom: var(--space-12);
+}
+
+.vm-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.vm-card-icon {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  background: var(--color-background);
+  border: var(--border-width-thin) solid var(--color-border);
+}
+
+.vm-card-icon svg { width: 100%; height: 100%; }
+
+.vm-card-header-text { flex: 1; }
+
+.vm-card-badge { margin-bottom: var(--space-3); }
+
+.vm-card-title {
+  font-size: var(--font-size-fluid-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+}
+
+.vm-card-content { max-width: none; }
+
+.vm-manifesto {
+  font-size: var(--font-size-fluid-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  border-left: var(--border-width-medium) solid var(--color-accent);
+  padding: var(--space-6) var(--space-8);
+  margin: 0 0 var(--space-10) var(--space-4);
+  background: var(--gradient-card);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  font-style: italic;
+  position: relative;
+}
+
+.mision-main .vm-manifesto { border-color: var(--color-gaia); }
+
+.vm-manifesto::before {
+  content: '"';
+  position: absolute;
+  top: -1.5rem;
+  left: var(--space-6);
+  font-family: var(--font-display);
+  font-size: 6rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-accent);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.mision-main .vm-manifesto::before { color: var(--color-gaia); }
+
+/* === VISION PILLARS === */
+.vision-pillars { display: grid; grid-template-columns: 1fr; gap: var(--space-5); margin-top: var(--space-8); }
+
+@media (min-width: 768px) { .vision-pillars { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .vision-pillars { grid-template-columns: repeat(3, 1fr); } }
+
+.vision-pillar {
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  transition: all var(--transition-normal);
+}
+
+.vision-pillar:hover { border-color: var(--color-border-light); box-shadow: var(--shadow-md), var(--glow-accent-sm); transform: translateY(-2px); }
+
+.pillar-marker {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--gradient-accent);
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-inverse);
+}
+
+.pillar-content { flex: 1; }
+
+.pillar-content h3 {
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.pillar-content p { font-size: var(--font-size-fluid-sm); line-height: var(--line-height-relaxed); color: var(--color-text-secondary); }
+
+/* === MISION AREAS === */
+.mision-areas { display: grid; grid-template-columns: 1fr; gap: var(--space-5); margin-top: var(--space-8); }
+
+@media (min-width: 768px) { .mision-areas { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .mision-areas { grid-template-columns: repeat(3, 1fr); } }
+
+.mision-area {
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  transition: all var(--transition-normal);
+  border-left: var(--border-width-medium) solid var(--color-gaia);
+}
+
+.mision-area:hover { border-color: var(--color-border-light); box-shadow: var(--shadow-md), var(--glow-gaia-sm); transform: translateY(-2px); }
+
+.area-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: rgba(0, 212, 122, 0.1);
+  color: var(--color-gaia);
+  margin-top: 2px;
+}
+
+.area-icon svg { width: 1.5rem; height: 1.5rem; }
+
+.area-content { flex: 1; }
+
+.area-content h3 {
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.area-content p { font-size: var(--font-size-fluid-sm); line-height: var(--line-height-relaxed); color: var(--color-text-secondary); margin-bottom: var(--space-3); }
+
+.area-kpi {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-fluid-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gaia);
+  background: rgba(0, 212, 122, 0.1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  border: var(--border-width-hairline) solid var(--color-gaia);
+}
+
+/* === MISION PRINCIPIOS === */
+.mison-principios { margin-top: var(--space-10); padding-top: var(--space-8); border-top: var(--border-width-hairline) solid var(--color-border); }
+
+.mison-principios h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.principios-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+
+.principios-list li {
+  padding: var(--space-4);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-fluid-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.principios-list li:hover { border-color: var(--color-border-light); transform: translateX(4px); }
+
+.principios-list strong { color: var(--color-accent); }
+
+/* === SINTESIS === */
+.vm-sintesis { margin-top: var(--space-16); padding-top: var(--space-12); border-top: var(--border-width-medium) solid var(--color-accent); }
+
+.sintesis-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) { .sintesis-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .sintesis-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.sintesis-card {
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.sintesis-card.full-width { grid-column: 1 / -1; }
+
+.sintesis-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+.ecuacion { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); font-size: var(--font-size-fluid-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-4); }
+
+.ecuacion-term { white-space: nowrap; }
+.ecuacion-op { color: var(--color-text-muted); font-weight: var(--font-weight-normal); }
+
+.contrato-items { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.contrato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-fluid-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.contrato-num {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--gradient-gaia);
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .vm-card-header { flex-direction: column; text-align: center; }
+  .vm-card-icon { width: 4rem; height: 4rem; margin: 0 auto; }
+  .vm-manifesto { font-size: var(--font-size-fluid-lg); padding: var(--space-4) var(--space-5); }
+  .vm-manifesto::before { font-size: 4rem; top: -1rem; left: 50%; transform: translateX(-50%); }
+  .vision-pillars, .mision-areas { grid-template-columns: 1fr; }
+  .sintesis-grid { grid-template-columns: 1fr; }
+}

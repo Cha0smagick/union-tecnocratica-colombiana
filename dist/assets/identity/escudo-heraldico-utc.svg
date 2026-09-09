@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" width="512" height="640" aria-label="Escudo heráldico tecnocrático UTC - Cuartelado: Árbol de circuitos, Balanza cuántica, Doble hélice+chip, Sol de Mayo circuitos">
+  <defs>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0518"/>
+      <stop offset="50%" stop-color="#1A0B2E"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#FFA500"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#808080"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B3AFF"/>
+      <stop offset="100%" stop-color="#6B2ACC"/>
+    </linearGradient>
+    <linearGradient id="gaiaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D47A"/>
+      <stop offset="100%" stop-color="#00A860"/>
+    </linearGradient>
+    <linearGradient id="techGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#00C0CC"/>
+    </linearGradient>
+    <radialGradient id="shieldGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(139,58,255,0.2)"/>
+      <stop offset="100%" stop-color="rgba(139,58,255,0)"/>
+    </radialGradient>
+    <filter id="shieldBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="emboss" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.8" specularExponent="20" lighting-color="white" result="specOut">
+        <fePointLight x="256" y="-100" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+    <pattern id="heraldicGrid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M0 16 L16 0 M16 16 L16 16" stroke="rgba(139,58,255,0.05)" stroke-width="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Forma del escudo (español/ibérico: punta redondeada) -->
+  <path id="shieldShape" d="M256 0 L500 0 L500 500 Q500 580 256 640 Q12 580 12 500 L12 0 Z" fill="url(#shieldBg)" stroke="url(#goldGrad)" stroke-width="4" filter="url(#shieldBloom)"/>
+
+  <!-- Campo del escudo con grid heráldico -->
+  <path d="M256 12 L488 12 L488 488 Q488 560 256 620 Q24 560 24 488 L24 12 Z" fill="url(#heraldicGrid)" filter="url(#emboss)"/>
+
+  <!-- DIVISIÓN CUARTelada (cruz de San Andrés + palo) -->
+  <path d="M256 12 L256 488" stroke="url(#goldGrad)" stroke-width="2" fill="none"/>
+  <path d="M24 250 L488 250" stroke="url(#goldGrad)" stroke-width="2" fill="none"/>
+
+  <!-- === CUARTEL 1 (Superior izquierdo): ÁRBOL DE CIRCUITOS (Yggdrasil tecnocrático) === -->
+  <g transform="translate(12, 12)" clip-path="url(#clipQ1)">
+    <defs>
+      <clipPath id="clipQ1"><path d="M0 0 L236 0 L236 238 Q236 274 128 304 Q20 274 20 238 Z"/></clipPath>
+    </defs>
+    <!-- Raíces -->
+    <path d="M128 238 Q80 270 40 290 Q10 300 0 295" stroke="url(#gaiaGrad)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M128 238 Q170 270 210 290 Q250 300 236 295" stroke="url(#gaiaGrad)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- Tronco -->
+    <path d="M108 238 Q100 180 128 120 Q156 180 148 238" fill="url(#accentGrad)" opacity="0.9"/>
+    <!-- Ramas/circuitos -->
+    <g stroke="url(#techGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M128 120 Q80 90 40 70"/>
+      <path d="M128 120 Q160 90 200 70"/>
+      <path d="M80 90 Q50 50 30 30"/>
+      <path d="M80 90 Q110 50 130 30"/>
+      <path d="M160 90 Q130 50 110 30"/>
+      <path d="M160 90 Q190 50 210 30"/>
+    </g>
+    <!-- Nodos -->
+    <g fill="url(#techGrad)">
+      <circle cx="128" cy="120" r="5" opacity="1"/>
+      <circle cx="40" cy="70" r="3" opacity="0.8"/>
+      <circle cx="200" cy="70" r="3" opacity="0.8"/>
+      <circle cx="30" cy="30" r="2" opacity="0.6"/>
+      <circle cx="130" cy="30" r="2" opacity="0.6"/>
+      <circle cx="110" cy="30" r="2" opacity="0.6"/>
+      <circle cx="210" cy="30" r="2" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- === CUARTEL 2 (Superior derecho): BALANZA CUÁNTICA (Justicia híbrida) === -->
+  <g transform="translate(268, 12)" clip-path="url(#clipQ2)">
+    <defs>
+      <clipPath id="clipQ2"><path d="M0 0 L236 0 L236 238 Q236 274 128 304 Q20 274 20 238 Z" transform="translate(-256, 0)"/></clipPath>
+    </defs>
+    <!-- Viga de la balanza (entrelazada humano-IA) -->
+    <path d="M40 80 L208 80" stroke="url(#goldGrad)" stroke-width="4" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-dasharray" values="0,400; 200,200; 400,0; 200,200; 0,400" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M40 80 L208 80" stroke="url(#techGrad)" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="10 10">
+      <animate attributeName="stroke-dashoffset" values="0;-20;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Pivote central (núcleo cuántico) -->
+    <g transform="translate(124, 80)">
+      <circle cx="0" cy="0" r="10" fill="url(#accentGrad)">
+        <animate attributeName="r" values="10;13;10" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="6" fill="url(#techGrad)" opacity="0.7"/>
+      <!-- Qubit visual -->
+      <path d="M0 -8 L0 8" stroke="#FFF" stroke-width="2" stroke-linecap="round" opacity="0.8">
+        <animate attributeName="stroke-dasharray" values="0,16; 8,8; 16,0; 8,8; 0,16" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M-8 0 L8 0" stroke="#FFF" stroke-width="2" stroke-linecap="round" opacity="0.8">
+        <animate attributeName="stroke-dasharray" values="16,0; 8,8; 0,16; 8,8; 16,0" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Plato izquierdo (Humanidad) -->
+    <g transform="translate(40, 80)">
+      <path d="M0 0 Q-20 25 -15 45 Q-10 55 0 55 Q10 55 15 45 Q20 25 0 0" fill="url(#silverGrad)" opacity="0.9" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="0" cy="45" r="15" fill="rgba(0,212,122,0.2)"/>
+      <text x="0" y="50" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="700" fill="#00D47A">HUMANO</text>
+    </g>
+
+    <!-- Plato derecho (IA) -->
+    <g transform="translate(208, 80)">
+      <path d="M0 0 Q20 25 15 45 Q10 55 0 55 Q-10 55 -15 45 Q-20 25 0 0" fill="url(#techGrad)" opacity="0.9" stroke="rgba(0,240,255,0.5)" stroke-width="1"/>
+      <circle cx="0" cy="45" r="15" fill="rgba(139,58,255,0.2)"/>
+      <text x="0" y="50" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="700" fill="#8B3AFF">I.A.</text>
+    </g>
+
+    <!-- Cadenas de suspensión (blockchain) -->
+    <g stroke="url(#goldGrad)" stroke-width="1.5" fill="none">
+      <path d="M40 80 Q30 100 25 140"/>
+      <path d="M208 80 Q218 100 223 140"/>
+    </g>
+    <g transform="translate(40, 80)">
+      <circle cx="0" cy="0" r="3" fill="url(#goldGrad)"/><circle cx="0" cy="15" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="30" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="45" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="60" r="2.5" fill="url(#goldGrad)"/>
+    </g>
+    <g transform="translate(208, 80)">
+      <circle cx="0" cy="0" r="3" fill="url(#goldGrad)"/><circle cx="0" cy="15" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="30" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="45" r="2.5" fill="url(#goldGrad)"/><circle cx="0" cy="60" r="2.5" fill="url(#goldGrad)"/>
+    </g>
+  </g>
+
+  <!-- === CUARTEL 3 (Inferior izquierdo): DOBLE HÉLICE + CHIP (Vida extendida) === -->
+  <g transform="translate(12, 262)" clip-path="url(#clipQ3)">
+    <defs>
+      <clipPath id="clipQ3"><path d="M0 0 L236 0 L236 238 Q236 274 128 304 Q20 274 20 238 Z" transform="translate(-12, -250)"/></clipPath>
+    </defs>
+    <!-- Doble hélice ADN -->
+    <g stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M60 20 Q80 60 60 100 Q40 140 60 180 Q80 220 60 260" stroke="url(#gaiaGrad)" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" values="0;-100;0" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <path d="M176 20 Q156 60 176 100 Q196 140 176 180 Q156 220 176 260" stroke="url(#techGrad)" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" values="0;100;0" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- Pares de bases (conectando ambas hebras) -->
+    <g stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none">
+      <path d="M60 50 L176 50"/><path d="M60 90 L176 90"/><path d="M60 130 L176 130"/>
+      <path d="M60 170 L176 170"/><path d="M60 210 L176 210"/><path d="M60 250 L176 250"/>
+    </g>
+    <!-- Chip/nanobot en el centro -->
+    <g transform="translate(118, 140)">
+      <rect x="-25" y="-25" width="50" height="50" rx="4" fill="url(#accentGrad)" opacity="0.9"/>
+      <rect x="-15" y="-15" width="30" height="30" rx="2" fill="#000" opacity="0.7"/>
+      <g stroke="#00F0FF" stroke-width="1" fill="none">
+        <path d="M-10 -10 L-10 10 M10 -10 L10 10 M-10 -10 L10 -10 M-10 10 L10 10"/>
+        <circle cx="0" cy="0" r="5" fill="url(#techGrad)"/>
+      </g>
+    </g>
+    <!-- Partículas de reparación celular -->
+    <g fill="#00D47A" opacity="0.7">
+      <circle cx="118" cy="80" r="2"><animate attributeName="cy" values="80;70;80" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="118" cy="200" r="2"><animate attributeName="cy" values="200;190;200" dur="3s" repeatCount="indefinite" begin="1s"/></circle>
+      <circle cx="60" cy="140" r="1.5"><animate attributeName="cx" values="60;50;60" dur="2.5s" repeatCount="indefinite"/></circle>
+      <circle cx="176" cy="140" r="1.5"><animate attributeName="cx" values="176;186;176" dur="2.5s" repeatCount="indefinite" begin="0.5s"/></circle>
+    </g>
+  </g>
+
+  <!-- === CUARTEL 4 (Inferior derecho): SOL DE MAYO CIRCUITOS (Soberanía tecnológica) === -->
+  <g transform="translate(268, 262)" clip-path="url(#clipQ4)">
+    <defs>
+      <clipPath id="clipQ4"><path d="M0 0 L236 0 L236 238 Q236 274 128 304 Q20 274 20 238 Z" transform="translate(-256, -250)"/></clipPath>
+    </defs>
+    <!-- Sol central -->
+    <circle cx="124" cy="130" r="35" fill="url(#goldGrad)" opacity="0.9">
+      <animate attributeName="r" values="35;38;35" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="124" cy="130" r="25" fill="url(#accentGrad)" opacity="0.7"/>
+
+    <!-- Rostro del sol (interfaz neural) -->
+    <g transform="translate(124, 130)">
+      <ellipse cx="-10" cy="-5" rx="6" ry="4" fill="#000"/>
+      <ellipse cx="10" cy="-5" rx="6" ry="4" fill="#000"/>
+      <circle cx="-11" cy="-6" r="2" fill="#00F0FF"/>
+      <circle cx="9" cy="-6" r="2" fill="#00F0FF"/>
+      <path d="M-8 8 Q0 12 8 8" stroke="#00D47A" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Rayos solares = circuitos radiales (16 rayos = 16 departamentos + capital) -->
+    <g stroke="url(#goldGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M124 130 L124 30"/><path d="M124 130 L145 45"/><path d="M124 130 L170 75"/><path d="M124 130 L190 110"/>
+      <path d="M124 130 L210 130"/><path d="M124 130 L190 150"/><path d="M124 130 L170 185"/><path d="M124 130 L145 215"/>
+      <path d="M124 130 L124 240"/><path d="M124 130 L103 215"/><path d="M124 130 L78 185"/><path d="M124 130 L58 150"/>
+      <path d="M124 130 L38 130"/><path d="M124 130 L58 110"/><path d="M124 130 L78 75"/><path d="M124 130 L103 45"/>
+    </g>
+    <!-- Rayos secundarios (datos) -->
+    <g stroke="url(#techGrad)" stroke-width="1" fill="none" stroke-dasharray="4 4" opacity="0.6">
+      <path d="M124 130 L124 10"/><path d="M124 130 L160 40"/><path d="M124 130 L200 90"/><path d="M124 130 L220 130"/>
+      <path d="M124 130 L200 170"/><path d="M124 130 L160 220"/><path d="M124 130 L124 260"/><path d="M124 130 L88 220"/>
+      <path d="M124 130 L48 170"/><path d="M124 130 L28 130"/><path d="M124 130 L48 90"/><path d="M124 130 L88 40"/>
+    </g>
+    <g fill="url(#goldGrad)">
+      <circle cx="124" cy="30" r="4"/><circle cx="160" cy="45" r="3"/><circle cx="200" cy="90" r="3"/><circle cx="220" cy="130" r="3"/>
+      <circle cx="200" cy="170" r="3"/><circle cx="160" cy="215" r="3"/><circle cx="124" cy="240" r="3"/><circle cx="88" cy="215" r="3"/>
+      <circle cx="48" cy="170" r="3"/><circle cx="28" cy="130" r="3"/><circle cx="48" cy="90" r="3"/><circle cx="88" cy="45" r="3"/>
+    </g>
+  </g>
+
+  <!-- TIMBRE: CORONA MURAL 8 TORRES (8 regiones administrativas / municipios autónomos) -->
+  <g id="corona" transform="translate(256, -10)" filter="url(#shieldBloom)">
+    <g fill="url(#goldGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+      <!-- Torres (8) -->
+      <g transform="translate(-180, 0)"><rect x="-18" y="0" width="36" height="50" rx="2"/><rect x="-14" y="-8" width="28" height="12" rx="1"/><circle cx="0" cy="-2" r="3" fill="#8B3AFF"/></g>
+      <g transform="translate(-120, 0)"><rect x="-18" y="0" width="36" height="55" rx="2"/><rect x="-14" y="-10" width="28" height="14" rx="1"/><circle cx="0" cy="-3" r="3" fill="#00D47A"/></g>
+      <g transform="translate(-60, 0)"><rect x="-18" y="0" width="36" height="60" rx="2"/><rect x="-14" y="-12" width="28" height="16" rx="1"/><circle cx="0" cy="-4" r="4" fill="#00F0FF"/></g>
+      <g transform="translate(0, 0)"><rect x="-20" y="0" width="40" height="65" rx="2"/><rect x="-16" y="-14" width="32" height="18" rx="1"/><circle cx="0" cy="-5" r="5" fill="#FFF"/></g>
+      <g transform="translate(60, 0)"><rect x="-18" y="0" width="36" height="60" rx="2"/><rect x="-14" y="-12" width="28" height="16" rx="1"/><circle cx="0" cy="-4" r="4" fill="#00F0FF"/></g>
+      <g transform="translate(120, 0)"><rect x="-18" y="0" width="36" height="55" rx="2"/><rect x="-14" y="-10" width="28" height="14" rx="1"/><circle cx="0" cy="-3" r="3" fill="#00D47A"/></g>
+      <g transform="translate(180, 0)"><rect x="-18" y="0" width="36" height="50" rx="2"/><rect x="-14" y="-8" width="28" height="12" rx="1"/><circle cx="0" cy="-2" r="3" fill="#8B3AFF"/></g>
+      <!-- Torres intermedias (7 espacios = 7 torres menores) -->
+      <g transform="translate(-150, 0)"><rect x="-10" y="10" width="20" height="35" rx="1"/></g>
+      <g transform="translate(-90, 0)"><rect x="-10" y="5" width="20" height="40" rx="1"/></g>
+      <g transform="translate(-30, 0)"><rect x="-10" y="0" width="20" height="45" rx="1"/></g>
+      <g transform="translate(30, 0)"><rect x="-10" y="0" width="20" height="45" rx="1"/></g>
+      <g transform="translate(90, 0)"><rect x="-10" y="5" width="20" height="40" rx="1"/></g>
+      <g transform="translate(150, 0)"><rect x="-10" y="10" width="20" height="35" rx="1"/></g>
+    </g>
+  </g>
+
+  <!-- TENANTES: DOS TECNO-GUACAMAYAS (sostenientes) -->
+  <g id="tenantes" transform="translate(256, 320)" filter="url(#shieldBloom)">
+    <!-- Izquierda -->
+    <g transform="translate(-160, 0) scale(0.4)" fill="url(#macawBody)">
+      <path d="M0 0 Q-40 -20 -60 -10 Q-70 10 -60 30 Q-50 40 -20 40 Q0 50 0 30 Q0 10 0 0"/>
+      <ellipse cx="-20" cy="10" rx="12" ry="8" fill="url(#macawFeather)"/>
+      <path d="M-32 10 Q-40 5 -45 10 Q-40 15 -32 10" fill="url(#techGrad)"/>
+      <circle cx="-25" cy="8" r="3" fill="#000"/><circle cx="-24" cy="7" r="1" fill="#00F0FF"/>
+      <path d="M-20 20 L-30 35 L-25 38 L-15 23 Z" fill="#00F0FF"/>
+    </g>
+    <!-- Derecha (espejo) -->
+    <g transform="translate(160, 0) scale(-0.4, 0.4)" fill="url(#macawBody)">
+      <path d="M0 0 Q-40 -20 -60 -10 Q-70 10 -60 30 Q-50 40 -20 40 Q0 50 0 30 Q0 10 0 0"/>
+      <ellipse cx="-20" cy="10" rx="12" ry="8" fill="url(#macawFeather)"/>
+      <path d="M-32 10 Q-40 5 -45 10 Q-40 15 -32 10" fill="url(#techGrad)"/>
+      <circle cx="-25" cy="8" r="3" fill="#000"/><circle cx="-24" cy="7" r="1" fill="#00F0FF"/>
+      <path d="M-20 20 L-30 35 L-25 38 L-15 23 Z" fill="#00F0FF"/>
+    </g>
+  </g>
+
+  <!-- LEMA: CINTA BAJO EL ESCUDO -->
+  <g id="lema" transform="translate(256, 590)" filter="url(#shieldBloom)">
+    <path d="M-180 0 Q-200 -10 -180 -20 L180 -20 Q200 -10 180 0 L180 25 Q200 35 180 35 L-180 35 Q-200 35 -180 25 Z" fill="url(#goldGrad)" stroke="#FF8C00" stroke-width="1"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Space Grotesk" font-size="16" font-weight="800" fill="#0D0518" letter-spacing="0.1em">MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS</text>
+    <text x="0" y="26" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#1A0B2E" letter-spacing="0.15em">UNIÓN TECNOCRÁTICA COLOMBIANA</text>
+  </g>
+
+  <!-- ORDEN DE PRECEDENCIA (pequeño, en la base) -->
+  <text x="256" y="625" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="rgba(139,58,255,0.3)" letter-spacing="1">ORDEN: GAIA ⚖ HÉLICE ☀ | FUNDADORES ⚖ PUEBLO ⚖ I.A. | 8 REGIONES AUTÓNOMAS | UTC-2024</text>
+</svg>

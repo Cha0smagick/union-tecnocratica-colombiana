@@ -1,0 +1,346 @@
+/* ==========================================================================
+   UNIÓN TECNOCRÁTICA COLOMBIANA — CALCULADORAS.CSS
+   Estilos para la página de calculadoras tecnocráticas
+   ========================================================================== */
+
+@import url('tokens.css');
+@import url('global.css');
+@import url('components.css');
+
+/* === CALCULADORAS SECTION === */
+.calculadoras-section { padding: var(--space-8) 0 var(--space-16); }
+
+.calc-intro {
+  max-width: 800px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.calc-intro .lead { margin-bottom: var(--space-4); }
+.calc-intro code {
+  font-family: var(--font-mono);
+  background: var(--color-background);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-hairline) solid var(--color-border);
+  color: var(--color-tech);
+}
+.calc-intro p { max-width: none; text-align: center; }
+
+/* === CALCULADORAS GRID === */
+.calculadoras-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .calculadoras-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .calculadoras-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* === CALC CARD === */
+.calc-card {
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.calc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.calc-card:hover {
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-lg), var(--glow-accent-sm);
+  transform: translateY(-4px);
+}
+
+.calc-card:hover::before { transform: scaleX(1); }
+
+.calc-card.calc-placeholder {
+  opacity: 0.7;
+}
+
+.calc-card.calc-placeholder::before { background: var(--color-border); }
+
+.calc-card.calc-placeholder:hover { transform: none; box-shadow: none; }
+
+/* Variantes de color */
+.calc-card[data-calc="presupuesto"]::before { background: var(--gradient-accent); }
+.calc-card[data-calc="energia"]::before { background: var(--gradient-warning); }
+.calc-card[data-calc="territorio"]::before { background: var(--gradient-gaia); }
+.calc-card[data-calc="vivienda"]::before { background: var(--gradient-tech); }
+.calc-card[data-calc="seguridad-vial"]::before { background: linear-gradient(135deg, var(--color-error), var(--color-warning)); }
+.calc-card[data-calc="ciudades"]::before { background: var(--gradient-tech); }
+.calc-card[data-calc="automatizacion"]::before { background: var(--gradient-tech); }
+.calc-card[data-calc="agua"]::before { background: var(--gradient-gaia); }
+.calc-card[data-calc="residuos"]::before { background: var(--gradient-warning); }
+.calc-card[data-calc="biodiversidad"]::before { background: var(--gradient-gaia); }
+
+.calc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.calc-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-background-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  color: var(--color-accent);
+}
+
+.calc-card[data-calc="energia"] .calc-icon { color: var(--color-warning); }
+.calc-card[data-calc="territorio"] .calc-icon { color: var(--color-gaia); }
+.calc-card[data-calc="vivienda"] .calc-icon { color: var(--color-tech); }
+.calc-card[data-calc="seguridad-vial"] .calc-icon { color: var(--color-error); }
+.calc-card[data-calc="ciudades"] .calc-icon { color: var(--color-tech); }
+.calc-card[data-calc="automatizacion"] .calc-icon { color: var(--color-tech); }
+.calc-card[data-calc="agua"] .calc-icon { color: var(--color-gaia); }
+.calc-card[data-calc="residuos"] .calc-icon { color: var(--color-warning); }
+.calc-card[data-calc="biodiversidad"] .calc-icon { color: var(--color-gaia); }
+
+.calc-icon svg { width: 1.5rem; height: 1.5rem; }
+
+.calc-meta { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+.calc-title {
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.calc-desc {
+  font-size: var(--font-size-fluid-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+  flex: 1;
+}
+
+/* === PARAMS === */
+.calc-params {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.param-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.param-label {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.param-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-border);
+  outline: none;
+  cursor: pointer;
+}
+
+.param-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-accent);
+  cursor: pointer;
+  box-shadow: var(--glow-accent-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.param-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: var(--glow-accent-md);
+}
+
+.param-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--gradient-accent);
+  cursor: pointer;
+}
+
+.calc-card[data-calc="energia"] .param-slider::-webkit-slider-thumb { background: var(--gradient-warning); }
+.calc-card[data-calc="energia"] .param-slider::-moz-range-thumb { background: var(--gradient-warning); }
+.calc-card[data-calc="territorio"] .param-slider::-webkit-slider-thumb { background: var(--gradient-gaia); }
+.calc-card[data-calc="territorio"] .param-slider::-moz-range-thumb { background: var(--gradient-gaia); }
+.calc-card[data-calc="seguridad-vial"] .param-slider::-webkit-slider-thumb { background: linear-gradient(135deg, var(--color-error), var(--color-warning)); }
+.calc-card[data-calc="seguridad-vial"] .param-slider::-moz-range-thumb { background: linear-gradient(135deg, var(--color-error), var(--color-warning)); }
+
+.param-value {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-fluid-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  min-width: 3rem;
+  text-align: right;
+}
+
+.calc-card[data-calc="energia"] .param-value { color: var(--color-warning); }
+.calc-card[data-calc="territorio"] .param-value { color: var(--color-gaia); }
+.calc-card[data-calc="seguridad-vial"] .param-value { color: var(--color-error); }
+
+/* === RESULTS === */
+.calc-results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.result-label {
+  font-size: var(--font-size-fluid-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.result-value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+}
+
+/* === CALC BTN === */
+.calc-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.calc-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === CALC MODAL === */
+.calc-modal {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: var(--container-6xl);
+}
+
+.calc-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.calc-modal-section {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+.calc-modal-section:last-child { border-bottom: none; }
+
+.calc-modal-section h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+.calc-modal-params {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.calc-modal-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.calc-modal-chart {
+  height: 300px;
+  background: var(--color-background);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-fluid-sm);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .calc-results { grid-template-columns: 1fr; }
+  .calc-modal-params { grid-template-columns: 1fr; }
+  .calc-modal-results { grid-template-columns: 1fr; }
+  .calc-header { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+}

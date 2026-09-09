@@ -1,0 +1,67 @@
+{
+  "actaConstitucion": {
+    "titulo": "ACTA DE CONSTITUCIÓN DE LA UNIÓN TECNOCRÁTICA COLOMBIANA",
+    "lugar": "Bogotá D.C., República de Colombia",
+    "fecha": "2024-01-15",
+    "hora": "10:00",
+    "modalidad": "Híbrida: Presencial (Salón Constitución, Universidad de los Andes) + VR (Metaverso UTC Node-0) + Streaming público (IPFS)",
+    "fundadores": [
+      {
+        "nombre": "Alejandro Quintero Ruiz",
+        "documento": "CC 1.023.456.789",
+        "rol": "Fundador y Coordinador General",
+        "firma": "SHA3-256:a1b2c3d4e5f6... (blockchain UTC-Genesis-001)",
+        "wallet": "0x742d35Cc6634C0532925a3b8D4C0532925a3b8D4"
+      },
+      {
+        "nombre": "Fabian Sorza Cepeda",
+        "documento": "CC 1.098.765.432",
+        "rol": "Fundador y Director de Operaciones",
+        "firma": "SHA3-256:f6e5d4c3b2a1... (blockchain UTC-Genesis-002)",
+        "wallet": "0x853d35Cc6634C0532925a3b8D4C0532925a3b8E5"
+      }
+    ],
+    "testigos": [
+      {
+        "nombre": "María Alejandra Gutiérrez López",
+        "documento": "CC 1.111.222.333",
+        "rol": "Testigo - Ingeniera Biomédica",
+        "firma": "SHA3-256:9f8e7d6c5b4a... (blockchain UTC-Genesis-003)"
+      },
+      {
+        "nombre": "Carlos Andrés Vargas Herrera",
+        "documento": "CC 1.444.555.666",
+        "rol": "Testigo - Científico de Datos",
+        "firma": "SHA3-256:3a4b5c6d7e8f... (blockchain UTC-Genesis-004)"
+      }
+    ],
+    "notario": {
+      "nombre": "Dra. Patricia Moreno Silva",
+      "documento": "CC 1.777.888.999",
+      "rol": "Notaria Pública Virtual (Certificación Blockchain Notarial)",
+      "firma": "SHA3-256:n0t4r14l516n... (blockchain UTC-Genesis-NOTARY)"
+    },
+    "ordenDelDia": [
+      "1. Lectura y aprobación del Manifiesto Fundacional",
+      "2. Lectura y aprobación de los Estatutos (v1.0)",
+      "3. Lectura y aprobación del Reglamento Interno (v1.0)",
+      "4. Elección de órganos directivos provisionales",
+      "5. Aprobación de identidad visual y símbolos",
+      "6. Autorización para trámites legales ante CNE",
+      "7. Definición de cuota fundacional y cuentas",
+      "8. Declaración de principios innegociables",
+      "9. Firma digital y anclaje en blockchain"
+    ],
+    "desarrollo": {
+      "punto1": "El Fundador Alejandro Quintero Ruiz presenta el MANIFIESTO FUNDACIONAL, leído en su integridad. Se somete a votación ponderada (fundadores voto doble, testigos voto simple). APROBADO POR UNANIMIDAD (6/6 votos ponderados). Se acuerda que el Manifiesto es documento vivo: versión en git, cambios requieren 2/3 Congreso.",
+      "punto2": "El Fundador Fabian Sorza Cepeda presenta los ESTATUTOS v1.0 (18 artículos, 6 títulos). Se discuten artículos 3 (Principios), 4 (Malvados en justa proporción), 10 (Cláusula fundadores). APROBADOS POR UNANIMIDAD. Se ordena publicación inmediata en repositorio git UTC y registro notarial blockchain.",
+      "punto3": "Se presenta el REGLAMENTO INTERNO v1.0 (20 artículos, 7 capítulos). Se destaca: formación obligatoria, células base, infraestructura soberana, contrainteligencia. APROBADO POR UNANIMIDAD. Entrada en vigor diferida a mes 3 para permitir formación inicial.",
+      "punto4": "ELECCIÓN ÓRGANOS PROVISIONALES (mandato 12 meses o hasta I Congreso):\n- COORDINADOR GENERAL: Alejandro Quintero Ruiz (por aclamación, veto fundadores Art.10 Estatutos)\n- DIRECTOR DE OPERACIONES: Fabian Sorza Cepeda (por aclamación)\n- CONSEJO DE ARQUITECTOS PROVISIONAL (7 miembros):\n  1. Alejandro Quintero Ruiz (Arquitectura Nacional)\n  2. Fabian Sorza Cepeda (Operaciones y Movilización)\n  2 expertos invitados por cada área técnica (Biotecnología, Gobernanza Algorítmica, Energía, Justicia, Educación)\n- TRIBUNAL ÉTICO PROVISIONAL (5 miembros): Expertos en Derecho Constitucional, Ética IA, Ciencia de Datos, Derecho Penal, Bioética\n- COORDINACIONES REGIONALES PROVISIONALES: Se designan coordinadores temporales para 5 macro-regiones (Andina, Caribe, Pacífico, Orinoquía, Amazonía) + Bogotá. Elecciones regionales en mes 6."
+    },
+    "punto5": "IDENTIDAD VISUAL Y SÍMBOLOS: Se aprueban por unanimidad:\n- LOGO: Árbol de la Vida (Yggdrasil) con circuitos neuronales, colibrí mecánico, proporción áurea.\n- BANDERA: Proporción 3:5, fondo gradiente negro-morado, banda diagonal morado eléctrico (35°), 3 estrellas cian (fundadores, pueblo, IA), franja inferior verde Gaia.\n- MASCOTA: Tecno-Guacamaya (guacamaya cibernética, plumaje iridiscente circuitos, ojo cámara, garras nanotech).\n- ESCUDO: Cuartelado (Árbol circuitos, Balanza cuántica, Hélice+chip, Sol de Mayo circuitos), timbre corona mural 8 torres, tenantes 2 Tecno-Guacamayas, lema 'MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS'.\n- COLORES: Morado oscuro #1A0B2E, Negro #000000, Morado eléctrico #8B3AFF, Verde Gaia #00D47A, Cian tech #00F0FF, Ámbar #FFB000, Blanco hueso #F5F0FF.\n- TIPOGRAFÍA: Space Grotesk (display), IBM Plex Sans (UI), JetBrains Mono (datos/código).",
+    "punto6": "TRÁMITES LEGALES: Se faculta a los Fundadores (Alejandro Quintero Ruiz y Fabian Sorza Cepeda) para:\n1. Registrar personería jurídica ante Cámara de Comercio de Bogotá.\n2. Solicitar personería jurídica política ante Consejo Nacional Electoral (CNE).\n3. Registrar símbolos ante Superintendencia de Industria y Comercio.\n4. Abrir cuentas bancarias y wallet multisig (3/5: 2 fundadores + 2 Consejo + 1 Tribunal).\n5. Contratar servicios legales, contables, de seguridad informática.\n6. Suscribir convenios marco con universidades, centros investigación, cooperativas.\n7. Presentar lista de candidatos a elecciones 2026 (concejos, asambleas, Congreso).",
+    "punto7": "CUOTA FUNDACIONAL Y CUENTAS:\n- Cuota fundacional voluntaria: mínimo 100.000 COP (aportes en COP, USDT, BTC, ETH).\n- Cuenta bancaria: Bancolombia, Cuenta Corriente, Titular: UNIÓN TECNOCRÁTICA COLOMBIANA EN CONSTITUCIÓN.\n- Wallet multisig (Gnosis Safe): 0xUTC... (3/5 firmas).\n- Tesorero provisional: Fabian Sorza Cepeda.\n- Auditoría: Trimestral por firma externa + continua por IA UTC.\n- Transparencia: Libro mayor en blockchain público (explorador UTC-Ledger).",
+    "punto8": "PRINCIPIOS INNEGOCIABLES (cláusula pétrea - requieren 3/4 Congreso + veto fundadores para modificar):\n1. La tecnología al servicio del ser humano, nunca el humano al servicio de la máquina.\n2. La naturaleza (Gaia) es sujeto de derechos y infraestructura sagrada.\n3. La IA es bien común: código abierto, datos soberanos, computación distribuida.\n4. La longevidad y extensión de la vida son derechos fundamentales.\n5. La justicia es híbrida: eficiencia algorítmica + empatía humana.\n6. La meritocracia radical: cargos por competencia certificada, no lealtad.\n7. La transparencia algorítmica: todo decisión pública auditable.\n8. La neutralidad estratégica: extremismo centro, pragmatismo medible.\n9. La soberanía digital: infraestructura propia, cero GAFAM en datos críticos.\n10. La evolución permanente: beta perpetua, sin dogmas, solo métricas.",
+    "punto9": "FIRMA DIGITAL Y ANCLAJE BLOCKCHAIN:\nEsta acta, los Estatutos v1.0, el Reglamento v1.0 y el Manifiesto son hasheados (SHA3-256) y anclados en:\n- Blockchain Bitcoin (OP_RETURN en tx Genesis UTC)\n- Blockchain Ethereum (contrato UTC-Genesis v1.0)\n- IPFS (QmHash...)\n- Timestamping RFC3161 (autoridad de tiempo colombiana)\n\nHash conjunto (Genesis Root): SHA3-256:UTC-GENESIS-ROOT-20240115-1000\n\nCada firmante estampa su firma digital ECDSA (secp256k1) vinculada a su wallet y documento de identidad, verificable públicamente en utc-genesis.vercel.app.\n\nActa levantada a las 13:30 horas, leída, aprobada y firmada por todos los comparecientes.\n\nFDO: Alejandro Quintero Ruiz - Fundador\nFDO: Fabian Sorza Cepeda - Fundador\nFDO: María Alejandra Gutiérrez López - Testigo\nFDO: Carlos Andrés Vargas Herrera - Testigo\nFDO: Dra. Patricia Moreno Silva - Notaria Virtual\n\n--- FIN DEL ACTA ---"
+  }
+}
