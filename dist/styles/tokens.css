@@ -1,343 +1,249 @@
 /* ==========================================================================
-   UNIÓN TECNOCRÁTICA COLOMBIANA — GREENPUNK 2.0 DESIGN TOKENS
-   Fusión naturaleza-máquina: bioluminiscencia, formas orgánicas, tecnología viva
-   Sistema: oklch() para perceptual uniformity, CSS layers, container queries ready
+   UNIÓN TECNOCRÁTICA COLOMBIANA — PROFESSIONAL POLITICAL CAMPAIGN DESIGN TOKENS
+   Inspirado en campañas presidenciales estadounidenses modernas (Obama 2008/2012, Biden 2020, Buttigieg 2020, AOC, DeSantis)
+   Principios: Autoridad, Confianza, Claridad, Conversión, Accesibilidad
    ========================================================================== */
 
 @layer tokens {
   :root {
-    /* === CORE GREENPUNK PALETTE (oklch for perceptual accuracy) === */
-    /* Fondos: profundidad orgánica, no negro puro */
-    --bg-deep: oklch(0.08 0.02 280);
-    --bg-base: oklch(0.12 0.03 270);
-    --bg-elevated: oklch(0.16 0.025 260);
-    --bg-card: oklch(0.14 0.02 265);
-    --bg-card-hover: oklch(0.18 0.025 260);
-    --bg-surface: oklch(0.2 0.02 250);
+    /* === PALETA POLÍTICA PROFESIONAL === */
+    /* Azul confianza (primary) - inspirado en Obama/Biden */
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-800: #1e40af;
+    --blue-900: #1e3a8a;
+    --blue-950: #172554;
 
-    /* Greenpunk Primarios: vida, tecnología, naturaleza */
-    --gaia: oklch(0.58 0.18 145);        /* Verde bioluminiscente principal */
-    --gaia-bright: oklch(0.72 0.22 142);  /* Hover/active states */
-    --gaia-dim: oklch(0.45 0.14 148);     /* Subtle accents */
-    --gaia-glow: oklch(0.75 0.25 140);    /* Glow effects */
+    /* Rojo acción (accent) - para donaciones, voluntariado, CTAs primarios */
+    --red-50:  #fef2f2;
+    --red-100: #fee2e2;
+    --red-200: #fecaca;
+    --red-300: #fca5a5;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-600: #dc2626;
+    --red-700: #b91c1c;
+    --red-800: #991b1b;
+    --red-900: #7f1d1d;
 
-    --tech: oklch(0.65 0.2 200);          /* Cian tecnológico vivo */
-    --tech-bright: oklch(0.78 0.22 195);
-    --tech-dim: oklch(0.52 0.16 205);
-    --tech-glow: oklch(0.8 0.25 198);
-
-    --accent: oklch(0.62 0.22 300);       /* Magenta/violeta acento */
-    --accent-bright: oklch(0.75 0.25 295);
-    --accent-dim: oklch(0.48 0.18 305);
-    --accent-glow: oklch(0.8 0.28 290);
-
-    --amber: oklch(0.72 0.16 85);         /* Ámbar orgánico/dorado */
-    --amber-dim: oklch(0.58 0.12 88);
-    --amber-glow: oklch(0.8 0.2 82);
+    /* Blanco/Grises limpios */
+    --white:   #ffffff;
+    --gray-50:  #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --gray-950: #030712;
 
     /* Semánticos */
-    --warning: oklch(0.68 0.18 65);
-    --error: oklch(0.58 0.22 25);
-    --success: var(--gaia);
+    --success: #059669;
+    --warning: #d97706;
+    --error:   #dc2626;
+    --info:    #2563eb;
 
-    /* Texto: jerarquía perceptual clara */
-    --text-primary: oklch(0.96 0.01 280);
-    --text-secondary: oklch(0.78 0.015 270);
-    --text-muted: oklch(0.58 0.02 260);
-    --text-inverse: oklch(0.12 0.02 280);
-    --text-gaia: var(--gaia-bright);
-    --text-tech: var(--tech-bright);
-    --text-accent: var(--accent-bright);
-    --text-amber: var(--amber);
+    /* === ALIAS SEMÁNTICOS (uso en componentes) === */
+    --color-primary: var(--blue-700);
+    --color-primary-hover: var(--blue-800);
+    --color-primary-light: var(--blue-100);
+    --color-primary-text: var(--blue-900);
 
-    /* Bordes: orgánicos, no duros */
-    --border-subtle: oklch(0.22 0.02 260);
-    --border-default: oklch(0.28 0.025 255);
-    --border-emphasis: oklch(0.35 0.03 250);
-    --border-gaia: var(--gaia-dim);
-    --border-tech: var(--tech-dim);
-    --border-accent: var(--accent-dim);
-    --border-amber: var(--amber-dim);
+    --color-accent: var(--red-600);
+    --color-accent-hover: var(--red-700);
+    --color-accent-light: var(--red-100);
+    --color-accent-text: var(--red-700);
 
-    /* === GRADIENTES GREENPUNK: formas orgánicas, bioluminiscencia === */
-    --grad-bg: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-base) 40%, var(--bg-elevated) 100%);
-    --grad-radial: radial-gradient(ellipse 80% 60% at 50% 20%, oklch(0.18 0.04 270) 0%, transparent 60%),
-                   radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.25 0.06 145 / 0.15) 0%, transparent 50%),
-                   radial-gradient(ellipse 50% 30% at 20% 30%, oklch(0.25 0.05 200 / 0.1) 0%, transparent 50%);
+    --color-bg: var(--white);
+    --color-bg-alt: var(--gray-50);
+    --color-bg-card: var(--white);
+    --color-bg-muted: var(--gray-100);
 
-    --grad-card: linear-gradient(145deg, oklch(0.16 0.025 265) 0%, oklch(0.12 0.02 270) 100%);
-    --grad-card-hover: linear-gradient(145deg, oklch(0.2 0.03 260) 0%, oklch(0.16 0.025 265) 100%);
+    --color-text-primary: var(--gray-900);
+    --color-text-secondary: var(--gray-600);
+    --color-text-muted: var(--gray-500);
+    --color-text-inverse: var(--white);
 
-    --grad-gaia: linear-gradient(135deg, var(--gaia) 0%, var(--gaia-bright) 100%);
-    --grad-tech: linear-gradient(135deg, var(--tech) 0%, var(--tech-bright) 100%);
-    --grad-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
-    --grad-amber: linear-gradient(135deg, var(--amber) 0%, var(--amber-dim) 100%);
+    --color-border: var(--gray-200);
+    --color-border-strong: var(--gray-300);
+    --color-border-focus: var(--blue-500);
 
-    --grad-border: linear-gradient(135deg, var(--gaia-dim) 0%, var(--tech-dim) 50%, var(--accent-dim) 100%);
-    --grad-border-hover: linear-gradient(135deg, var(--gaia) 0%, var(--tech) 50%, var(--accent) 100%);
+    /* === TIPOGRAFÍA: Serif para autoridad (headlines), Sans para claridad (body) === */
+    --font-display: 'Merriweather', 'Georgia', 'Cambria', 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-    --grad-hero: var(--grad-bg),
-                 radial-gradient(ellipse 70% 50% at 50% 15%, oklch(0.35 0.12 145 / 0.18) 0%, transparent 60%),
-                 radial-gradient(ellipse 50% 40% at 85% 70%, oklch(0.3 0.1 200 / 0.12) 0%, transparent 55%),
-                 radial-gradient(ellipse 40% 35% at 15% 60%, oklch(0.3 0.1 300 / 0.1) 0%, transparent 50%);
+    /* Escala tipográfica modular (ratio 1.25 - Major Third) */
+    --fs-xs:    0.75rem;   /* 12px */
+    --fs-sm:    0.875rem;  /* 14px */
+    --fs-base:  1rem;      /* 16px */
+    --fs-lg:    1.125rem;  /* 18px */
+    --fs-xl:    1.25rem;   /* 20px */
+    --fs-2xl:   1.5rem;    /* 24px */
+    --fs-3xl:   1.875rem;  /* 30px */
+    --fs-4xl:   2.25rem;   /* 36px */
+    --fs-5xl:   3rem;      /* 48px */
+    --fs-6xl:   3.75rem;   /* 60px */
+    --fs-7xl:   4.5rem;    /* 72px */
 
-    --grad-text-primary: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-    --grad-text-gaia: linear-gradient(135deg, var(--gaia-bright) 0%, var(--tech-bright) 100%);
-    --grad-text-tech: linear-gradient(135deg, var(--tech-bright) 0%, var(--gaia-bright) 100%);
-    --grad-text-accent: linear-gradient(135deg, var(--accent-bright) 0%, var(--gaia-bright) 100%);
+    /* Fluid clamp para responsive */
+    --fs-fluid-xs:    clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --fs-fluid-sm:    clamp(0.875rem, 0.82rem + 0.275vw, 1rem);
+    --fs-fluid-base:  clamp(1rem, 0.93rem + 0.35vw, 1.125rem);
+    --fs-fluid-lg:    clamp(1.125rem, 1.03rem + 0.475vw, 1.25rem);
+    --fs-fluid-xl:    clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --fs-fluid-2xl:   clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --fs-fluid-3xl:   clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+    --fs-fluid-4xl:   clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);
+    --fs-fluid-5xl:   clamp(3rem, 2.25rem + 3.75vw, 5rem);
+    --fs-fluid-6xl:   clamp(3.75rem, 2.75rem + 5vw, 6.5rem);
 
-    --grad-glow-gaia: radial-gradient(circle at center, oklch(0.58 0.18 145 / 0.25) 0%, transparent 70%);
-    --grad-glow-tech: radial-gradient(circle at center, oklch(0.65 0.2 200 / 0.2) 0%, transparent 70%);
-    --grad-glow-accent: radial-gradient(circle at center, oklch(0.62 0.22 300 / 0.2) 0%, transparent 70%);
-
-    /* === TIPOGRAFÍA: escala modular 1.25 (major third) + fluid clamp === */
-    --font-display: 'Space Grotesk', system-ui, sans-serif;
-    --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-    --font-gaia: 'IBM Plex Sans', system-ui, sans-serif;
-
-    /* Fluid type scale: clamp(min, preferred, max) */
-    --fs-2xs: clamp(0.625rem, 0.58rem + 0.225vw, 0.75rem);    /* 10-12px */
-    --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);       /* 12-14px */
-    --fs-sm: clamp(0.875rem, 0.82rem + 0.275vw, 1rem);        /* 14-16px */
-    --fs-base: clamp(1rem, 0.93rem + 0.35vw, 1.125rem);       /* 16-18px */
-    --fs-lg: clamp(1.125rem, 1.03rem + 0.475vw, 1.375rem);    /* 18-22px */
-    --fs-xl: clamp(1.375rem, 1.22rem + 0.775vw, 1.75rem);     /* 22-28px */
-    --fs-2xl: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);        /* 28-40px */
-    --fs-3xl: clamp(2.25rem, 1.85rem + 2vw, 3.5rem);          /* 36-56px */
-    --fs-4xl: clamp(3rem, 2.3rem + 3.5vw, 5rem);              /* 48-80px */
-    --fs-5xl: clamp(4rem, 2.8rem + 6vw, 7.5rem);              /* 64-120px */
-    --fs-6xl: clamp(5rem, 3.2rem + 9vw, 10rem);               /* 80-160px */
-
-    --fw-light: 300;
-    --fw-regular: 400;
-    --fw-medium: 500;
+    --fw-light:    300;
+    --fw-regular:  400;
+    --fw-medium:   500;
     --fw-semibold: 600;
-    --fw-bold: 700;
+    --fw-bold:     700;
     --fw-extrabold: 800;
 
-    --lh-tight: 1.05;
-    --lh-snug: 1.25;
-    --lh-normal: 1.55;
-    --lh-relaxed: 1.7;
-    --lh-loose: 1.9;
+    --lh-tight:    1.1;
+    --lh-snug:     1.25;
+    --lh-normal:   1.5;
+    --lh-relaxed:  1.625;
+    --lh-loose:    1.75;
 
-    --ls-tight: -0.03em;
-    --ls-normal: 0;
-    --ls-wide: 0.02em;
-    --ls-wider: 0.06em;
-    --ls-widest: 0.12em;
-    --ls-tracking: 0.18em;
+    --ls-tight:    -0.02em;
+    --ls-normal:   0;
+    --ls-wide:     0.02em;
+    --ls-wider:    0.05em;
+    --ls-widest:   0.1em;
 
-    /* === ESPACIADO: base 8px + Fibonacci rhythm === */
-    --space-0: 0;
-    --space-1: 0.25rem;   /* 4px  */
-    --space-2: 0.5rem;    /* 8px  */
-    --space-3: 0.75rem;   /* 12px */
-    --space-4: 1rem;      /* 16px */
-    --space-5: 1.25rem;   /* 20px */
-    --space-6: 1.5rem;    /* 24px */
-    --space-7: 1.75rem;   /* 28px */
-    --space-8: 2rem;      /* 32px */
-    --space-10: 2.5rem;   /* 40px */
-    --space-12: 3rem;     /* 48px */
-    --space-14: 3.5rem;   /* 56px */
-    --space-16: 4rem;     /* 64px */
-    --space-20: 5rem;     /* 80px */
-    --space-24: 6rem;     /* 96px */
-    --space-32: 8rem;     /* 128px */
+    /* === ESPACIADO: Base 4px (0.25rem) - Sistema 8px === */
+    --space-0:   0;
+    --space-1:   0.25rem;  /* 4px  */
+    --space-2:   0.5rem;   /* 8px  */
+    --space-3:   0.75rem;  /* 12px */
+    --space-4:   1rem;     /* 16px */
+    --space-5:   1.25rem;  /* 20px */
+    --space-6:   1.5rem;   /* 24px */
+    --space-8:   2rem;     /* 32px */
+    --space-10:  2.5rem;   /* 40px */
+    --space-12:  3rem;     /* 48px */
+    --space-16:  4rem;     /* 64px */
+    --space-20:  5rem;     /* 80px */
+    --space-24:  6rem;     /* 96px */
+    --space-32:  8rem;     /* 128px */
 
-    /* Fibonacci vertical rhythm */
-    --rhythm-1: 0.25rem;   /* 1  */
-    --rhythm-2: 0.5rem;    /* 2  */
-    --rhythm-3: 0.75rem;   /* 3  */
-    --rhythm-5: 1.25rem;   /* 5  */
-    --rhythm-8: 2rem;      /* 8  */
-    --rhythm-13: 3.25rem;  /* 13 */
-    --rhythm-21: 5.25rem;  /* 21 */
-    --rhythm-34: 8.5rem;   /* 34 */
-
-    /* === RADIOS: orgánicos, no mecánicos === */
+    /* === RADIOS: Ligeros, profesionales === */
     --radius-none: 0;
-    --radius-xs: 0.125rem;   /* 2px  */
-    --radius-sm: 0.375rem;   /* 6px  */
-    --radius-md: 0.625rem;   /* 10px */
-    --radius-lg: 1rem;       /* 16px */
-    --radius-xl: 1.5rem;     /* 24px */
-    --radius-2xl: 2rem;      /* 32px */
-    --radius-3xl: 3rem;      /* 48px */
+    --radius-sm:   0.25rem;   /* 4px  */
+    --radius-md:   0.375rem;  /* 6px  */
+    --radius-lg:   0.5rem;    /* 8px  */
+    --radius-xl:   0.75rem;   /* 12px */
+    --radius-2xl:  1rem;      /* 16px */
     --radius-full: 9999px;
-    --radius-organic-s: 1.5rem 0.75rem 2rem 1rem / 1rem 2rem 1rem 1.5rem;
-    --radius-organic-m: 2.5rem 1.25rem 3rem 1.5rem / 1.5rem 2.5rem 1.5rem 2rem;
-    --radius-organic-l: 3.5rem 1.75rem 4rem 2rem / 2rem 3.5rem 2rem 2.5rem;
 
-    --border-hairline: 0.5px;
-    --border-thin: 1px;
-    --border-medium: 1.5px;
-    --border-thick: 2px;
-    --border-heavy: 3px;
+    --border-width: 1px;
+    --border-width-2: 2px;
 
-    /* === SOMBRAS: profundidad orgánica, no cajas === */
-    --shadow-xs: 0 1px 3px oklch(0 0 0 / 0.4);
-    --shadow-sm: 0 2px 6px oklch(0 0 0 / 0.45), 0 1px 2px oklch(0 0 0 / 0.3);
-    --shadow-md: 0 4px 12px oklch(0 0 0 / 0.5), 0 2px 6px oklch(0 0 0 / 0.35);
-    --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.55), 0 4px 12px oklch(0 0 0 / 0.4);
-    --shadow-xl: 0 16px 40px oklch(0 0 0 / 0.6), 0 8px 20px oklch(0 0 0 / 0.45);
-    --shadow-2xl: 0 32px 64px oklch(0 0 0 / 0.65), 0 16px 32px oklch(0 0 0 / 0.5);
+    /* === SOMBRAS: Sutiles, elevación realista === */
+    --shadow-sm:  0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg:  0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl:  0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
-    /* Glows: bioluminiscencia viva */
-    --glow-gaia-xs: 0 0 6px var(--gaia-glow / 0.35), 0 0 12px var(--gaia-glow / 0.15);
-    --glow-gaia-sm: 0 0 12px var(--gaia-glow / 0.45), 0 0 24px var(--gaia-glow / 0.2);
-    --glow-gaia-md: 0 0 20px var(--gaia-glow / 0.55), 0 0 40px var(--gaia-glow / 0.25);
-    --glow-gaia-lg: 0 0 32px var(--gaia-glow / 0.65), 0 0 64px var(--gaia-glow / 0.3);
-    --glow-gaia-xl: 0 0 48px var(--gaia-glow / 0.7), 0 0 96px var(--gaia-glow / 0.35);
+    /* Sombras de color para CTAs */
+    --shadow-primary: 0 4px 14px 0 rgb(30 64 175 / 0.35);
+    --shadow-primary-hover: 0 6px 20px 0 rgb(30 64 175 / 0.45);
+    --shadow-accent: 0 4px 14px 0 rgb(220 38 38 / 0.35);
+    --shadow-accent-hover: 0 6px 20px 0 rgb(220 38 38 / 0.45);
 
-    --glow-tech-xs: 0 0 6px var(--tech-glow / 0.3), 0 0 12px var(--tech-glow / 0.12);
-    --glow-tech-sm: 0 0 12px var(--tech-glow / 0.4), 0 0 24px var(--tech-glow / 0.18);
-    --glow-tech-md: 0 0 20px var(--tech-glow / 0.5), 0 0 40px var(--tech-glow / 0.22);
-    --glow-tech-lg: 0 0 32px var(--tech-glow / 0.6), 0 0 64px var(--tech-glow / 0.28);
-    --glow-tech-xl: 0 0 48px var(--tech-glow / 0.65), 0 0 96px var(--tech-glow / 0.32);
+    /* === TRANSICIONES: Rápidas, profesionales === */
+    --duration-fast:   150ms;
+    --duration-normal: 200ms;
+    --duration-slow:   300ms;
 
-    --glow-accent-xs: 0 0 6px var(--accent-glow / 0.3), 0 0 12px var(--accent-glow / 0.12);
-    --glow-accent-sm: 0 0 12px var(--accent-glow / 0.4), 0 0 24px var(--accent-glow / 0.18);
-    --glow-accent-md: 0 0 20px var(--accent-glow / 0.5), 0 0 40px var(--accent-glow / 0.22);
-    --glow-accent-lg: 0 0 32px var(--accent-glow / 0.6), 0 0 64px var(--accent-glow / 0.28);
+    --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 
-    --glow-amber-xs: 0 0 6px var(--amber-glow / 0.35), 0 0 12px var(--amber-glow / 0.15);
-    --glow-amber-sm: 0 0 12px var(--amber-glow / 0.45), 0 0 24px var(--amber-glow / 0.2);
-    --glow-amber-md: 0 0 20px var(--amber-glow / 0.55), 0 0 40px var(--amber-glow / 0.25);
-    --glow-amber-lg: 0 0 32px var(--amber-glow / 0.65), 0 0 64px var(--amber-glow / 0.3);
+    --trans-fast:   var(--duration-fast) var(--ease-out);
+    --trans-normal: var(--duration-normal) var(--ease-out);
+    --trans-slow:   var(--duration-slow) var(--ease-in-out);
 
-    /* === TRANSICIONES: easings orgánicos === */
-    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
-    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
-    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    --dur-instant: 60ms;
-    --dur-fast: 140ms;
-    --dur-normal: 220ms;
-    --dur-slow: 350ms;
-    --dur-slower: 500ms;
-    --dur-slowest: 800ms;
-
-    --trans-instant: var(--dur-instant) var(--ease-out-quart);
-    --trans-fast: var(--dur-fast) var(--ease-out-expo);
-    --trans-normal: var(--dur-normal) var(--ease-out-quart);
-    --trans-slow: var(--dur-slow) var(--ease-out-circ);
-    --trans-spring: var(--dur-slower) var(--ease-spring);
-    --trans-bounce: var(--dur-slower) var(--ease-bounce);
-
-    /* === Z-INDEX: escala semántica === */
-    --z-bg: -1;
-    --z-base: 0;
-    --z-raised: 10;
-    --z-dropdown: 100;
-    --z-sticky: 200;
-    --z-modal-backdrop: 1000;
-    --z-modal: 1100;
-    --z-popover: 1200;
-    --z-tooltip: 1300;
-    --z-toast: 1400;
-    --z-max: 9999;
-
-    /* === CONTAINERS: fluid, max-width semántico === */
-    --container-xs: 20rem;
-    --container-sm: 24rem;
-    --container-md: 28rem;
-    --container-lg: 34rem;
-    --container-xl: 42rem;
-    --container-2xl: 52rem;
-    --container-3xl: 64rem;
-    --container-4xl: 76rem;
-    --container-5xl: 88rem;
-    --container-6xl: 100rem;
-    --container-7xl: 112rem;
+    /* === CONTAINERS === */
+    --container-sm:  640px;
+    --container-md:  768px;
+    --container-lg:  1024px;
+    --container-xl:  1280px;
+    --container-2xl: 1440px;
     --container-full: 100%;
-    --container-screen: 100vw;
 
-    /* === BREAKPOINTS: mobile-first, semantic names === */
-    --bp-xs: 400px;
-    --bp-sm: 560px;
-    --bp-md: 768px;
-    --bp-lg: 1024px;
-    --bp-xl: 1280px;
-    --bp-2xl: 1440px;
-    --bp-3xl: 1680px;
-    --bp-4xl: 1920px;
+    /* === BREAKPOINTS === */
+    --bp-sm:  640px;
+    --bp-md:  768px;
+    --bp-lg:  1024px;
+    --bp-xl:  1280px;
+    --bp-2xl: 1536px;
 
-    /* === EFECTOS ESPECIALES GREENPUNK === */
-    --noise-opacity: 0.025;
-    --noise-opacity-hover: 0.045;
-    --scanline-opacity: 0.015;
-    --vignette-strength: 0.25;
-    --organic-blur: blur(120px);
+    /* === Z-INDEX === */
+    --z-dropdown: 100;
+    --z-sticky:   200;
+    --z-modal:    300;
+    --z-popover:  400;
+    --z-tooltip:  500;
+    --z-toast:    600;
 
-    /* Focus rings: accesibles, temáticos */
-    --focus-ring: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--accent);
-    --focus-ring-gaia: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--gaia);
-    --focus-ring-tech: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--tech);
-    --focus-ring-amber: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--amber);
+    /* === FOCUS RING (accesibilidad) === */
+    --focus-ring: 0 0 0 3px rgb(59 130 246 / 0.4);
+    --focus-ring-offset: 2px;
 
-    /* Scrollbar orgánica */
-    --scrollbar-track: var(--bg-deep);
-    --scrollbar-thumb: var(--border-default);
-    --scrollbar-thumb-hover: var(--border-emphasis);
-    --scrollbar-thumb-active: var(--gaia);
-    --scrollbar-width: 10px;
-    --scrollbar-radius: 5px;
+    /* === SCROLLBAR === */
+    --scrollbar-thumb: var(--gray-400);
+    --scrollbar-track: var(--gray-100);
+  }
 
-    /* === PROPORCIÓN ÁUREA === */
-    --phi: 1.618033988749895;
-    --phi-inv: 0.618033988749895;
-
-    /* === SELECTION === */
-    --selection-bg: var(--accent / 0.35);
-    --selection-color: var(--text-primary);
+  /* === DARK MODE (opcional, para futuro) === */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: var(--gray-950);
+      --color-bg-alt: var(--gray-900);
+      --color-bg-card: var(--gray-900);
+      --color-bg-muted: var(--gray-800);
+      --color-text-primary: var(--gray-50);
+      --color-text-secondary: var(--gray-300);
+      --color-text-muted: var(--gray-400);
+      --color-border: var(--gray-700);
+      --color-border-strong: var(--gray-600);
+      --scrollbar-thumb: var(--gray-600);
+      --scrollbar-track: var(--gray-800);
+    }
   }
 
   /* === HIGH CONTRAST MODE === */
   @media (prefers-contrast: high) {
     :root {
-      --bg-deep: #000;
-      --bg-base: #050505;
-      --bg-elevated: #0a0a0a;
-      --bg-card: #0d0d0d;
-      --gaia: #2eff80;
-      --gaia-bright: #40ff90;
-      --tech: #40ffff;
-      --tech-bright: #60ffff;
-      --accent: #d080ff;
-      --accent-bright: #e0a0ff;
-      --amber: #ffcc00;
-      --text-primary: #fff;
-      --text-secondary: #e0e0e0;
-      --text-muted: #b0b0b0;
-      --border-default: var(--gaia);
-      --border-emphasis: var(--tech);
-      --glow-gaia-md: 0 0 20px #2eff80, 0 0 40px #2eff80;
-      --glow-tech-md: 0 0 20px #40ffff, 0 0 40px #40ffff;
+      --color-primary: var(--blue-800);
+      --color-accent: var(--red-700);
+      --color-border: var(--gray-400);
+      --focus-ring: 0 0 0 4px var(--blue-800);
     }
   }
 
   /* === REDUCED MOTION === */
   @media (prefers-reduced-motion: reduce) {
     :root {
-      --dur-instant: 0ms;
-      --dur-fast: 0ms;
-      --dur-normal: 0ms;
-      --dur-slow: 0ms;
-      --dur-slower: 0ms;
-      --dur-slowest: 0ms;
-      --trans-instant: none;
-      --trans-fast: none;
-      --trans-normal: none;
-      --trans-slow: none;
-      --trans-spring: none;
-      --trans-bounce: none;
+      --duration-fast: 0ms;
+      --duration-normal: 0ms;
+      --duration-slow: 0ms;
     }
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -349,125 +255,35 @@
 }
 
 /* ==========================================================================
-   UTILITY CLASSES (para uso directo en HTML)
+   FUENTES: Carga optimizada con preconnect y font-display: swap
    ========================================================================== */
-@layer utilities {
-  /* Text gradients */
-  .text-grad-primary { background: var(--grad-text-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .text-grad-gaia { background: var(--grad-text-gaia); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .text-grad-tech { background: var(--grad-text-tech); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .text-grad-accent { background: var(--grad-text-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-
-  /* Colors */
-  .text-primary { color: var(--text-primary); }
-  .text-secondary { color: var(--text-secondary); }
-  .text-muted { color: var(--text-muted); }
-  .text-gaia { color: var(--text-gaia); }
-  .text-tech { color: var(--text-tech); }
-  .text-accent { color: var(--text-accent); }
-  .text-amber { color: var(--text-amber); }
-
-  /* Spacing */
-  .gap-1 { gap: var(--space-1); }
-  .gap-2 { gap: var(--space-2); }
-  .gap-3 { gap: var(--space-3); }
-  .gap-4 { gap: var(--space-4); }
-  .gap-5 { gap: var(--space-5); }
-  .gap-6 { gap: var(--space-6); }
-  .gap-8 { gap: var(--space-8); }
-  .gap-10 { gap: var(--space-10); }
-  .gap-12 { gap: var(--space-12); }
-  .gap-16 { gap: var(--space-16); }
-
-  /* Container */
-  .container {
-    width: 100%;
-    max-width: var(--container-7xl);
-    margin: 0 auto;
-    padding: 0 var(--space-6);
+@layer base {
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/fonts/Merriweather-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
   }
-  @media (min-width: 1280px) {
-    .container { padding: 0 var(--space-10); }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/fonts/Merriweather-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: italic;
   }
-  @media (min-width: 1680px) {
-    .container { padding: 0 var(--space-16); }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
   }
-
-  /* Grid */
-  .grid { display: grid; gap: var(--space-6); }
-  .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
-  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-  .grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
-
-  @media (max-width: 1024px) {
-    .grid-cols-3, .grid-cols-4, .grid-cols-5, .grid-cols-6 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 640px) {
-    .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-5, .grid-cols-6 {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Flex */
-  .flex { display: flex; }
-  .flex-col { flex-direction: column; }
-  .flex-wrap { flex-wrap: wrap; }
-  .items-center { align-items: center; }
-  .items-start { align-items: flex-start; }
-  .items-end { align-items: flex-end; }
-  .justify-center { justify-content: center; }
-  .justify-between { justify-content: space-between; }
-  .justify-around { justify-content: space-around; }
-
-  /* Animations */
-  .animate-fade-in { animation: fade-in var(--dur-normal) var(--ease-out-quart); }
-  .animate-slide-up { animation: slide-up var(--dur-slow) var(--ease-out-expo); }
-  .animate-slide-down { animation: slide-down var(--dur-slow) var(--ease-out-expo); }
-  .animate-slide-left { animation: slide-left var(--dur-slow) var(--ease-out-expo); }
-  .animate-slide-right { animation: slide-right var(--dur-slow) var(--ease-out-expo); }
-  .animate-scale-in { animation: scale-in var(--dur-normal) var(--ease-spring); }
-  .animate-pulse-gaia { animation: pulse-gaia 3s ease-in-out infinite; }
-  .animate-pulse-tech { animation: pulse-tech 3s ease-in-out infinite; }
-  .animate-breathe { animation: breathe 4s ease-in-out infinite; }
-  .animate-float { animation: float 6s ease-in-out infinite; }
-  .animate-rotate-slow { animation: rotate-slow 20s linear infinite; }
-
-  .stagger-1 { animation-delay: 80ms; }
-  .stagger-2 { animation-delay: 160ms; }
-  .stagger-3 { animation-delay: 240ms; }
-  .stagger-4 { animation-delay: 320ms; }
-  .stagger-5 { animation-delay: 400ms; }
-  .stagger-6 { animation-delay: 480ms; }
-  .stagger-7 { animation-delay: 560ms; }
-  .stagger-8 { animation-delay: 640ms; }
-
-  /* Scrollbar */
-  ::-webkit-scrollbar { width: var(--scrollbar-width); height: var(--scrollbar-width); }
-  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
-  ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: var(--scrollbar-radius);
-    border: 2px solid var(--scrollbar-track);
-  }
-  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
-  ::-webkit-scrollbar-thumb:active { background: var(--scrollbar-thumb-active); }
-  ::-webkit-scrollbar-corner { background: var(--scrollbar-track); }
-  * { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); }
-
-  /* Selection */
-  ::selection { background: var(--selection-bg); color: var(--selection-color); }
-  ::-moz-selection { background: var(--selection-bg); color: var(--selection-color); }
-
-  /* Sr-only */
-  .sr-only {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0, 0, 0, 0);
-    white-space: nowrap; border: 0;
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 800;
+    font-display: swap;
+    font-style: normal;
   }
 }

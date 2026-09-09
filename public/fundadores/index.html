@@ -3,244 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fundadores de la Unión Tecnocrática Colombiana: Alejandro Quintero Ruiz (Coordinador General) y Fabian Sorza Cepeda (Director de Operaciones). Perfiles, visión, áreas de expertise.">
+  <meta name="description" content="Fundadores de la Unión Tecnocrática Colombiana: Alejandro Quintero Ruiz (Coordinador General) y Fabian Sorza Cepeda (Director de Operaciones). Perfiles, experiencia en servicio público, visión a 30 años.">
   <meta property="og:title" content="Fundadores | Unión Tecnocrática Colombiana">
-  <meta property="og:description" content="Dos fundadores. Una visión. Cero clientelismo.">
+  <meta property="og:description" content="Dos fundadores con experiencia en servicio público y administración. Un plan a 30 años para transformar Colombia.">
+  <meta property="og:type" content="website">
   <title>Fundadores | Unión Tecnocrática Colombiana</title>
-  <link rel="preload" as="font" href="/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2" crossorigin>
-  <link rel="preload" as="font" href="/assets/fonts/IBMPlexSans-VariableFont_wght.woff2" crossorigin>
-  <link rel="stylesheet" href="/styles/tokens.css">
-  <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/components.css">
-  <link rel="stylesheet" href="/styles/fundadores.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/identity/logo-utc.svg">
+  <link rel="preload" as="font" href="/union-tecnocratica-colombiana/assets/fonts/Merriweather-VariableFont_wght.woff2" crossorigin>
+  <link rel="preload" as="font" href="/union-tecnocratica-colombiana/assets/fonts/Inter-VariableFont_opsz,wght.woff2" crossorigin>
+  <link rel="preload" as="font" href="/union-tecnocratica-colombiana/assets/fonts/JetBrainsMono-VariableFont_wght.woff2" crossorigin>
+  <link rel="stylesheet" href="/union-tecnocratica-colombiana/styles/tokens.css">
+  <link rel="stylesheet" href="/union-tecnocratica-colombiana/styles/global.css">
+  <link rel="stylesheet" href="/union-tecnocratica-colombiana/styles/components.css">
+  <link rel="icon" type="image/svg+xml" href="/union-tecnocratica-colombiana/assets/identity/logo-utc.svg">
+  <link rel="apple-touch-icon" href="/union-tecnocratica-colombiana/assets/identity/logo-utc.svg">
+  <link rel="manifest" href="/union-tecnocratica-colombiana/manifest.json">
 </head>
 <body>
   <a href="#main" class="sr-only btn-primary">Saltar al contenido principal</a>
 
+  <!-- NAVBAR -->
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="container navbar-inner">
-      <a href="/" class="navbar-brand" aria-label="Unión Tecnocrática Colombiana - Inicio">
-        <svg class="navbar-logo" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#logo"/></svg>
+      <a href="/union-tecnocratica-colombiana/" class="navbar-brand" aria-label="Unión Tecnocrática Colombiana - Inicio">
+        <svg class="navbar-logo" aria-hidden="true"><use href="/union-tecnocratica-colombiana/assets/identity/logo-utc.svg#logo"/></svg>
         <span class="navbar-title">UNIÓN TECNOCRÁTICA COLOMBIANA</span>
         <span class="navbar-sigla">UTC</span>
       </a>
-      <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Abrir menú"><span class="hamburger"></span></button>
+
+      <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
       <div id="navbar-menu" class="navbar-menu">
         <ul class="navbar-nav" role="menubar">
-          <li role="none"><a href="/manifiesto/" class="nav-link" role="menuitem">MANIFIESTO</a></li>
-          <li role="none"><a href="/fundadores/" class="nav-link active" role="menuitem" aria-current="page">FUNDADORES</a></li>
-          <li role="none"><a href="/vision-mision/" class="nav-link" role="menuitem">VISIÓN Y MISIÓN</a></li>
-          <li role="none"><a href="/objetivos/" class="nav-link" role="menuitem">OBJETIVOS</a></li>
-          <li role="none"><a href="/cronograma/" class="nav-link" role="menuitem">CRONOGRAMA</a></li>
-          <li role="none"><a href="/estatutos/" class="nav-link" role="menuitem">ESTATUTOS</a></li>
-          <li role="none"><a href="/calculadoras/" class="nav-link" role="menuitem">CALCULADORA TECNOCRÁTICA</a></li>
-          <li role="none"><a href="/newsletter/" class="nav-link" role="menuitem">NEWSLETTER</a></li>
-          <li role="none"><a href="/inscripcion/" class="nav-link btn-primary nav-cta" role="menuitem">ÚNETE AHORA</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/manifiesto/" class="nav-link" role="menuitem">MANIFIESTO</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/fundadores/" class="nav-link active" role="menuitem" aria-current="page">FUNDADORES</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/vision-mision/" class="nav-link" role="menuitem">VISIÓN Y MISIÓN</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/objetivos/" class="nav-link" role="menuitem">OBJETIVOS</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/cronograma/" class="nav-link" role="menuitem">CRONOGRAMA</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/estatutos/" class="nav-link" role="menuitem">ESTATUTOS</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/calculadoras/" class="nav-link" role="menuitem">CALCULADORA</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/newsletter/" class="nav-link" role="menuitem">NEWSLETTER</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/inscripcion/" class="nav-link" role="menuitem">INSCRIPCIÓN</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/contacto/" class="nav-link" role="menuitem">CONTACTO</a></li>
+          <li role="none"><a href="/union-tecnocratica-colombiana/prensa/" class="nav-link" role="menuitem">PRENSA</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero" role="banner">
-    <div class="page-hero-bg" aria-hidden="true">
-      <div class="page-hero-glow"></div>
-    </div>
-    <div class="container page-hero-content">
-      <nav class="breadcrumb" aria-label="Ruta de navegación">
-        <ol><li><a href="/">Inicio</a></li><li aria-current="page">Fundadores</li></ol>
+  <!-- PAGE HERO -->
+  <header class="page-hero section--sm" role="banner">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Ruta de navegación" style="margin-bottom: var(--space-4);">
+        <ol style="display: flex; gap: var(--space-2); font-size: var(--fs-sm); color: var(--color-text-muted);">
+          <li><a href="/union-tecnocratica-colombiana/" style="color: var(--color-text-muted);">Inicio</a></li>
+          <li style="color: var(--color-primary);">/</li>
+          <li aria-current="page" style="color: var(--color-text-primary); font-weight: var(--fw-medium);">Fundadores</li>
+        </ol>
       </nav>
-      <h1 class="page-title text-gradient-primary">LOS ARQUITECTOS</h1>
-      <p class="page-subtitle">Dos fundadores. Una visión. Cero clientelismo. Cero herencia política.</p>
-      <div class="page-meta">
-        <span class="badge badge-accent">CLÁUSULA DE ESTABILIDAD (Art. 10 Estatutos)</span>
-        <span class="badge badge-tech">Veto suspensivo sobre principios rectores</span>
-        <span class="badge badge-gaia">Expira 2030 o 1M militantes</span>
-      </div>
+      <h1 class="page-title" style="font-family: var(--font-display); font-size: var(--fs-fluid-4xl); font-weight: var(--fw-bold); line-height: var(--lh-tight); margin-bottom: var(--space-3);">Los Fundadores</h1>
+      <p class="page-subtitle" style="font-size: var(--fs-fluid-lg); color: var(--color-text-secondary); max-width: 700px;">Dos servidores públicos con experiencia en administración del Estado. Un plan a 30 años para transformar Colombia.</p>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main id="main" role="main">
-    <section class="fundadores-section" aria-labelledby="fundadores-title">
+    <!-- FUNDADOR 1: ALEJANDRO QUINTERO RUIZ -->
+    <section class="section" aria-labelledby="alejandro-title">
       <div class="container">
-        <!-- FUNDADOR 1: ALEJANDRO -->
-        <article class="fundador-detail" id="alejandro" aria-labelledby="alejandro-nombre">
-          <div class="fundador-header">
-            <div class="fundador-avatar-large" aria-hidden="true">
-              <svg viewBox="0 0 200 200" fill="none">
-                <defs>
-                  <linearGradient id="alejandroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#8B3AFF"/><stop offset="100%" stop-color="#6B2ACC"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="100" cy="80" r="50" stroke="url(#alejandroGrad)" stroke-width="6" fill="none"/>
-                <path d="M100 150 Q60 170 40 170 Q40 140 100 140 Q160 140 160 170 Q140 170 100 150" stroke="url(#alejandroGrad)" stroke-width="6" fill="none"/>
-                <rect x="70" y="110" width="60" height="8" rx="4" fill="url(#alejandroGrad)"/>
-              </svg>
-            </div>
-            <div class="fundador-header-info">
-              <span class="fundador-badge badge badge-accent">FUNDADOR</span>
-              <h2 id="alejandro-nombre" class="fundador-nombre-large">ALEJANDRO QUINTERO RUIZ</h2>
-              <p class="fundador-rol-large text-gradient-accent">COORDINADOR GENERAL</p>
-              <p class="fundador-tagline">"Cada línea de código bien escrita es un acto de amor político."</p>
-            </div>
+        <article class="leader-card" style="max-width: 1000px; margin: 0 auto; text-align: left; display: grid; grid-template-columns: 280px 1fr; gap: var(--space-10); align-items: start;">
+          <div style="text-align: center;">
+            <div class="leader-portrait-placeholder" style="width: 16rem; height: 16rem; margin: 0 auto var(--space-5); font-size: var(--fs-4xl);">AQR</div>
+            <h2 id="alejandro-title" class="leader-name" style="font-size: var(--fs-3xl);">Alejandro Quintero Ruiz</h2>
+            <p class="leader-role" style="margin-bottom: var(--space-2);">Coordinador General</p>
+            <p class="leader-title">Ingeniero de Sistemas • Arquitecto de Sistemas Públicos • Ex-Servidor Público</p>
           </div>
+          <div>
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin-bottom: var(--space-4); color: var(--color-text-primary);">Trayectoria en Servicio Público</h3>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">Ingeniero de Sistemas de la Universidad de los Andes con especialización en Arquitectura de Software Distribuido y Gobernanza Algorítmica. Cuenta con más de 15 años de experiencia diseñando infraestructura tecnológica crítica para el sector público y privado.</p>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">Se desempeñó como asesor tecnológico en entidades del orden nacional, liderando la modernización de sistemas de información gubernamentales, plataformas de identidad digital y sistemas de votación basados en blockchain. Su trabajo en la implementación de la infraestructura de identidad soberana para el Estado colombiano le valió reconocimiento en foros internacionales de gobernanza digital.</p>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">En 2022, tras evidenciar la brecha tecnológica estructural del Estado colombiano durante la pandemia, decidió fundar la UTC con la convicción de que la tecnocracia no es ausencia de política, sino su forma más rigurosa: la política de lo que funciona, medible, auditable y escalable.</p>
 
-          <div class="fundador-grid">
-            <div class="fundador-bio-main">
-              <h3>BIOGRAFÍA TECNOCRÁTICA</h3>
-              <p>Ingeniero de sistemas de la Universidad de los Andes, con especialización en Arquitectura de Software Distribuido (MIT) y Gobernanza Algorítmica (ETH Zürich). Pasó 15 años diseñando infraestructura crítica para fintechs globales, sistemas de votación basados en blockchain, y plataformas de identidad soberana.</p>
-              <p>En 2020, tras ver cómo la pandemia exponía la fragilidad analógica del Estado colombiano, decidió que la única forma de arreglar el sistema era reescribirlo desde la raíz. No como político, sino como arquitecto de sistemas.</p>
-              <p>Su obsesión: demostrar que la tecnocracia no es fría. Es la única forma de amor que escala. Diseñó la arquitectura de la UTC: el gemelo digital nacional, la justicia híbrida, la renta básica financiada por eficiencia, los Ecoparques Tecnológicos.</p>
-              <blockquote class="fundador-quote">"La pobreza es un bug de asignación. La corrupción es un exploit de permisos. La violencia es un fallo de sincronización de oportunidades. Todos tienen patch. Solo hace falta deploy."</blockquote>
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin: var(--space-6) 0 var(--space-4); color: var(--color-text-primary);">Áreas de Expertise</h3>
+            <div class="leader-expertise" style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6);">
+              <span class="badge badge-primary">Arquitectura Tecnocrática Nacional</span>
+              <span class="badge badge-primary">Gobernanza Algorítmica</span>
+              <span class="badge badge-primary">Identidad Digital Soberana</span>
+              <span class="badge badge-primary">Blockchain & Votación Segura</span>
+              <span class="badge badge-primary">Gemelos Digitales Territoriales</span>
+              <span class="badge badge-primary">Infraestructura Crítica Pública</span>
             </div>
 
-            <aside class="fundador-sidebar">
-              <div class="fundador-card-meta">
-                <h4>ÁREAS DE EXPERTISE</h4>
-                <ul class="expertise-list">
-                  <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/></svg></span>Arquitectura Tecnocrática Nacional</li>
-                  <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8 V12 L15 15"/></svg></span>Autodominio Transhumanista</li>
-                  <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/></svg></span>Sistemas de Gobernanza Algorítmica</li>
-                  <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6 V18 M6 12 H18"/></svg></span>Identidad Soberana & Blockchain</li>
-                  <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 7 L3 17 L12 22 L21 17 L21 7 Z"/></svg></span>Gemelos Digitales Territoriales</li>
-                </ul>
-              </div>
-
-              <div class="fundador-card-meta">
-                <h4>MÉTRICAS DE GESTIÓN (OBJETIVO 2026)</h4>
-                <ul class="metrics-list">
-                  <li><span class="metric-label">Gemelo Digital Colombia:</span> <span class="metric-value text-gradient-accent" data-count="100" data-suffix="%">0%</span></li>
-                  <li><span class="metric-label">Ecoparques Operativos:</span> <span class="metric-value text-gradient-accent" data-count="5" data-suffix="">0</span></li>
-                  <li><span class="metric-label">Militantes Certificados Nivel 1:</span> <span class="metric-value text-gradient-accent" data-count="10000" data-suffix="">0</span></li>
-                  <li><span class="metric-label">Leyes Redescritas Algorítmicamente:</span> <span class="metric-value text-gradient-accent" data-count="50" data-suffix="">0</span></li>
-                </ul>
-              </div>
-
-              <div class="fundador-contact">
-                <h4>CONTACTO DIRECTO</h4>
-                <ul>
-                  <li><a href="mailto:alejandro@utc.org.co">alejandro@utc.org.co</a></li>
-                  <li><a href="https://matrix.to/#/@alejandro_quintero:utc.matrix.org" target="_blank" rel="noopener">Matrix: @alejandro_quintero</a></li>
-                  <li><a href="https://github.com/alejandroquinteror" target="_blank" rel="noopener">GitHub: @alejandroquinteror</a></li>
-                  <li>Wallet: <code>0x742d35Cc6634C0532925a3b8D4C0532925a3b8D4</code></li>
-                </ul>
-              </div>
-            </aside>
-          </div>
-        </article>
-
-        <!-- FUNDADOR 2: FABIAN -->
-        <article class="fundador-detail" id="fabian" aria-labelledby="fabian-nombre">
-          <div class="fundador-header">
-            <div class="fundador-avatar-large" aria-hidden="true">
-              <svg viewBox="0 0 200 200" fill="none">
-                <defs>
-                  <linearGradient id="fabianGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00D47A"/><stop offset="100%" stop-color="#00A860"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="100" cy="80" r="50" stroke="url(#fabianGrad)" stroke-width="6" fill="none"/>
-                <path d="M100 150 Q60 170 40 170 Q40 140 100 140 Q160 140 160 170 Q140 170 100 150" stroke="url(#fabianGrad)" stroke-width="6" fill="none"/>
-                <circle cx="100" cy="80" r="16" fill="url(#fabianGrad)" opacity="0.3"/>
-              </svg>
-            </div>
-            <div class="fundador-header-info">
-              <span class="fundador-badge badge badge-gaia">FUNDADOR</span>
-              <h2 id="fabian-nombre" class="fundador-nombre-large">FABIAN SORZA CEPEDA</h2>
-              <p class="fundador-rol-large text-gradient-gaia">DIRECTOR DE OPERACIONES</p>
-              <p class="fundador-tagline">"El poder pertenece a quienes entienden los datos. La narrativa es la interfaz de la realidad."</p>
-            </div>
-
-            <div class="fundador-grid">
-              <div class="fundador-bio-main">
-                <h3>BIOGRAFÍA TECNOCRÁTICA</h3>
-                <p>Politólogo y estratega de comunicación política, máster en Neurociencia Cognitiva Aplicada (UCL) y Psicología de Masas Digital (Stanford). Dirigió campañas presidenciales en 3 países latinoamericanos, siempre desde la trinchera de los datos, nunca de la ideología.</p>
-                <p>Su epifanía llegó analizando por qué los discursos técnicos fracasan: no es el mensaje, es el medio. La política tradicional usa TV y mítines. La UTC usa algoritmos de difusión, psicología basada en evidencia, y micro-targeting ético para movilizar hacia el bienestar medible.</p>
-                <p>Diseñó la maquinaria de movilización: células base, nodos digitales, newsletter CÓDIGO FUENTE, academia UTC, contrainteligencia algorítmica. Su principio: cada like debe ser una acción medible. Cada seguidor, un militante en potencia. Cada voto, un commit auditado.</p>
-                <blockquote class="fundador-quote">"La derecha usa el miedo. La izquierda usa la esperanza. Nosotros usamos la función de utilidad. Y ganamos porque la nuestra es medible."</blockquote>
-              </div>
-
-              <aside class="fundador-sidebar">
-                <div class="fundador-card-meta">
-                  <h4>ÁREAS DE EXPERTISE</h4>
-                  <ul class="expertise-list">
-                    <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/></svg></span>Psicología Política Tecnológica</li>
-                    <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4 H20"/><path d="M4 12 H20"/></svg></span>Comunicación Greenpunk</li>
-                    <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21 L7 11 L17 1"/></svg></span>Movilización de Militancia</li>
-                    <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></span>Contrainteligencia Algorítmica</li>
-                    <li><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 7 L3 17 L12 22 L21 17 L21 7 Z"/></svg></span>Infiltración Narrativa Estratégica</li>
-                  </ul>
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin: var(--space-6) 0 var(--space-4); color: var(--color-text-primary);">Objetivos 2026-2030 (Fase Consolidación)</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-primary);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-primary);">1</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Gemelo Digital Colombia</strong> operativo en 5 sectores prioritarios (salud, educación, hacienda, justicia, medio ambiente)
                 </div>
-
-                <div class="fundador-card-meta">
-                  <h4>MÉTRICAS DE GESTIÓN (OBJETIVO 2026)</h4>
-                  <ul class="metrics-list">
-                    <li><span class="metric-label">Militantes Activos:</span> <span class="metric-value text-gradient-gaia" data-count="50000" data-suffix="">0</span></li>
-                    <li><span class="metric-label">Células Base Constituidas:</span> <span class="metric-value text-gradient-gaia" data-count="1000" data-suffix="">0</span></li>
-                    <li><span class="metric-label">Newsletter CÓDIGO FUENTE Suscriptores:</span> <span class="metric-value text-gradient-gaia" data-count="100000" data-suffix="">0</span></li>
-                    <li><span class="metric-label">Conversión Like→Acción:</span> <span class="metric-value text-gradient-gaia" data-count="15" data-suffix="%">0%</span></li>
-                  </ul>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-primary);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-primary);">2</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">5 Ecoparques Tecnológicos</strong> operativos (Chocó, Amazonía, Orinoquía, Caribe, Pacífico) como centros de cómputo verde y biodiversidad
                 </div>
-
-                <div class="fundador-contact">
-                  <h4>CONTACTO DIRECTO</h4>
-                  <ul>
-                    <li><a href="mailto:fabian@utc.org.co">fabian@utc.org.co</a></li>
-                    <li><a href="https://matrix.to/#/@fabian_sorza:utc.matrix.org" target="_blank" rel="noopener">Matrix: @fabian_sorza</a></li>
-                    <li><a href="https://github.com/fabiansorza" target="_blank" rel="noopener">GitHub: @fabiansorza</a></li>
-                    <li>Wallet: <code>0x853d35Cc6634C0532925a3b8D4C0532925a3b8E5</code></li>
-                  </ul>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-primary);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-primary);">3</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Identidad Soberana Digital</strong> para 10M de colombianos con blockchain permissioned
                 </div>
-              </aside>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-primary);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-primary);">4</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Ley de Gobernanza Algorítmica</strong> aprobada: auditoría obligatoria de algoritmos públicos
+                </div>
+              </li>
+            </ul>
+
+            <div style="margin-top: var(--space-6); padding: var(--space-4); background-color: var(--color-primary-light); border-radius: var(--radius-lg); border: var(--border-width) solid var(--color-primary);">
+              <p style="font-style: italic; color: var(--color-primary-text); margin: 0;">"La pobreza es un fallo de asignación. La corrupción es un exploit de permisos. La violencia es un fallo de sincronización de oportunidades. Todos tienen solución técnica. Solo hace falta voluntad política para deployar el patch."</p>
+              <p style="text-align: right; margin-top: var(--space-2); font-weight: var(--fw-medium); color: var(--color-primary-text);">— Alejandro Quintero Ruiz</p>
             </div>
           </div>
         </article>
+      </div>
+    </section>
 
-        <!-- CLÁUSULA DE ESTABILIDAD -->
-        <section class="estabilidad-section" aria-labelledby="estabilidad-title">
-          <div class="card estabilidad-card">
-            <header class="estabilidad-header">
-              <svg class="estabilidad-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/><path d="M7 16 L12 21 L17 16"/></svg>
-              <h2 id="estabilidad-title" class="estabilidad-title">CLÁUSULA DE ESTABILIDAD FUNDACIONAL</h2>
-            </header>
-            <div class="estabilidad-content">
-              <p>Según <strong>Artículo 10 de los Estatutos UTC</strong>, los fundadores Alejandro Quintero Ruiz y Fabian Sorza Cepeda poseen <strong>veto suspensivo (1 vez por mandato)</strong> sobre decisiones que alteren:</p>
-              <ul>
-                <li>Los Principios Rectores (Art. 3 Estatutos)</li>
-                <li>La estructura federal del partido</li>
-                <li>La cláusula pétrea de principios innegociables</li>
-              </ul>
-              <p>El veto es reversible por <strong>3/4 del Congreso Tecnocrático Nacional</strong>.</p>
-              <div class="estabilidad-expiracion">
-                <strong>Expiración automática:</strong> 2030 o cuando la UTC alcance <strong>1 millón de militantes activos</strong>, lo primero que ocurra.
-              </div>
-              <p class="estabilidad-justificacion">Esta cláusula garantiza que la arquitectura original no sea diluida por oportunismo político durante la fase crítica de consolidación. Es el único mecanismo anti-entropía en la política colombiana.</p>
+    <!-- FUNDADOR 2: FABIAN SORZA CEPEDA -->
+    <section class="section section--muted" aria-labelledby="fabian-title">
+      <div class="container">
+        <article class="leader-card" style="max-width: 1000px; margin: 0 auto; text-align: left; display: grid; grid-template-columns: 280px 1fr; gap: var(--space-10); align-items: start;">
+          <div style="text-align: center;">
+            <div class="leader-portrait-placeholder" style="width: 16rem; height: 16rem; margin: 0 auto var(--space-5); background-color: var(--color-accent-light); border-color: var(--color-accent); font-size: var(--fs-4xl); color: var(--color-accent);">FSC</div>
+            <h2 id="fabian-title" class="leader-name" style="font-size: var(--fs-3xl);">Fabian Sorza Cepeda</h2>
+            <p class="leader-role" style="margin-bottom: var(--space-2);">Director de Operaciones</p>
+            <p class="leader-title">Abogado • Politólogo • Ex-Servidor Público en Cargos Administrativos</p>
+          </div>
+          <div>
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin-bottom: var(--space-4); color: var(--color-text-primary);">Trayectoria en Servicio Público y Política</h3>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">Abogado de la Universidad del Rosario con maestría en Políticas Públicas y Administración del Estado (Universidad de los Andes) y especialización en Neurociencia Cognitiva Aplicada a la Política (UCL). Cuenta con más de 12 años de experiencia en cargos de alto nivel en la administración pública colombiana.</p>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">Se desempeñó como asesor jurídico y de políticas públicas en ministerios y entidades del orden nacional, liderando procesos de reforma administrativa, diseño de políticas públicas basadas en evidencia y modernización de la gestión pública. Dirigió equipos de análisis de datos para la toma de decisiones en entidades de control y planeación nacional.</p>
+            <p class="leader-bio" style="margin-bottom: var(--space-4);">Como estratega político, dirigió campañas electorales en 3 países latinoamericanos aplicando metodologías basadas en evidencia, micro-targeting ético y psicología cognitiva aplicada a la comunicación política. Su enfoque: la política no se gana con discursos, se gana con operaciones de movilización medibles, auditables y escalables.</p>
+
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin: var(--space-6) 0 var(--space-4); color: var(--color-text-primary);">Áreas de Expertise</h3>
+            <div class="leader-expertise" style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6);">
+              <span class="badge badge-accent">Políticas Públicas Basadas en Evidencia</span>
+              <span class="badge badge-accent">Administración Pública y Reforma Administrativa</span>
+              <span class="badge badge-accent">Psicología Política y Comunicación Estratégica</span>
+              <span class="badge badge-accent">Movilización y Organización Territorial</span>
+              <span class="badge badge-accent">Contrainteligencia Algorítmica</span>
+              <span class="badge badge-accent">Neurociencia Cognitiva Aplicada</span>
+            </div>
+
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin: var(--space-6) 0 var(--space-4); color: var(--color-text-primary);">Objetivos 2026-2030 (Fase Consolidación)</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-accent);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-accent);">1</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">500.000 Militantes Activos</strong> organizados en 1.000 células base territoriales con formación certificada
+                </div>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-accent);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-accent);">2</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Academia UTC</strong> operativa: 100.000 ciudadanos formados en tecnocracia, análisis de datos y participación política
+                </div>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-accent);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-accent);">3</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Newsletter CÓDIGO FUENTE</strong> con 500.000 suscriptores y tasa de conversión like→acción >15%
+                </div>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border-left: var(--border-width-2) solid var(--color-accent);">
+                <span style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-extrabold); color: var(--color-accent);">4</span>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Candidaturas UTC</strong> en 300+ municipios con plataforma programática unificada y medible
+                </div>
+              </li>
+            </ul>
+
+            <div style="margin-top: var(--space-6); padding: var(--space-4); background-color: var(--color-accent-light); border-radius: var(--radius-lg); border: var(--border-width) solid var(--color-accent);">
+              <p style="font-style: italic; color: var(--color-accent-text); margin: 0;">"La derecha usa el miedo. La izquierda usa la esperanza. Nosotros usamos la función de utilidad social. Y ganamos porque la nuestra es medible, auditable y escalable."</p>
+              <p style="text-align: right; margin-top: var(--space-2); font-weight: var(--fw-medium); color: var(--color-accent-text);">— Fabian Sorza Cepeda</p>
             </div>
           </div>
-        </section>
+        </article>
+      </div>
+    </section>
 
-        <!-- CTA -->
-        <div class="section-cta">
-          <a href="/inscripcion/" class="btn btn-primary btn-lg">UNIRME A SU VISIÓN</a>
-          <a href="/manifiesto/" class="btn btn-secondary btn-lg">LEER EL MANIFIESTO QUE FIRMARON</a>
+    <!-- CLAUSULA DE ESTABILIDAD -->
+    <section class="section" aria-labelledby="estabilidad-title">
+      <div class="container">
+        <div class="card" style="max-width: 900px; margin: 0 auto; border-left: var(--border-width-2) solid var(--color-primary);">
+          <header style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: var(--border-width) solid var(--color-border);">
+            <div style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background-color: var(--color-primary); color: var(--white); border-radius: var(--radius-full);">
+              <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/><path d="M7 16 L12 21 L17 16"/></svg>
+            </div>
+            <h2 id="estabilidad-title" style="font-size: var(--fs-2xl); font-weight: var(--fw-bold); margin: 0;">Cláusula de Estabilidad Fundacional</h2>
+          </header>
+          <div>
+            <p style="margin-bottom: var(--space-4); font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text-secondary);">Según <strong>Artículo 10 de los Estatutos UTC</strong>, los fundadores poseen <strong>veto suspensivo (1 vez por mandato)</strong> sobre decisiones que alteren los pilares innegociables del partido:</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6);">
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background-color: var(--color-bg-alt); border-radius: var(--radius-md);">
+                <svg width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/><path d="M7 16 L12 21 L17 16"/></svg>
+                <span style="color: var(--color-text-primary);">Los 6 Principios Rectores (Art. 3 Estatutos): Tecnología como cura, Greenpunk, Autodominio, Neutralidad, IA como bien común, Justicia híbrida</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background-color: var(--color-bg-alt); border-radius: var(--radius-md);">
+                <svg width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/><path d="M7 16 L12 21 L17 16"/></svg>
+                <span style="color: var(--color-text-primary);">La estructura federal y territorial del partido</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background-color: var(--color-bg-alt); border-radius: var(--radius-md);">
+                <svg width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M12 2 L2 7 L12 12 L22 7 L12 2"/><path d="M12 12 V22"/><path d="M7 16 L12 21 L17 16"/></svg>
+                <span style="color: var(--color-text-primary);">La cláusula pétrea de principios innegociables</span>
+              </li>
+            </ul>
+            <p style="margin-bottom: var(--space-4); font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text-secondary);">El veto es reversible por <strong>3/4 del Congreso Tecnocrático Nacional</strong>.</p>
+            <div style="padding: var(--space-4); background-color: var(--color-accent-light); border-radius: var(--radius-lg); border: var(--border-width) solid var(--color-accent); margin-bottom: var(--space-4);">
+              <p style="margin: 0; font-weight: var(--fw-semibold); color: var(--color-accent-text);"><strong>Expiración automática:</strong> 2054 (30 años desde fundación) o cuando la UTC alcance <strong>1 millón de militantes activos</strong>, lo primero que ocurra.</p>
+            </div>
+            <p style="font-size: var(--fs-sm); color: var(--color-text-muted); line-height: var(--lh-relaxed);">Esta cláusula garantiza que la arquitectura original no sea diluida por oportunismo político durante la fase crítica de consolidación. Es el único mecanismo anti-entropía en la política colombiana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN A 30 AÑOS -->
+    <section class="section section--muted" aria-labelledby="plan30-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="plan30-title" class="section-title">Plan a 30 Años: 2024-2054</h2>
+          <p class="section-subtitle">No es un plan de gobierno de 4 años. Es una arquitectura de Estado para 3 generaciones. Los primeros 12 años son consolidación; los 30 años son la transformación estructural.</p>
+        </header>
+        <div class="grid grid-cols-1 grid-cols-3" style="max-width: 1200px; margin: 0 auto;">
+          <article class="card" style="border-left: var(--border-width-2) solid var(--color-primary);">
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-bold); margin-bottom: var(--space-3); color: var(--color-primary);">Fase 1: Fundación y Arquitectura (2024-2030)</h3>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-3);"><strong>Objetivo:</strong> Personería jurídica, arquitectura tecnocrática, 100K militantes formados, gemelo digital piloto, 5 Ecoparques.</p>
+            <p style="color: var(--color-text-muted); font-size: var(--fs-sm);">Hitos: Personería jurídica CNE (2025), Gemelo Digital Salud piloto (2026), Ley Identidad Soberana (2027), 1er Congreso UTC (2028).</p>
+          </article>
+          <article class="card" style="border-left: var(--border-width-2) solid var(--color-accent);">
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-bold); margin-bottom: var(--space-3); color: var(--color-accent);">Fase 2: Expansión e Infiltración (2030-2040)</h3>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-3);"><strong>Objetivo:</strong> 1M militantes, 30+ congresistas, Gemelo Digital Colombia completo, RBU Fase 1, Fábrica de órganos bioimpresos, Justicia Híbrida nacional.</p>
+            <p style="color: var(--color-text-muted); font-size: var(--fs-sm);">Hitos: 30+ curules Congreso (2034), RBU Fase 1 nacional (2035), Fábrica órganos Bogotá (2036), Justicia Híbrida 100% (2038).</p>
+          </article>
+          <article class="card" style="border-left: var(--border-width-2) solid var(--success);">
+            <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-bold); margin-bottom: var(--space-3); color: var(--success);">Fase 3: Transformación Estructural (2040-2054)</h3>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-3);"><strong>Objetivo:</strong> Reforma Constitucional Art. 1, Automatización Vial Nacional (Visión Cero), RBU 100%, Esperanza de vida >90 años, Hub mundial computación verde, Federación Tecnocrática LatAm.</p>
+            <p style="color: var(--color-text-muted); font-size: var(--fs-sm);">Hitos: Reforma Constitucional (2045), Visión Cero muertes viales (2048), RBU Universal (2050), Hub Cómputo Verde #1 Mundial (2052).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-fundadores-title">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2 id="cta-fundadores-title" class="cta-title">Su Visión, Tu Compromiso</h2>
+          <p class="cta-desc">No fundaron un partido para gestionar la decadencia. Lo fundaron para reescribir el sistema operativo de Colombia. Cada militante es un contributor. Cada voto, un commit auditado.</p>
+          <div class="cta-actions">
+            <a href="/union-tecnocratica-colombiana/inscripcion/" class="btn btn-primary btn-lg">Inscribirme como Militante</a>
+            <a href="/union-tecnocratica-colombiana/manifiesto/" class="btn btn-secondary btn-lg">Leer el Manifiesto Completo</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="/" class="footer-logo"><svg class="footer-logo-img" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#logo"/></svg><span class="footer-title">UNIÓN TECNOCRÁTICA COLOMBIANA</span><span class="footer-sigla">UTC</span></a><p class="footer-lema">MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS</p></div>
-        <nav class="footer-nav" aria-label="Enlaces principales"><div class="footer-nav-col"><h4>PARTIDO</h4><ul><li><a href="/manifiesto/">Manifiesto</a></li><li><a href="/fundadores/">Fundadores</a></li><li><a href="/vision-mision/">Visión y Misión</a></li></ul></div><div class="footer-nav-col"><h4>DOCUMENTOS</h4><ul><li><a href="/estatutos/">Estatutos</a></li><li><a href="/reglamento/">Reglamento</a></li></ul></div><div class="footer-nav-col"><h4>HERRAMIENTAS</h4><ul><li><a href="/calculadoras/">Calculadora</a></li><li><a href="/inscripcion/">Inscripción</a></li></ul></div><div class="footer-nav-col"><h4>CONTACTO</h4><ul><li><a href="mailto:contacto@utc.org.co">contacto@utc.org.co</a></li></ul></div></nav>
+        <div class="footer-brand">
+          <a href="/union-tecnocratica-colombiana/" class="footer-logo" aria-label="Unión Tecnocrática Colombiana - Inicio">
+            <svg class="footer-logo-img" aria-hidden="true"><use href="/union-tecnocratica-colombiana/assets/identity/logo-utc.svg#logo"/></svg>
+            <span class="footer-title">UNIÓN TECNOCRÁTICA COLOMBIANA</span>
+            <span class="footer-sigla">UTC</span>
+          </a>
+          <p class="footer-motto">MEDIMOS • PROYECTAMOS • EVOLUCIONAMOS</p>
+          <p class="footer-tagline">Partido político de extremo centro neutral. Tecnología como cura. Plan a 30 años.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Enlaces principales">
+          <div class="footer-nav-col"><h4>PARTIDO</h4><ul><li><a href="/union-tecnocratica-colombiana/manifiesto/">Manifiesto</a></li><li><a href="/union-tecnocratica-colombiana/fundadores/">Fundadores</a></li><li><a href="/union-tecnocratica-colombiana/vision-mision/">Visión y Misión</a></li><li><a href="/union-tecnocratica-colombiana/objetivos/">Objetivos</a></li><li><a href="/union-tecnocratica-colombiana/cronograma/">Cronograma 30 Años</a></li></ul></div>
+          <div class="footer-nav-col"><h4>DOCUMENTOS</h4><ul><li><a href="/union-tecnocratica-colombiana/estatutos/">Estatutos</a></li><li><a href="/union-tecnocratica-colombiana/reglamento/">Reglamento</a></li><li><a href="/union-tecnocratica-colombiana/acta-constitucion/">Acta Constitución</a></li><li><a href="/union-tecnocratica-colombiana/transparencia/">Transparencia</a></li><li><a href="/union-tecnocratica-colombiana/privacidad/">Privacidad</a></li></ul></div>
+          <div class="footer-nav-col"><h4>HERRAMIENTAS</h4><ul><li><a href="/union-tecnocratica-colombiana/calculadoras/">Calculadora</a></li><li><a href="/union-tecnocratica-colombiana/inscripcion/">Inscripción</a></li><li><a href="/union-tecnocratica-colombiana/newsletter/">Newsletter</a></li><li><a href="/union-tecnocratica-colombiana/contacto/">Contacto</a></li><li><a href="/union-tecnocratica-colombiana/prensa/">Prensa</a></li></ul></div>
+          <div class="footer-nav-col"><h4>CONTACTO</h4><ul><li><a href="/union-tecnocratica-colombiana/contacto/">Formulario</a></li><li><a href="/union-tecnocratica-colombiana/prensa/">Prensa</a></li><li><a href="/union-tecnocratica-colombiana/inscripcion/">Militancia</a></li><li>Bogotá D.C., Colombia</li></ul></div>
+        </nav>
       </div>
-      <div class="footer-bottom"><div class="footer-legal"><p>&copy; 2024 UTC. Personería jurídica en trámite.</p></div></div>
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <p>&copy; 2024 Unión Tecnocrática Colombiana. Todos los derechos reservados.</p>
+          <p>Personería jurídica en trámite ante CNE. Símbolos registrados ante SIC.</p>
+          <p>Infraestructura propia: servidores Ecoparques, Kubernetes autogestionado, blockchain permissioned. Cero GAFAM en datos críticos.</p>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-neutral">v1.0 Genesis Block</span>
+          <span class="badge badge-primary">Open Source</span>
+          <span class="badge badge-accent">Plan 30 Años</span>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script type="module" src="/scripts/main.js"></script>
-  <script type="module" src="/scripts/navbar.js"></script>
-  <script type="module" src="/scripts/stats-counter.js"></script>
+  <script type="module" src="/union-tecnocratica-colombiana/scripts/main.js"></script>
+  <script type="module" src="/union-tecnocratica-colombiana/scripts/navbar.js"></script>
 </body>
 </html>
