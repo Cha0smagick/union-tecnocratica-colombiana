@@ -120,6 +120,97 @@ function injectBasePath() {
   log(`Base path inyectado: ${BASE_PATH}`, 'success');
 }
 
+function rewriteAssetUrls() {
+  // Reescribe URLs absolutas (/styles/, /scripts/, /assets/) para que funcionen con base path
+  // /styles/tokens.css → /union-tecnocratica-colombiana/styles/tokens.css
+  const urlPatterns = [
+    // CSS links
+    { pattern: /href="\/(styles\/[^"]+)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(styles\/[^']+)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // JS scripts
+    { pattern: /src="\/(scripts\/[^"]+)"/g, replacement: `src="${BASE_PATH}$1"` },
+    { pattern: /src='\/(scripts\/[^']+)'/g, replacement: `src='${BASE_PATH}$1'` },
+    // Fonts preload
+    { pattern: /href="\/(assets\/fonts\/[^"]+)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(assets\/fonts\/[^']+)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Identity assets (SVGs en use href)
+    { pattern: /href="\/(assets\/identity\/[^"]+)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(assets\/identity\/[^']+)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Images
+    { pattern: /src="\/(assets\/images\/[^"]+)"/g, replacement: `src="${BASE_PATH}$1"` },
+    { pattern: /src='\/(assets\/images\/[^']+)'/g, replacement: `src='${BASE_PATH}$1'` },
+    // Manifest
+    { pattern: /href="\/(manifest\.json)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(manifest\.json)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Favicon
+    { pattern: /href="\/(assets\/identity\/logo-utc\.svg)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(assets\/identity\/logo-utc\.svg)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Navigation links (internal pages) - absolute paths to base path
+    { pattern: /href="\/(manifiesto\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(manifiesto\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(fundadores\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(fundadores\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(vision-mision\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(vision-mision\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(objetivos\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(objetivos\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(cronograma\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(cronograma\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(estatutos\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(estatutos\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(calculadoras\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(calculadoras\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(newsletter\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(newsletter\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(inscripcion\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(inscripcion\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Footer links
+    { pattern: /href="\/(privacidad\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(privacidad\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(terminos\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(terminos\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(reglamento\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(reglamento\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(acta-constitucion\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(acta-constitucion\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(transparencia\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(transparencia\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(academia\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(academia\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(ecoparques\/)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(ecoparques\/)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Anchor links within pages (e.g., /manifiesto/#tecnologia-cura)
+    { pattern: /href="\/(manifiesto\/#[^"]+)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(manifiesto\/#[^']+)'/g, replacement: `href='${BASE_PATH}$1'` },
+    { pattern: /href="\/(estatutos\/#[^"]+)"/g, replacement: `href="${BASE_PATH}$1"` },
+    { pattern: /href='\/(estatutos\/#[^']+)'/g, replacement: `href='${BASE_PATH}$1'` },
+    // Home link
+    { pattern: /href="\/"([^>]*>)/g, replacement: `href="${BASE_PATH}"$1` },
+    { pattern: /href='\/'([^>]*>)/g, replacement: `href='${BASE_PATH}'$1` },
+  ];
+
+  PAGES.forEach(page => {
+    const filePath = path.join(DIST, page);
+    if (fs.existsSync(filePath)) {
+      let html = fs.readFileSync(filePath, 'utf8');
+      let changed = false;
+
+      urlPatterns.forEach(({ pattern, replacement }) => {
+        const newHtml = html.replace(pattern, replacement);
+        if (newHtml !== html) {
+          changed = true;
+          html = newHtml;
+        }
+      });
+
+      if (changed) {
+        fs.writeFileSync(filePath, html);
+      }
+    }
+  });
+  log('URLs de assets y navegación reescritas con base path', 'success');
+}
+
 function generateSitemap() {
   // Para GitHub Pages project site, usar la URL del project site
   const baseUrl = 'https://cha0smagick.github.io/union-tecnocratica-colombiana';
@@ -305,6 +396,7 @@ try {
   copyPublic();
   optimizeAllHtml();
   injectBasePath();
+  rewriteAssetUrls();
   generateSitemap();
   generateRobots();
   generateSecurityHeaders();
