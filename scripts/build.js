@@ -33,7 +33,8 @@ const ASSETS_DIRS = [
   'assets/identity',
   'assets/images',
   'assets/fonts',
-  'styles'
+  'styles',
+  'scripts'
 ];
 
 function log(msg, type = 'info') {
@@ -66,6 +67,14 @@ function copyPublic() {
   if (fs.existsSync(SRC_STYLES)) {
     copyRecursiveSync(SRC_STYLES, DIST_STYLES);
     log('Styles copiados a dist/styles', 'success');
+  }
+
+  // Copiar scripts desde src a dist
+  const SRC_SCRIPTS = path.join(SRC, 'scripts');
+  const DIST_SCRIPTS = path.join(DIST, 'scripts');
+  if (fs.existsSync(SRC_SCRIPTS)) {
+    copyRecursiveSync(SRC_SCRIPTS, DIST_SCRIPTS);
+    log('Scripts copiados a dist/scripts', 'success');
   }
 }
 
