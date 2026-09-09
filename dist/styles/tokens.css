@@ -1,0 +1,316 @@
+/* ==========================================================================
+   UNIÓN TECNOCRÁTICA COLOMBIANA — DESIGN TOKENS
+   Sistema de diseño verde-punk/eco-punk: fusión naturaleza-máquina
+   Paleta: morado oscuro (#1A0B2E), negro (#000000), morado eléctrico (#8B3AFF),
+           verde Gaia (#00D47A), cian tecnológico (#00F0FF), ámbar (#FFB000), blanco hueso (#F5F0FF)
+   ========================================================================== */
+
+:root {
+  /* === COLORES PRIMARIOS === */
+  --color-primary: #1A0B2E;
+  --color-primary-light: #2D1B4E;
+  --color-primary-dark: #0D0518;
+  --color-primary-glow: #8B3AFF;
+
+  --color-background: #000000;
+  --color-background-elevated: #0A0A0F;
+  --color-background-card: #110E1A;
+  --color-background-hover: #1A1428;
+
+  --color-accent: #8B3AFF;
+  --color-accent-dim: #6B2ACC;
+  --color-accent-glow: #A85FFF;
+  --color-accent-pulse: #C480FF;
+
+  --color-gaia: #00D47A;
+  --color-gaia-dim: #00A860;
+  --color-gaia-glow: #3AFF9E;
+  --color-gaia-pulse: #6AFFB8;
+
+  --color-tech: #00F0FF;
+  --color-tech-dim: #00C0CC;
+  --color-tech-glow: #40F8FF;
+  --color-tech-pulse: #80FCFF;
+
+  --color-warning: #FFB000;
+  --color-warning-dim: #CC8D00;
+  --color-warning-glow: #FFC840;
+
+  --color-error: #FF3A5E;
+  --color-error-dim: #CC2D4A;
+  --color-error-glow: #FF6A8A;
+
+  --color-text-primary: #F5F0FF;
+  --color-text-secondary: #C8B8E8;
+  --color-text-muted: #8A7AA8;
+  --color-text-inverse: #0D0518;
+  --color-text-accent: #8B3AFF;
+  --color-text-gaia: #00D47A;
+  --color-text-tech: #00F0FF;
+
+  --color-border: #2A1A4A;
+  --color-border-light: #3A2A5A;
+  --color-border-accent: #8B3AFF;
+  --color-border-gaia: #00D47A;
+  --color-border-tech: #00F0FF;
+
+  /* === GRADIENTES === */
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #1A0B2E 50%, #0D0518 100%);
+  --gradient-radial-primary: radial-gradient(ellipse at center, #1A0B2E 0%, #000000 70%);
+  --gradient-accent: linear-gradient(135deg, #8B3AFF 0%, #6B2ACC 100%);
+  --gradient-gaia: linear-gradient(135deg, #00D47A 0%, #00A860 100%);
+  --gradient-tech: linear-gradient(135deg, #00F0FF 0%, #00C0CC 100%);
+  --gradient-warning: linear-gradient(135deg, #FFB000 0%, #CC8D00 100%);
+  --gradient-card: linear-gradient(145deg, #1A1428 0%, #110E1A 100%);
+  --gradient-glow-accent: radial-gradient(circle at center, rgba(139, 58, 255, 0.3) 0%, transparent 70%);
+  --gradient-glow-gaia: radial-gradient(circle at center, rgba(0, 212, 122, 0.25) 0%, transparent 70%);
+  --gradient-glow-tech: radial-gradient(circle at center, rgba(0, 240, 255, 0.2) 0%, transparent 70%);
+  --gradient-text-primary: linear-gradient(135deg, #F5F0FF 0%, #C8B8E8 100%);
+  --gradient-text-accent: linear-gradient(135deg, #8B3AFF 0%, #C480FF 100%);
+  --gradient-text-gaia: linear-gradient(135deg, #00D47A 0%, #6AFFB8 100%);
+  --gradient-text-tech: linear-gradient(135deg, #00F0FF 0%, #80FCFF 100%);
+  --gradient-border: linear-gradient(135deg, #8B3AFF 0%, #00D47A 50%, #00F0FF 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(26, 11, 46, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%),
+                   radial-gradient(ellipse 80% 50% at 50% 20%, rgba(139, 58, 255, 0.15) 0%, transparent 50%),
+                   radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0, 212, 122, 0.1) 0%, transparent 50%);
+
+  /* === TIPOGRAFÍA === */
+  --font-display: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-gaia: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --font-size-fluid-xs: clamp(0.625rem, 0.5rem + 0.625vw, 0.75rem);
+  --font-size-fluid-sm: clamp(0.75rem, 0.625rem + 0.625vw, 0.875rem);
+  --font-size-fluid-base: clamp(0.875rem, 0.75rem + 0.625vw, 1rem);
+  --font-size-fluid-lg: clamp(1rem, 0.875rem + 0.625vw, 1.125rem);
+  --font-size-fluid-xl: clamp(1.25rem, 1rem + 1.25vw, 1.5rem);
+  --font-size-fluid-2xl: clamp(1.5rem, 1.125rem + 1.875vw, 2rem);
+  --font-size-fluid-3xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --font-size-fluid-4xl: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  --font-size-fluid-5xl: clamp(3rem, 2rem + 5vw, 5.5rem);
+  --font-size-fluid-6xl: clamp(4rem, 2.5rem + 7.5vw, 8rem);
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.04em;
+  --letter-spacing-widest: 0.08em;
+  --letter-spacing-tracking: 0.12em;
+
+  /* === ESPACIADO (base 8px) === */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
+
+  /* === BORDES Y RADIOS === */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-xl: 1.5rem;    /* 24px */
+  --radius-2xl: 2rem;     /* 32px */
+  --radius-full: 9999px;
+  --radius-organic: 2rem 1rem 3rem 1.5rem / 1.5rem 2rem 1rem 2.5rem;
+
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+  --border-width-heavy: 4px;
+
+  /* === SOMBRAS Y BRILLOS === */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 32px 64px rgba(0, 0, 0, 0.5), 0 16px 32px rgba(0, 0, 0, 0.3);
+
+  --glow-accent-sm: 0 0 8px rgba(139, 58, 255, 0.3), 0 0 16px rgba(139, 58, 255, 0.15);
+  --glow-accent-md: 0 0 16px rgba(139, 58, 255, 0.4), 0 0 32px rgba(139, 58, 255, 0.2);
+  --glow-accent-lg: 0 0 32px rgba(139, 58, 255, 0.5), 0 0 64px rgba(139, 58, 255, 0.25);
+  --glow-accent-xl: 0 0 64px rgba(139, 58, 255, 0.6), 0 0 128px rgba(139, 58, 255, 0.3);
+
+  --glow-gaia-sm: 0 0 8px rgba(0, 212, 122, 0.3), 0 0 16px rgba(0, 212, 122, 0.15);
+  --glow-gaia-md: 0 0 16px rgba(0, 212, 122, 0.4), 0 0 32px rgba(0, 212, 122, 0.2);
+  --glow-gaia-lg: 0 0 32px rgba(0, 212, 122, 0.5), 0 0 64px rgba(0, 212, 122, 0.25);
+
+  --glow-tech-sm: 0 0 8px rgba(0, 240, 255, 0.3), 0 0 16px rgba(0, 240, 255, 0.15);
+  --glow-tech-md: 0 0 16px rgba(0, 240, 255, 0.4), 0 0 32px rgba(0, 240, 255, 0.2);
+  --glow-tech-lg: 0 0 32px rgba(0, 240, 255, 0.5), 0 0 64px rgba(0, 240, 255, 0.25);
+
+  --glow-warning-sm: 0 0 8px rgba(255, 176, 0, 0.3), 0 0 16px rgba(255, 176, 0, 0.15);
+  --glow-warning-md: 0 0 16px rgba(255, 176, 0, 0.4), 0 0 32px rgba(255, 176, 0, 0.2);
+
+  /* === TRANSICIONES Y ANIMACIONES === */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --duration-instant: 50ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-slowest: 1000ms;
+
+  --transition-instant: var(--duration-instant) var(--ease-out-quart);
+  --transition-fast: var(--duration-fast) var(--ease-out-quart);
+  --transition-normal: var(--duration-normal) var(--ease-out-quart);
+  --transition-slow: var(--duration-slow) var(--ease-out-quart);
+  --transition-spring: var(--duration-slow) var(--ease-spring);
+  --transition-bounce: var(--duration-slower) var(--ease-bounce);
+
+  /* === Z-INDEX === */
+  --z-background: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-toast: 700;
+  --z-max: 9999;
+
+  /* === BREAKPOINTS === */
+  --bp-xs: 480px;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1440px;
+  --bp-3xl: 1920px;
+  --bp-4xl: 2560px;
+
+  /* === CONTENEDORES === */
+  --container-xs: 20rem;    /* 320px */
+  --container-sm: 24rem;    /* 384px */
+  --container-md: 28rem;    /* 448px */
+  --container-lg: 32rem;    /* 512px */
+  --container-xl: 36rem;    /* 576px */
+  --container-2xl: 42rem;   /* 672px */
+  --container-3xl: 48rem;   /* 768px */
+  --container-4xl: 56rem;   /* 896px */
+  --container-5xl: 64rem;   /* 1024px */
+  --container-6xl: 72rem;   /* 1152px */
+  --container-7xl: 80rem;   /* 1280px */
+  --container-full: 100%;
+  --container-screen: 100vw;
+
+  /* === PROPORCIÓN ÁUREA === */
+  --phi: 1.618033988749895;
+  --phi-inverse: 0.618033988749895;
+
+  /* === FIBONACCI SCALE (para rhythm vertical) === */
+  --fib-1: 0.25rem;   /* 1 */
+  --fib-2: 0.5rem;    /* 2 */
+  --fib-3: 0.75rem;   /* 3 */
+  --fib-5: 1.25rem;   /* 5 */
+  --fib-8: 2rem;      /* 8 */
+  --fib-13: 3.25rem;  /* 13 */
+  --fib-21: 5.25rem;  /* 21 */
+  --fib-34: 8.5rem;   /* 34 */
+  --fib-55: 13.75rem; /* 55 */
+  --fib-89: 22.25rem; /* 89 */
+
+  /* === EFECTOS ESPECIALES === */
+  --noise-opacity: 0.03;
+  --noise-opacity-hover: 0.05;
+  --scanline-opacity: 0.02;
+  --vignette-strength: 0.3;
+
+  /* === FOCUS RING === */
+  --focus-ring: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-accent);
+  --focus-ring-gaia: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-gaia);
+  --focus-ring-tech: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-tech);
+
+  /* === SCROLLBAR === */
+  --scrollbar-track: var(--color-background);
+  --scrollbar-thumb: var(--color-border);
+  --scrollbar-thumb-hover: var(--color-border-light);
+  --scrollbar-thumb-active: var(--color-accent);
+  --scrollbar-width: 8px;
+  --scrollbar-radius: 4px;
+}
+
+/* === TEMA ALTERNATIVO: MODO ALTO CONTRASTE (ACCESIBILIDAD) === */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #2D1B4E;
+    --color-background: #000000;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #E0E0E0;
+    --color-text-muted: #B0B0B0;
+    --color-border: #8B3AFF;
+    --color-accent: #B080FF;
+    --color-gaia: #40FF80;
+    --color-tech: #40FFFF;
+    --glow-accent-md: 0 0 16px rgba(176, 128, 255, 0.6), 0 0 32px rgba(176, 128, 255, 0.3);
+    --glow-gaia-md: 0 0 16px rgba(64, 255, 128, 0.6), 0 0 32px rgba(64, 255, 128, 0.3);
+    --glow-tech-md: 0 0 16px rgba(64, 255, 255, 0.6), 0 0 32px rgba(64, 255, 255, 0.3);
+  }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+    --duration-slowest: 0ms;
+    --transition-instant: none;
+    --transition-fast: none;
+    --transition-normal: none;
+    --transition-slow: none;
+    --transition-spring: none;
+    --transition-bounce: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === DARK MODE FORZADO (nuestro default) === */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Mantenemos dark mode como default para la estética del partido */
+  }
+}

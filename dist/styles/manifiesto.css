@@ -1,0 +1,383 @@
+/* ==========================================================================
+   UNIÓN TECNOCRÁTICA COLOMBIANA — MANIFIESTO.CSS
+   Estilos específicos para la página del manifiesto
+   ========================================================================== */
+
+@import url('tokens.css');
+@import url('global.css');
+@import url('components.css');
+
+/* === PAGE HERO === */
+.page-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem var(--space-6) var(--space-10);
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-background);
+  background: var(--gradient-hero);
+}
+
+.page-hero-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(139, 58, 255, 0.15) 0%, transparent 70%);
+  border-radius: var(--radius-full);
+  filter: blur(60px);
+  animation: breathe 6s ease-in-out infinite;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  text-align: center;
+  max-width: 800px;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-fluid-sm);
+  color: var(--color-text-muted);
+}
+
+.breadcrumb ol {
+  display: flex;
+  list-style: none;
+  gap: var(--space-2);
+}
+
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-2); }
+
+.breadcrumb li:not(:last-child)::after {
+  content: '/';
+  color: var(--color-border);
+}
+
+.breadcrumb a { color: var(--color-text-muted); transition: color var(--transition-fast); }
+.breadcrumb a:hover { color: var(--color-accent); }
+.breadcrumb [aria-current="page"] { color: var(--color-accent); font-weight: var(--font-weight-semibold); }
+
+.page-title {
+  font-size: var(--font-size-fluid-5xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-fluid-xl);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.lema-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.lema-large .lema-separator {
+  color: var(--color-accent);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* === MANIFIESTO ARTICLE === */
+.manifiesto-article {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.manifiesto-section {
+  position: relative;
+  padding: var(--space-12) 0;
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+.manifiesto-section:last-of-type { border-bottom: none; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-fluid-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  background: rgba(139, 58, 255, 0.1);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: var(--border-width-hairline) solid var(--color-accent);
+  min-width: 4rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--font-size-fluid-3xl);
+  flex: 1;
+}
+
+.pilar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.pilar-icon svg { width: 1.25rem; height: 1.25rem; }
+
+/* === PREÁMBULO === */
+.preambulo-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preambulo-content .lead {
+  font-size: var(--font-size-fluid-xl);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.preambulo-content p {
+  margin-bottom: var(--space-4);
+  max-width: none;
+  text-align: center;
+}
+
+.preambulo-content .text-gradient-accent {
+  display: block;
+  margin: var(--space-6) 0;
+  font-size: var(--font-size-fluid-lg);
+}
+
+.lema-large { margin-top: var(--space-8); }
+
+/* === PILARES === */
+.pilar-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pilar-quote {
+  font-size: var(--font-size-fluid-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  border-left: var(--border-width-medium) solid var(--color-accent);
+  padding-left: var(--space-5);
+  margin: 0 0 var(--space-6) var(--space-4);
+  font-style: italic;
+}
+
+#greenpunk-fusion .pilar-quote { border-color: var(--color-gaia); }
+#transhumanismo-autodominio .pilar-quote { border-color: var(--color-accent); }
+#seguridad-hibrida .pilar-quote { border-color: var(--color-warning); }
+#ia-bien-comun .pilar-quote { border-color: var(--color-tech); }
+
+.pilar-content > p {
+  margin-bottom: var(--space-5);
+  font-size: var(--font-size-fluid-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.pilar-metrics {
+  background: var(--gradient-card);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.pilar-metrics h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.pilar-metrics h4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-accent);
+}
+
+#greenpunk-fusion .pilar-metrics h4::before { background: var(--gradient-gaia); }
+#transhumanismo-autodominio .pilar-metrics h4::before { background: var(--gradient-accent); }
+#seguridad-hibrida .pilar-metrics h4::before { background: var(--gradient-warning); }
+#ia-bien-comun .pilar-metrics h4::before { background: var(--gradient-tech); }
+
+.pilar-metrics ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.pilar-metrics li {
+  padding: var(--space-4);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-fluid-sm);
+  line-height: var(--line-height-normal);
+  transition: all var(--transition-fast);
+}
+
+.pilar-metrics li:hover {
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-md), var(--glow-accent-sm);
+  transform: translateY(-2px);
+}
+
+.pilar-metrics strong { color: var(--color-text-primary); }
+
+.pilar-refs {
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  background: var(--color-background-card);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.pilar-refs h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-fluid-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.pilar-refs ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+.pilar-refs li {
+  font-size: var(--font-size-fluid-sm);
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-background);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+/* === CIERRE === */
+.cierre-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cierre-quote {
+  font-size: var(--font-size-fluid-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  margin: 0 auto var(--space-8);
+  padding: 0 var(--space-6);
+  border-left: none;
+  font-style: italic;
+}
+
+.cierre-content > p {
+  font-size: var(--font-size-fluid-lg);
+  margin-bottom: var(--space-4);
+  max-width: none;
+}
+
+.cierre-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+/* === FIRMA === */
+.manifiesto-firma {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: var(--border-width-medium) solid var(--color-accent);
+  text-align: center;
+}
+
+.manifiesto-firma p {
+  margin-bottom: var(--space-3);
+  max-width: none;
+  font-size: var(--font-size-fluid-sm);
+  color: var(--color-text-muted);
+}
+
+.firmantes {
+  font-size: var(--font-size-fluid-base) !important;
+  color: var(--color-text-secondary) !important;
+  margin: var(--space-6) 0 !important;
+}
+
+.firmantes strong { color: var(--color-text-primary); }
+
+.fecha {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-fluid-xs) !important;
+  color: var(--color-accent) !important;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .page-title { font-size: var(--font-size-fluid-4xl); }
+  .section-title { font-size: var(--font-size-fluid-2xl); }
+  .section-header { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+  .section-number { width: 100%; }
+  .pilar-metrics ul { grid-template-columns: 1fr; }
+  .pilar-refs ul { flex-direction: column; }
+}

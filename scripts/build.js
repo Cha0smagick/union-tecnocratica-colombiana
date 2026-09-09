@@ -32,7 +32,8 @@ const PAGES = [
 const ASSETS_DIRS = [
   'assets/identity',
   'assets/images',
-  'assets/fonts'
+  'assets/fonts',
+  'styles'
 ];
 
 function log(msg, type = 'info') {
@@ -58,6 +59,14 @@ function copyPublic() {
   // Copiar todo public a dist
   copyRecursiveSync(PUBLIC, DIST);
   log('Archivos públicos copiados a dist', 'success');
+
+  // Copiar styles desde src a dist
+  const SRC_STYLES = path.join(SRC, 'styles');
+  const DIST_STYLES = path.join(DIST, 'styles');
+  if (fs.existsSync(SRC_STYLES)) {
+    copyRecursiveSync(SRC_STYLES, DIST_STYLES);
+    log('Styles copiados a dist/styles', 'success');
+  }
 }
 
 function copyRecursiveSync(src, dest) {
