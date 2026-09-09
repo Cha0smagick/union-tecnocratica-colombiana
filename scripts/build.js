@@ -13,6 +13,9 @@ const SRC = path.join(ROOT, 'src');
 const PUBLIC = path.join(ROOT, 'public');
 const DIST = path.join(ROOT, 'dist');
 
+// GitHub Pages project site base path
+const BASE_PATH = '/union-tecnocratica-colombiana/';
+
 const PAGES = [
   'index.html',
   'manifiesto/index.html',
@@ -95,8 +98,31 @@ function optimizeAllHtml() {
   log('HTML optimizado', 'success');
 }
 
+function injectBasePath() {
+  PAGES.forEach(page => {
+    const filePath = path.join(DIST, page);
+    if (fs.existsSync(filePath)) {
+      let html = fs.readFileSync(filePath, 'utf8');
+      
+      // Inyectar base tag después de <head>
+      if (!html.includes('<base href=')) {
+        html = html.replace('<head>', `<head>\n  <base href="${BASE_PATH}">`);
+        fs.writeFileSync(filePath, html);
+      }
+      
+      // Fix action URLs en formularios (newsletter, inscripcion)
+      html = html.replace(/action="\//g, `action="${BASE_PATH}`);
+      html = html.replace(/action='\//g, `action='${BASE_PATH}`);
+      
+      fs.writeFileSync(filePath, html);
+    }
+  });
+  log(`Base path inyectado: ${BASE_PATH}`, 'success');
+}
+
 function generateSitemap() {
-  const baseUrl = 'https://utc.org.co';
+  // Para GitHub Pages project site, usar la URL del project site
+  const baseUrl = 'https://cha0smagick.github.io/union-tecnocratica-colombiana';
   const today = new Date().toISOString().split('T')[0];
 
   const urls = PAGES.map(page => {
@@ -122,7 +148,7 @@ function generateRobots() {
   const robots = `User-agent: *
 Allow: /
 
-Sitemap: https://utc.org.co/sitemap.xml
+Sitemap: https://cha0smagick.github.io/union-tecnocratica-colombiana/sitemap.xml
 
 # UTC - Unión Tecnocrática Colombiana
 # Partido político de extremo centro neutral
@@ -278,6 +304,7 @@ try {
   cleanDist();
   copyPublic();
   optimizeAllHtml();
+  injectBasePath();
   generateSitemap();
   generateRobots();
   generateSecurityHeaders();

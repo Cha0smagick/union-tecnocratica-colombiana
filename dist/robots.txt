@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://utc.org.co/sitemap.xml
+Sitemap: https://cha0smagick.github.io/union-tecnocratica-colombiana/sitemap.xml
 
 # UTC - Unión Tecnocrática Colombiana
 # Partido político de extremo centro neutral
