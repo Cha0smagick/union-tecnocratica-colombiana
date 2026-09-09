@@ -48,6 +48,12 @@
           <li role="none"><a href="/calculadoras/" class="nav-link" role="menuitem">CALCULADORA TECNOCRÁTICA</a></li>
           <li role="none"><a href="/newsletter/" class="nav-link" role="menuitem">NEWSLETTER</a></li>
           <li role="none"><a href="/inscripcion/" class="nav-link btn-primary nav-cta" role="menuitem">ÚNETE AHORA</a></li>
+          <li role="none">
+            <button class="nav-link theme-toggle" id="theme-toggle" aria-label="Cambiar tema" role="menuitem" type="button">
+              <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -57,14 +63,12 @@
   <header class="hero" role="banner">
     <div class="hero-bg" aria-hidden="true">
       <svg class="hero-pattern" viewBox="0 0 100 100" preserveAspectRatio="none"><use href="/assets/identity/logo-utc.svg#circuitPattern"/></svg>
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
-      <div class="hero-glow hero-glow-3"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
     </div>
 
     <div class="container hero-content">
       <div class="hero-badge">
-        <span class="badge badge-accent animate-pulse-glow">PARTIDO POLÍTICO DE EXTREMO CENTRO NEUTRAL</span>
+        <span class="badge badge-accent">PARTIDO POLÍTICO DE EXTREMO CENTRO NEUTRAL</span>
       </div>
 
       <h1 class="hero-title animate-slide-up">
@@ -88,34 +92,41 @@
       </div>
 
       <div class="hero-actions animate-slide-up stagger-3">
-        <a href="/inscripcion/" class="btn btn-primary btn-lg" aria-label="Unirse a la UTC como militante activo">
-          <svg class="btn-icon" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#colibri"/></svg>
-          UNIRME A LA UTC
-        </a>
-        <a href="/manifiesto/" class="btn btn-secondary btn-lg" aria-label="Leer el manifiesto completo">
-          LEER MANIFIESTO
-        </a>
-        <a href="/calculadoras/" class="btn btn-tech btn-lg" aria-label="Probar calculadoras tecnocráticas">
-          CALCULAR IMPACTO
-        </a>
+        <div class="hero-links" role="list" aria-label="Enlaces principales de acción">
+          <a href="/inscripcion/" class="hero-link" role="listitem" aria-label="Unirse a la UTC como militante activo">
+            <svg class="link-icon" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#colibri"/></svg>
+            <span>Unirme a la UTC</span>
+            <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/manifiesto/" class="hero-link" role="listitem" aria-label="Leer el manifiesto completo">
+            <svg class="link-icon" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#circuitPattern"/></svg>
+            <span>Leer Manifiesto</span>
+            <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/calculadoras/" class="hero-link" role="listitem" aria-label="Probar calculadoras tecnocráticas">
+            <svg class="link-icon" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#shield"/></svg>
+            <span>Calcular Impacto</span>
+            <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
 
       <div class="hero-stats animate-slide-up stagger-4" role="list" aria-label="Métricas del partido">
         <div class="stat-item" role="listitem">
           <span class="stat-value" data-count="10000">0</span>
-          <span class="stat-label">MILITANTES FUNDADORES</span>
+          <span class="stat-label">0 MILITANTES FUNDADORES</span>
         </div>
         <div class="stat-item" role="listitem">
           <span class="stat-value" data-count="32">0</span>
-          <span class="stat-label">DEPARTAMENTOS</span>
+          <span class="stat-label">0 DEPARTAMENTOS</span>
         </div>
         <div class="stat-item" role="listitem">
           <span class="stat-value" data-count="6">0</span>
-          <span class="stat-label">PILARES PROGRAMÁTICOS</span>
+          <span class="stat-label">0 PILARES PROGRAMÁTICOS</span>
         </div>
         <div class="stat-item" role="listitem">
           <span class="stat-value" data-count="2035">0</span>
-          <span class="stat-label">AÑO META TRANSFORMACIÓN</span>
+          <span class="stat-label">0 AÑO META TRANSFORMACIÓN</span>
         </div>
       </div>
     </div>
@@ -380,10 +391,7 @@
             <h2 id="cta-final-title" class="section-title text-gradient-primary">LA EVOLUCIÓN NO TIENE RELEASE FINAL</h2>
             <p class="cta-desc">Versión 1.0. En beta permanente. Cada militante es un contributor. Cada voto es un commit. Cada ley es un merge request auditado.</p>
             <div class="cta-actions">
-              <a href="/inscripcion/" class="btn btn-primary btn-lg">
-                <svg class="btn-icon" aria-hidden="true"><use href="/assets/identity/logo-utc.svg#colibri"/></svg>
-                CONVERTIRME EN MILITANTE
-              </a>
+              <a href="/inscripcion/" class="cta-link">CONVERTIRME EN MILITANTE</a>
               <a href="/manifiesto/" class="btn btn-gaia btn-lg">LEER EL CÓDIGO FUENTE</a>
             </div>
             <p class="cta-footer">Fundadores: <strong>Alejandro Quintero Ruiz</strong> & <strong>Fabian Sorza Cepeda</strong> | <a href="/estatutos/" class="link-underline">Estatutos</a> · <a href="/reglamento/" class="link-underline">Reglamento</a> · <a href="/acta-constitucion/" class="link-underline">Acta de Constitución</a> · <a href="/privacidad/" class="link-underline">Privacidad</a> · <a href="/transparencia/" class="link-underline">Transparencia</a></p>

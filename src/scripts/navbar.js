@@ -1,18 +1,88 @@
 // ==========================================================================
 // UNIÓN TECNOCRÁTICA COLOMBIANA — NAVBAR.JS
-// Navbar responsive, scroll spy, active link highlighting
+// Navbar responsive, scroll spy, active link highlighting, theme toggle
 // ==========================================================================
 
 import { AppState, $ } from './main.js';
+
+/** Inicializa theme toggle */
+function initThemeToggle() {
+  const themeToggle = $.id('theme-toggle');
+  if (!themeToggle) return;
+
+  // Obtener tema guardado o preferencia del sistema
+  const savedTheme = localStorage.getItem('utc-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+  // Aplicar tema inicial
+  document.documentElement.setAttribute('data-theme', initialTheme);
+  AppState.theme = initialTheme;
+  updateThemeIcons(initialTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('utc-theme', newTheme);
+    AppState.theme = newTheme;
+    updateThemeIcons(newTheme);
+
+    // Anuncio para lectores de pantalla
+    announceThemeChange(newTheme);
+  });
+
+  // Escuchar cambios en preferencia del sistema (solo si no hay preferencia guardada)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('utc-theme')) {
+      const newTheme = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      AppState.theme = newTheme;
+      updateThemeIcons(newTheme);
+    }
+  });
+}
+
+function updateThemeIcons(theme) {
+  const themeToggle = $.id('theme-toggle');
+  if (!themeToggle) return;
+
+  const sunIcon = themeToggle.querySelector('.theme-icon-sun');
+  const moonIcon = themeToggle.querySelector('.theme-icon-moon');
+
+  if (theme === 'dark') {
+    if (sunIcon) sunIcon.style.display = 'block';
+    if (moonIcon) moonIcon.style.display = 'none';
+    themeToggle.setAttribute('aria-label', 'Cambiar a modo claro');
+  } else {
+    if (sunIcon) sunIcon.style.display = 'none';
+    if (moonIcon) moonIcon.style.display = 'block';
+    themeToggle.setAttribute('aria-label', 'Cambiar a modo oscuro');
+  }
+}
+
+function announceThemeChange(theme) {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('role', 'status');
+  announcement.setAttribute('aria-live', 'polite');
+  announcement.className = 'sr-only';
+  announcement.textContent = theme === 'dark' ? 'Modo oscuro activado' : 'Modo claro activado';
+  document.body.appendChild(announcement);
+  setTimeout(() => announcement.remove(), 1000);
+}
 
 /** Inicializa navbar */
 export function initNavbar() {
   const navbar = $.sel('.navbar');
   const menuToggle = $.sel('.navbar-toggle');
   const menu = $.id('navbar-menu');
-  const navLinks = $.selAll('.nav-link');
+  const navLinks = $.selAll('.nav-link:not(.theme-toggle)');
 
   if (!navbar) return;
+
+  // Inicializar theme toggle
+  initThemeToggle();
 
   // Scroll effect
   let lastScrollY = 0;
@@ -118,7 +188,8 @@ export function initNavbar() {
   }
 
   // Keyboard navigation para nav-links
-  navLinks.forEach((link, i, links) => {
+  const allNavLinks = $.selAll('.nav-link');
+  allNavLinks.forEach((link, i, links) => {
     link.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         e.preventDefault();

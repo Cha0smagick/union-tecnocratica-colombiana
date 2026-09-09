@@ -114,7 +114,7 @@
   .navbar-menu {
     position: fixed;
     top: 5rem; left: 0; right: 0;
-    background-color: var(--white);
+    background-color: var(--color-bg);
     border-bottom: var(--border-width) solid var(--color-border);
     padding: var(--space-6);
     display: none;
@@ -173,6 +173,47 @@
   .nav-cta .btn { width: 100%; }
   @media (min-width: 1024px) { .nav-cta .btn { width: auto; } }
 
+  /* Theme Toggle */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    transition: background-color var(--trans-fast);
+    color: var(--color-text-secondary);
+  }
+  .theme-toggle:hover {
+    background-color: var(--color-bg-muted);
+    color: var(--color-text-primary);
+  }
+  .theme-toggle:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+  .theme-toggle .theme-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: opacity var(--trans-fast), transform var(--trans-fast);
+  }
+  .theme-toggle .theme-icon-sun { display: none; }
+  .theme-toggle .theme-icon-moon { display: block; }
+
+  /* Soporte para clases explícitas de tema (antes de que JS cargue) */
+  :root[data-theme="light"] .theme-toggle .theme-icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .theme-icon-moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .theme-icon-sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .theme-icon-moon { display: block; }
+
+  @media (min-width: 1024px) {
+    .theme-toggle { margin-left: var(--space-2); }
+  }
+
   /* ==========================================================================
      HERO: Autoridad, conversión, claridad
      ========================================================================== */
@@ -195,8 +236,8 @@
 
   .hero-pattern {
     position: absolute; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232563eb' stroke-width='0.5' stroke-opacity='0.1'%3E%3Cpath d='M0 30h60M30 0v60'/%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233D2566' stroke-width='0.5' stroke-opacity='0.05'%3E%3Cpath d='M0 30h60M30 0v60'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
   }
 
   .hero-content {
@@ -257,14 +298,122 @@
     .hero-actions .btn { max-width: none; min-width: 0; }
   }
 
-  .hero-trust {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-8);
+  /* Hero Links - Reemplazo de botones por hipervínculos estilizados */
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-10);
+  }
+
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-6);
+    font-family: var(--font-sans);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: all var(--trans-normal);
+    min-width: 180px;
+    justify-content: center;
+  }
+
+  .hero-link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-primary);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .hero-link:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  .link-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .link-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-text-muted);
+    transition: transform var(--trans-fast);
+    flex-shrink: 0;
+  }
+
+  .hero-link:hover .link-arrow {
+    transform: translateX(2px);
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 560px) {
+    .hero-links { flex-direction: column; align-items: stretch; }
+    .hero-link { max-width: none; min-width: 0; }
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
     padding-top: var(--space-8);
     border-top: var(--border-width) solid var(--color-border);
-    color: var(--color-text-muted);
-    font-size: var(--fs-sm);
   }
-  .hero-trust-item { display: flex; align-items: center; gap: var(--space-2); }
+
+  .hero-stats .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    text-align: center;
+  }
+
+  .hero-stats .stat-value {
+    font-family: var(--font-display);
+    font-size: var(--fs-fluid-4xl);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-tight);
+    color: var(--color-text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .hero-stats .stat-value { font-size: var(--fs-fluid-3xl); }
+  }
+
+  .hero-stats .stat-label {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+  }
 
   /* ==========================================================================
      SECTION BASE
@@ -340,7 +489,7 @@
   .pillar-card:hover {
     border-color: var(--color-border-strong);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 
   .pillar-icon {
@@ -391,7 +540,7 @@
   .leader-card:hover {
     border-color: var(--color-border-strong);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 
   .leader-portrait {
@@ -457,7 +606,7 @@
   .vm-card:hover {
     border-color: var(--color-border-strong);
     box-shadow: var(--shadow-lg);
-    transform: translateX(4px);
+    transform: translateX(2px);
   }
   .vm-card--mission { border-left-color: var(--color-accent); }
 
@@ -580,6 +729,28 @@
   .cta-actions .btn-accent:hover { background-color: var(--blue-50); }
   .cta-actions .btn-secondary { border-color: var(--white); color: var(--white); }
   .cta-actions .btn-secondary:hover { background-color: var(--white); color: var(--color-primary); }
+
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all var(--trans-fast);
+  }
+  .cta-link:hover {
+    color: var(--color-primary-hover);
+    text-decoration-thickness: 2px;
+  }
+  .cta-link:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius-sm);
+  }
 
   /* ==========================================================================
      FOOTER: Institucional

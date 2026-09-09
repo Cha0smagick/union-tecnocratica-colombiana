@@ -439,6 +439,38 @@
   .text-accent { color: var(--color-accent); }
   .text-success { color: var(--success); }
 
+  /* Gradient text utilities - usando colores del partido */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-accent {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-gaia {
+    background: linear-gradient(135deg, var(--success) 0%, var(--info) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-tech {
+    background: linear-gradient(135deg, var(--info) 0%, var(--success) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-warning {
+    background: linear-gradient(135deg, var(--warning) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .bg-primary { background-color: var(--color-bg-alt); }
   .bg-card { background-color: var(--color-bg-card); }
 
