@@ -89,7 +89,7 @@ function initParallax() {
 function initParticles() {
   const canvas = $.create('canvas', {
     class: 'hero-particles',
-    aria-hidden: 'true',
+    'aria-hidden': 'true',
     width: window.innerWidth,
     height: window.innerHeight
   });

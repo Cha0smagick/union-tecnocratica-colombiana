@@ -152,7 +152,7 @@ export const toast = {
     const toastEl = $.create('div', {
       class: `toast ${type}`,
       role: 'alert',
-      aria-live: 'polite'
+      'aria-live': 'polite'
     }, [
       $.create('div', { class: 'toast-icon', innerHTML: icons[type] }),
       $.create('div', { class: 'toast-message', textContent: message }),
