@@ -1,6 +1,6 @@
-# Unión Tecnocrática Colombiana (UTC) 🇨🇴
+# Unión Tecnocrática Colombiana (UTC)
 
-> **Partido político de extremo centro neutral** — *Tecnología como cura. Greenpunk. Fusión naturaleza-máquina. Transhumanismo responsable. IA como bien común.*
+> **Partido político de extremo centro neutral** — *Tecnología como cura. Las Corrientes: tribus de la convergencia. Transhumanismo responsable. Vida eterna para todos. Conquista del espacio desde Colombia. IA como bien común.*
 
 [![Deploy UTC](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml/badge.svg)](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,28 +8,31 @@
 
 ---
 
-## 🌐 Sitio Web Oficial
+## Sitio Web Oficial
 
-**🔗 [https://cha0smagick.github.io/union-tecnocratica-colombiana/](https://cha0smagick.github.io/union-tecnocratica-colombiana/)** — Desplegado automáticamente en **GitHub Pages** desde la rama `main`.
+**[https://cha0smagick.github.io/union-tecnocratica-colombiana/](https://cha0smagick.github.io/union-tecnocratica-colombiana/)** — Desplegado automáticamente en **GitHub Pages** desde la rama `main`.
 
 ---
 
-## 🎯 Qué es la UTC
+## Qué es la UTC
 
 La **Unión Tecnocrática Colombiana** es un partido político colombiano de **extremo centro neutral** que propone:
 
 | Pilar | Descripción |
 |-------|-------------|
-| 🏥 **Tecnología como Cura** | Pobreza = fallo de asignación. Corrupción = exploit de sistema. Violencia = error de oportunidad. |
-| 🌿 **Greenpunk: Fusión Naturaleza-Máquina** | Silicio nace de arena. Electricidad fluye como savia. Circuitos imitan micelio. |
-| 🧬 **Autodominio Transhumanista** | Órganos bioimpresos. Interfaces neurales. Longevidad = derecho. La muerte es un bug. |
-| ⚖️ **Neutralidad Estratégica** | Extremo centro como Suiza. Derecha = orden. Izquierda = justicia. UTC = implementación que funciona. |
-| 🤖 **IA como Bien Común** | Silicon Valleys sin gentrificación. Ecoparques tecnológicos. GPU para el campesino. Modelos abiertos. |
-| 🛡️ **Justicia Híbrida Humano-IA** | Jueces humanos para empatía. IA para consistencia. Penas escalonadas matemáticamente. |
+| **Tecnología como Cura** | Pobreza = fallo de asignación. Corrupción = exploit de sistema. Violencia = error de oportunidad. |
+| **Greenpunk: Fusión Naturaleza-Máquina** | Silicio nace de arena. Electricidad fluye como savia. Circuitos imitan micelio. |
+| **Autodominio Transhumanista** | Órganos bioimpresos. Interfaces neurales. Longevidad = derecho. La muerte es un bug. |
+| **Neutralidad Estratégica** | Extremo centro como Suiza. Derecha = orden. Izquierda = justicia. UTC = implementación que funciona. |
+| **IA como Bien Común** | Silicon Valleys sin gentrificación. Ecoparques tecnológicos. GPU para el campesino. Modelos abiertos. |
+| **Justicia Híbrida Humano-IA** | Jueces humanos para empatía. IA para consistencia. Penas escalonadas matemáticamente. |
+| **Las Corrientes: Tribus de la Convergencia** | Cypherpunks, netrunners, cyberpunks, adeptos del vacío, dropouts, matemáticos caóticos y cosmistas. Vida eterna como Tarea Común (Fyodorov), el espacio como su logística (Tsiolkovsky). Tecnomancia: realismo mágico computacional. |
+
+**Objetivos máximos** (OBJ 7 y OBJ 8): **Vida Eterna para Todos** (Longevity Escape Velocity nacional, reprogramación epigenética, cohortes auditadas blockchain, META 2045) y **Conquista del Espacio desde Colombia** (Cuerpo Orbital de médicos e ingenieros, soporte vital MELiSSA, primera nave en órbita baja 2040, META 2050).
 
 ---
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ### Prerrequisitos
 - **Node.js ≥ 18.0.0**
@@ -66,7 +69,7 @@ npm run deploy
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 union-tecnocratica-colombiana/
@@ -116,18 +119,23 @@ union-tecnocratica-colombiana/
 
 ---
 
-## 🎨 Sistema de Diseño (Greenpunk 2.0)
+## Sistema de Diseño
 
-### Paleta de Colores (oklch)
+### Paleta de Colores
+
+Tokens principales en `src/styles/tokens.css` (esquema hex, modo claro por defecto con variantes oscuro, high-contrast y reduced-motion):
+
 ```css
-/* Tokens principales en src/styles/tokens.css */
---bg-deep: oklch(0.08 0.02 280);      /* Fondo profundo */
---bg-base: oklch(0.12 0.03 270);      /* Fondo base */
---gaia: oklch(0.58 0.18 145);         /* Verde bioluminiscente */
---tech: oklch(0.65 0.2 200);          /* Cian tecnológico */
---accent: oklch(0.62 0.22 300);       /* Magenta/violeta */
---amber: oklch(0.72 0.16 85);         /* Ámbar orgánico */
+--purple-950: #1A0B2E;   /* Negro profundo - casi negro */
+--purple-800: #3D2566;   /* Morado oscuro principal (color primario del partido) */
+--purple-600: #5D3A9E;   /* Morado medio (acento) */
+--purple-100: #EDE6FC;   /* Casi blanco con tinte morado (fondos suaves) */
+--success:    #059669;   /* Verde confirmación */
+--warning:    #D97706;   /* Ámbar advertencia */
+--info:       #2563EB;   /* Azul información */
 ```
+
+Paleta institucional: **BLANCO, NEGRO, MORADO OSCURO**. Los tokens semánticos derivan de la escala morada (`--color-primary: var(--purple-800)`, `--color-accent: var(--purple-600)`).
 
 ### Tipografía
 - **Display/Headers:** `Space Grotesk` (Variable font, wght 300-800)
@@ -135,28 +143,28 @@ union-tecnocratica-colombiana/
 - **Mono/Code:** `JetBrains Mono` (Variable font, wght 100-800)
 
 ### Principios Visuales
-- **Fusión naturaleza-máquina:** Circuitos orgánicos, patrones de micelio, bioluminiscencia
 - **Accesibilidad WCAG 2.2 AA:** Contraste, landmarks ARIA, skip links, focus visible
 - **Mobile-first:** Breakpoints 400px / 560px / 768px / 1024px / 1280px / 1440px / 1680px
 - **Performance:** Fonts preload, CSS crítico inline, @layer cascade, will-change optimizations
+- **Identidad:** Sin emojis ni decoración gratuito; métricas y datos como lenguaje visual
 
 ---
 
-## 📞 Contacto
+## Contacto
 
 > **Canales en construcción** — Se habilitarán progresivamente.
 
 | Canal | Estado |
 |-------|--------|
-| 🌐 Web | ✅ [GitHub Pages](https://cha0smagick.github.io/union-tecnocratica-colombiana/) |
-| 📧 General | 🚧 En construcción — ver sección [Contacto](/contacto/) |
-| 📰 Prensa | 🚧 En construcción — ver sección [Prensa](/prensa/) |
-| 🐦 X/Twitter | [@UTC_Colombia](https://twitter.com/UTC_Colombia) |
-| 🐙 GitHub | [cha0smagick/union-tecnocratica-colombiana](https://github.com/cha0smagick/union-tecnocratica-colombiana) |
+| Web | [GitHub Pages](https://cha0smagick.github.io/union-tecnocratica-colombiana/) (activo) |
+| General | En construcción — ver sección [Contacto](/contacto/) |
+| Prensa | En construcción — ver sección [Prensa](/prensa/) |
+| X/Twitter | [@UTC_Colombia](https://twitter.com/UTC_Colombia) |
+| GitHub | [cha0smagick/union-tecnocratica-colombiana](https://github.com/cha0smagick/union-tecnocratica-colombiana) |
 
 ---
 
-## ⚖️ Licencia
+## Licencia
 
 **MIT License** — Libre para usar, modificar, distribuir.
 Ver [LICENSE](LICENSE) para detalles.
@@ -166,7 +174,7 @@ Ver [LICENSE](LICENSE) para detalles.
 
 ---
 
-**Fundadores:** Alejandro Quintero Ruiz & Fabian Sorza Cepeda  
-**Personería jurídica:** En trámite ante CNE  
-**Símbolos:** Registrados ante SIC  
+**Fundadores:** Alejandro Quintero Ruiz & Fabian Sorza Cepeda
+**Personería jurídica:** En trámite ante CNE
+**Símbolos:** Registrados ante SIC
 **Infraestructura:** Servidores propios (Ecoparques), Kubernetes autogestionado, blockchain permissioned. **Cero GAFAM en datos críticos.**

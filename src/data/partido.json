@@ -35,12 +35,12 @@
     }
   },
   "manifiesto": {
-    "preambulo": "Colombia no necesita más políticos. Necesita ingenieros de la realidad. Cada peso mal gastado es una vida que no se salvó. Cada kilovatio desperdiciado es un niño que no estudió. Cada hectárea deforestada es un futuro que se quemó. La política tradicional es un código legacy: bugueado, ineficiente, corrupto por diseño. Nosotros somos el patch. La tecnocracia no es fría: es la única forma de amor que escala. Medimos. Proyectamos. Evolucionamos.",
+    "preambulo": "Colombia no necesita más políticos. Necesita ingenieros de la realidad. Cada peso mal gastado es una vida que no se salvó. Cada kilovatio desperdiciado es un niño que no estudió. Cada hectárea deforestada es un futuro que se quemó. La política tradicional es un código legacy: bugueado, ineficiente, corrupto por diseño. Nosotros somos el patch. Seguimos a Fyodorov y a Tsiolkovsky: la vida eterna es la Tarea Común y el espacio es su logística. La tecnocracia es la única forma de amor que escala. Medimos. Proyectamos. Evolucionamos.",
     "pilares": [
       {
         "id": "tecnologia-cura",
         "titulo": "LA TECNOLOGÍA COMO CURA",
-        "texto": "La pobreza no es falta de recursos, es falta de asignación óptima. La corrupción no es moral, es un exploit de sistema mal diseñado. La violencia no es cultural, es un fallo de asignación de oportunidades. La tecnología —IA, blockchain, sensores, automatización— no es herramienta: es el sistema inmune de la nación. Cada algoritmo bien escrito es una vacuna contra la miseria. Cada sensor instalado es un anticuerpo contra la corrupción. Cada ciudad inteligente es un órgano regenerado.",
+        "texto": "La pobreza no es falta de recursos, es falta de asignación óptima. La corrupción no es moral, es un exploit de sistema mal diseñado. La violencia no es cultural, es un fallo de asignación de oportunidades. La tecnología (IA, blockchain, sensores, automatización) no es herramienta: es el sistema inmune de la nación. Cada algoritmo bien escrito es una vacuna contra la miseria. Cada sensor instalado es un anticuerpo contra la corrupción. Cada ciudad inteligente es un órgano regenerado.",
         "referencias": ["Manifiesto Pirata: información libre", "Partido Pirata: democracia líquida", "Unabomber: crítica al sistema tecnológico (invertida)"]
       },
       {
@@ -52,7 +52,7 @@
       {
         "id": "transhumanismo-autodominio",
         "titulo": "AUTODOMINIO TRANSHUMANISTA",
-        "texto": "El ser humano no es el final de la evolución: es el puente. Órganos artificiales impresos en 3D. Interfaces neurales que expanden la cognición. Longevidad como derecho, no privilegio. La muerte es un bug que podemos depurar. Pero —y esto es innegociable— la tecnología sirve al humano, no el humano a la máquina. Quien entrega su agencia a un algoritmo se convierte en NPC. Quien usa la tecnología para expandir su voluntad se convierte en arquitecto. La educación obligatoria en IA, programación, biotecnología: no para crear trabajadores, para crear dioses menores responsables.",
+        "texto": "El ser humano no es el final de la evolución: es el puente. Órganos artificiales impresos en 3D. Interfaces neurales que expanden la cognición. Longevidad como derecho, no privilegio. La muerte es un bug que podemos depurar. La ciencia ya lo demuestra: SENS caracteriza los 7 tipos de daño celular, la rapamicina extiende la vida en 167 estudios (meta-análisis, 8 vertebrados), la reprogramación de Yamanaka (Nobel 2012) revierte la edad epigenética. La Longevity Escape Velocity, con mortalidad específica cayendo más de 10% anual, es meta de Estado. Y esto es innegociable: la tecnología sirve al humano, no el humano a la máquina. Quien entrega su agencia a un algoritmo se convierte en NPC. Quien usa la tecnología para expandir su voluntad se convierte en arquitecto. La educación obligatoria en IA, programación y biotecnología no crea trabajadores: crea dioses menores responsables.",
         "referencias": ["Transhumanismo", "Neuralink", "Bioprinting", "Filosofía de la extensión de vida"]
       },
       {
@@ -64,13 +64,13 @@
       {
         "id": "ia-bien-comun",
         "titulo": "IA COMO BIEN COMÚN: SILICON VALLEYS SIN GENTRIFICACIÓN",
-        "texto": "El conocimiento no se cerca. La IA es electricidad del siglo XXI: debe ser ubicua, barata, controlada por quien la usa. Cada colombiano —desde el campesino en el Chocó hasta el estudiante en Bogotá— tiene derecho a GPU, a modelos abiertos, a entrenamiento local. Creamos Ecoparques Tecnológicos: clústeres de computación verde alimentados por solar/eólica, refrigerados por ríos, gobernados por cooperativas de datos. Sin alquileres abusivos. Sin desplazamiento. La riqueza se genera donde vive la gente. El campesino que usa IA para optimizar su cosecha vale más que el trader que la usa para especular.",
+        "texto": "El conocimiento no se cerca. La IA es electricidad del siglo XXI: debe ser ubicua, barata, controlada por quien la usa. Cada colombiano, desde el campesino en el Chocó hasta el estudiante en Bogotá, tiene derecho a GPU, a modelos abiertos, a entrenamiento local. Creamos Ecoparques Tecnológicos: clústeres de computación verde alimentados por solar/eólica, refrigerados por ríos, gobernados por cooperativas de datos. Sin alquileres abusivos. Sin desplazamiento. La riqueza se genera donde vive la gente. El campesino que usa IA para optimizar su cosecha vale más que el trader que la usa para especular.",
         "referencias": ["Open Source", "Federated Learning", "Data Cooperatives", "Digital Commons"]
       },
       {
         "id": "seguridad-hibrida",
         "titulo": "SEGURIDAD: JUICIOS HÍBRIDOS HUMANO-IA",
-        "texto": "El delito es una variable optimizable. Cámaras con visión por computadora en cada esquina. Patrones predictivos que previenen, no solo reaccionan. Jueces humanos para la empatía, IA para la consistencia, precedentes, cálculos de reincidencia basados en datos —no en prejuicios. Reincidencia: penas escalonadas matemáticamente. Primera vez: rehabilitación obligatoria + restitución algorítmica. Segunda: aislamiento productivo (trabajo forzoso remunerado para víctimas). Tercera: expulsión del contrato social (isla tecnológica autosostenible). Protección animal y especies: patrimonio de la humanidad, delito equiparado a lesa humanidad. La crueldad es un indicador de psicopatía social: se detecta, se trata, se aisla.",
+        "texto": "El delito es una variable optimizable. Cámaras con visión por computadora en cada esquina. Patrones predictivos que previenen, no solo reaccionan. Jueces humanos para la empatía, IA para la consistencia, precedentes, cálculos de reincidencia basados en datos, no en prejuicios. Reincidencia: penas escalonadas matemáticamente. Primera vez: rehabilitación obligatoria + restitución algorítmica. Segunda: aislamiento productivo (trabajo forzoso remunerado para víctimas). Tercera: expulsión del contrato social (isla tecnológica autosostenible). Protección animal y especies: patrimonio de la humanidad, delito equiparado a lesa humanidad. La crueldad es un indicador de psicopatía social: se detecta, se trata, se aisla.",
         "referencias": ["Justicia predictiva", "Restorative justice", "Derechos de la naturaleza"]
       },
       {
@@ -78,11 +78,17 @@
         "titulo": "CÁLCULO TECNOCRÁTICO: TODO SE MIDE, TODO SE PROYECTA",
         "texto": "Salud: años de vida ajustados por calidad (AVAC) por peso invertido. Energía: kWh per cápita vs. huella de carbono vs. resiliencia. Territorio: hectáreas productivas vs. conservación vs. expansión urbana. Vivienda: metros cuadrados dignos por hogar vs. costo de ciclo de vida. Seguridad vial: muertos por 100k veh-km → objetivo cero (Visión Cero algorítmica). Ciudades inteligentes: sensores por habitante, latencia de respuesta, huella ecológica per cápita. Automatización vial: vehículos autónomos coordinados por semáforos inteligentes, cero semáforos tontos. Cada decisión de política pública: función objetivo, restricciones, datos abiertos, auditoría continua. El lenguaje de la tecnología es imperativo. El lenguaje matemático es la única lengua oficial de la administración.",
         "referencias": ["Investigación de operaciones", "Análisis costo-beneficio", "Gobernanza basada en evidencia"]
+      },
+      {
+        "id": "corrientes-convergentes",
+        "titulo": "LAS CORRIENTES: TRIBUS DE LA CONVERGENCIA",
+        "texto": "La UTC es el punto donde convergen las tribus que ya construyen el futuro. Los cypherpunks escriben código como acción política: privacidad por criptografía y dinero libre (Eric Hughes, 1993); Colombia ya es 4º en Bitcoin de Latinoamérica y pionera en stablecoins. Los netrunners auditan sistemas desde dentro: serán nuestros auditores algorítmicos. Los cyberpunks advierten: Gibson y Stephenson nos enseñaron lo que pasa cuando la corporación captura al Estado, por eso el nuestro es un partido de extremo centro, jamás de corporación. Los adeptos del vacío reparan lo que otros descartan: reparar es orar, la carne es débil, el hierro bendice; su transhumanismo mecánico nutre nuestra ingeniería. Los dropouts e ingenieros de garaje (Wozniak, hackerspaces, derecho a reparar) demuestran que la innovación brota fuera de las torres de marfil. Los matemáticos caóticos (Lorenz, los sigilos, los reality tunnels) modelan lo impredecible y recuerdan que el azar también se calcula. Y los cosmistas: Fyodorov, que enunció la Tarea Común (vida eterna universal por medios científicos), y su discípulo Tsiolkovsky, que formuló la ecuación del cohete (1903) y declaró que la Tierra es la cuna de la humanidad, aunque nadie permanece en la cuna. Colombia aporta su propia estirpe: Julio Garavito y la mecánica celeste, Ángela Camacho y la nanoplasmónica, Eduardo Posada y la física del Estado. La tecnomancia es nuestro realismo mágico computacional: como los gitanos de Macondo trajeron el telescopio, nosotros traemos el cohete.",
+        "referencias": ["Eric Hughes: A Cypherpunk's Manifesto (1993)", "Nikolai Fyodorov: Filosofía de la Tarea Común", "Tsiolkovsky: Exploración del espacio exterior (1903)", "William Gibson: Neuromancer / Neal Stephenson: Snow Crash", "Principia Discordia / Edward Lorenz: teoría del caos"]
       }
     ],
-    "cierre": "No prometemos paraíso. Prometemos ingeniería. El paraíso es una variable dependiente de buenas decisiones sostenidas. Únete. Calcula. Construye. La Unión Tecnocrática Colombiana no es un partido: es un sistema operativo para la nación. Versión 1.0. En beta permanente. Porque la evolución no tiene release final."
+    "cierre": "No prometemos paraíso. Prometemos ingeniería. El paraíso es una variable dependiente de buenas decisiones sostenidas. Únete. Calcula. Construye. La Unión Tecnocrática Colombiana es un sistema operativo para la nación. Versión 1.0. En beta permanente. La evolución carece de release final, y la Tarea Común de Fyodorov es nuestra hoja de ruta: vida eterna para todos y para todo, y después el espacio."
   },
-  "vision": "Una Colombia donde cada niño nace con su gemelo digital de salud, donde la selva amazónica es el centro de datos más valioso del planeta, donde la IA es tan accesible como el agua, donde vivir 150 años en plenitud es la norma, donde el peso colombiano es la moneda de reserva de la biodiversidad global, donde la política es una API transparente y el ciudadano es el root user de su destino.",
+  "vision": "Una Colombia donde cada niño nace con su gemelo digital de salud, donde la selva amazónica es el centro de datos más valioso del planeta, donde la IA es tan accesible como el agua, donde vivir 150 años en plenitud es la norma, donde el peso colombiano es la moneda de reserva de la biodiversidad global, donde la política es una API transparente y el ciudadano es el root user de su destino, donde la cuna de la humanidad se abre y Colombia conquista el espacio.",
   "mision": "Diseñar, implementar y auditar el sistema operativo de Colombia 2.0: infraestructura tecnocrática verde, justicia algorítmica híbrida, educación transhumanista universal, economía de datos soberana, longevidad como derecho constitucional. Entregar resultados medibles cada trimestre. Ser juzgados por métricas, no por discursos.",
   "objetivos": [
     {
@@ -120,6 +126,18 @@
       "titulo": "GAIA INSTRUMENTADA",
       "meta": "100% especies nativas registradas en blockchain de existencia. Cero deforestación neta. 50% territorio en conservación activa con sensores. Amazonas: reserva de computación cuántica mundial.",
       "indicadores": ["Especies registradas", "Tasa deforestación", "Área sensores", "Créditos biodiversidad"]
+    },
+    {
+      "id": "obj7",
+      "titulo": "VIDA ETERNA PARA TODOS",
+      "meta": "Longevity Escape Velocity nacional: mortalidad específica por edad cayendo más de 10% anual. Reprogramación epigenética (factores Yamanaka, Nobel 2012) accesible para todos. Cohortes LEV auditadas en blockchain para 2045. Cero muertes por enfermedades curables.",
+      "indicadores": ["Caída mortalidad específica anual", "Participación en ensayos LEV", "Centros de reprogramación (32)", "Daños SENS caracterizados (7/7)"]
+    },
+    {
+      "id": "obj8",
+      "titulo": "CONQUISTA DEL ESPACIO DESDE COLOMBIA",
+      "meta": "Cuerpo Orbital Colombiano: 500 médicos e ingenieros espaciales formados para 2040. Soporte vital cerrado tipo MELiSSA (pérdidas inferiores a 0.0002% diarias). Gravedad artificial 1g. Primera nave colombiana en órbita baja 2040. Mitigación de radiación interplanetaria (1.84 mSv/día).",
+      "indicadores": ["Médicos-ingenieros espaciales", "Pérdida ósea BMD/mes", "Ciclo MELiSSA local", "Misiones orbitales"]
     }
   ],
   "cronograma": [
