@@ -259,6 +259,7 @@
 
   .hero-badge {
     display: inline-flex; align-items: center; gap: var(--space-2);
+    max-width: 100%;
     padding: var(--space-1) var(--space-3);
     background-color: var(--color-primary-light);
     border: var(--border-width) solid var(--color-primary);
@@ -270,6 +271,16 @@
     text-transform: uppercase;
     color: var(--color-primary-text);
     margin-bottom: var(--space-5);
+  }
+  /* Fix móvil: el kicker largo hereda white-space:nowrap de .badge y desborda
+     el hero-content (313px) quedando recortado → permitir envoltura */
+  .hero-badge .badge { white-space: normal; text-align: center; }
+  /* Fix móvil: el lema (partes sin espacios de ruptura) no envuelve →
+     flex-wrap centrado permite partirlo en varias líneas */
+  .hero-lema {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    column-gap: var(--space-2); row-gap: var(--space-1);
+    max-width: 100%;
   }
 
   .hero-title {
@@ -463,12 +474,26 @@
     padding: var(--space-6) 0;
   }
   .stats-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6);
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6);
     max-width: var(--container-2xl); margin: 0 auto; padding: 0 var(--space-6);
   }
-  @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-  .stat-item { text-align: center; padding: var(--space-4); }
+  /* Anidado en tarjetas: móvil 1 columna, ≥768px 3 columnas (3 stats por tarjeta).
+     Evita el desborde derecho que overflow:hidden de .card recorta. */
+  .card .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+  @media (min-width: 768px) {
+    .card .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+  }
+
+  .stat-item {
+    display: flex; flex-direction: column; align-items: center; gap: var(--space-1);
+    text-align: center; padding: var(--space-4);
+    min-width: 0; max-width: 100%;
+  }
   .stat-value {
     font-family: var(--font-display);
     font-size: var(--fs-4xl);
@@ -483,6 +508,7 @@
     letter-spacing: var(--ls-wider);
     color: var(--blue-100);
     margin-top: var(--space-1);
+    overflow-wrap: anywhere;
   }
 
   /* ==========================================================================
