@@ -76,7 +76,7 @@ function guardar(clave, valor) {
   }
 }
 
-function crearLista(votos, texto) {
+function crearLista(texto) {
   const item = document.createElement('li');
   item.className = 'bg-vote-item';
   item.textContent = texto;
@@ -180,6 +180,8 @@ function pintarVotacion(localidad) {
   if (!panel || !opciones || !lista || !vacio) {
     return;
   }
+
+  panel.hidden = false;
 
   const votos = leer(CLAVE_VOTOS);
   const datos = votos[localidad] || {};
