@@ -211,8 +211,8 @@
   font-style: italic;
 }
 
-#greenpunk-fusion .pilar-quote { border-color: var(--color-gaia); }
-#transhumanismo-autodominio .pilar-quote { border-color: var(--color-accent); }
+#innovacion-sostenible .pilar-quote { border-color: var(--color-gaia); }
+#salud-digital-preventiva .pilar-quote { border-color: var(--color-accent); }
 #seguridad-hibrida .pilar-quote { border-color: var(--color-warning); }
 #ia-bien-comun .pilar-quote { border-color: var(--color-tech); }
 
@@ -251,8 +251,8 @@
   background: var(--gradient-accent);
 }
 
-#greenpunk-fusion .pilar-metrics h4::before { background: var(--gradient-gaia); }
-#transhumanismo-autodominio .pilar-metrics h4::before { background: var(--gradient-accent); }
+#innovacion-sostenible .pilar-metrics h4::before { background: var(--gradient-gaia); }
+#salud-digital-preventiva .pilar-metrics h4::before { background: var(--gradient-accent); }
 #seguridad-hibrida .pilar-metrics h4::before { background: var(--gradient-warning); }
 #ia-bien-comun .pilar-metrics h4::before { background: var(--gradient-tech); }
 

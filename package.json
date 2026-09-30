@@ -1,7 +1,7 @@
 {
   "name": "union-tecnocratica-colombiana",
   "version": "1.0.0",
-  "description": "Unión Tecnocrática Colombiana - Partido político de extremo centro neutral. Tecnología como cura. Greenpunk. Fusión naturaleza-máquina.",
+  "description": "Unión Tecnocrática Colombiana - Menos discursos políticos, más soluciones que funcionan. Partido civil orientado a resultados: salud, justicia, campo, transparencia y seguridad.",
   "private": true,
   "scripts": {
     "dev": "npx serve public -p 3000",
@@ -14,9 +14,11 @@
   "keywords": [
     "politica",
     "colombia",
-    "tecnocracia",
-    "greenpunk",
-    "transhumanismo",
+    "salud-publica",
+    "justicia",
+    "tecnologia-agricola",
+    "transparencia",
+    "seguridad-ciudadana",
     "partido-politico"
   ],
   "author": "Unión Tecnocrática Colombiana",

@@ -1,7 +1,7 @@
 {
   "name": "Unión Tecnocrática Colombiana",
   "short_name": "UTC",
-  "description": "Partido político de extremo centro neutral. Tecnología como cura. Greenpunk. Fusión naturaleza-máquina.",
+  "description": "Unión Tecnocrática Colombiana. Menos discursos políticos, más soluciones que funcionan.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -16,15 +16,36 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/identity/logo-utc.png",
+      "src": "/assets/identity/escudo-heraldico-utc.svg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ],
   "categories": ["government", "politics", "education"],
   "screenshots": [],
   "shortcuts": [
+    {
+      "name": "Bogotá",
+      "short_name": "Bogotá",
+      "description": "La solución para el día a día de Bogotá",
+      "url": "/bogota/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Casos de Uso",
+      "short_name": "Tu Día",
+      "description": "Tu día a día con la UTC",
+      "url": "/caso-diario/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Buzón",
+      "short_name": "Buzón",
+      "description": "Reporta un problema y recibe la solución",
+      "url": "/buzon/",
+      "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
+    },
     {
       "name": "Manifiesto",
       "short_name": "Manifiesto",
@@ -35,7 +56,7 @@
     {
       "name": "Calculadora",
       "short_name": "Calculadora",
-      "description": "Simuladores tecnocráticos",
+      "description": "Simuladores de impacto de las propuestas UTC",
       "url": "/calculadoras/",
       "icons": [{ "src": "/assets/identity/logo-utc.svg", "sizes": "192x192" }]
     },

@@ -1,0 +1,114 @@
+/* Caso Diario: tarjetas por persona y tabla de compromisos. */
+
+.cd-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.cd-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.cd-card-rol {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--space-2);
+  text-transform: uppercase;
+}
+
+.cd-card-titulo {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  margin: 0 0 var(--space-4);
+}
+
+.cd-toggle {
+  background: none;
+  border: 1px solid var(--color-border-focus);
+  border-radius: var(--radius-full);
+  color: var(--color-primary-text);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+.cd-toggle:hover {
+  background: var(--color-primary-light);
+}
+
+.cd-toggle:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.cd-body {
+  margin-top: var(--space-4);
+}
+
+.cd-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cd-body li {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: var(--space-3) 0;
+}
+
+.cd-body li:first-child {
+  border-top: 0;
+}
+
+.cd-tabla {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cd-tabla caption {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  padding-bottom: var(--space-3);
+  text-align: left;
+}
+
+.cd-tabla th,
+.cd-tabla td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+}
+
+.cd-tabla thead th {
+  background: var(--color-bg-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cd-tabla tbody th {
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .cd-tabla thead {
+    display: none;
+  }
+
+  .cd-tabla tbody th,
+  .cd-tabla tbody td {
+    display: block;
+    white-space: normal;
+  }
+}

@@ -123,7 +123,7 @@ async function submitNewsletter(data, form, submitBtn) {
   submitBtn.disabled = true;
 
   try {
-    // Simulación de envío a API (reemplazar con endpoint real)
+    // Simulación de envío (reemplazar con endpoint real)
     const response = await fetch('/api/newsletter/subscribe', {
       method: 'POST',
       headers: {

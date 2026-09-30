@@ -1,6 +1,6 @@
 # Unión Tecnocrática Colombiana (UTC)
 
-> **Partido político de extremo centro neutral** — *Tecnología como cura. Las Corrientes: tribus de la convergencia. Transhumanismo responsable. Vida eterna para todos. Conquista del espacio desde Colombia. IA como bien común.*
+> **Menos discursos políticos, más soluciones que funcionan.** Salud, justicia, campo, transparencia y seguridad con resultados medibles.
 
 [![Deploy UTC](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml/badge.svg)](https://github.com/cha0smagick/union-tecnocratica-colombiana/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -16,19 +16,19 @@
 
 ## Qué es la UTC
 
-La **Unión Tecnocrática Colombiana** es un partido político colombiano de **extremo centro neutral** que propone:
+La **Unión Tecnocrática Colombiana** es un partido político colombiano **orientado a resultados** que propone:
 
 | Pilar | Descripción |
 |-------|-------------|
-| **Tecnología como Cura** | Pobreza = fallo de asignación. Corrupción = exploit de sistema. Violencia = error de oportunidad. |
-| **Greenpunk: Fusión Naturaleza-Máquina** | Silicio nace de arena. Electricidad fluye como savia. Circuitos imitan micelio. |
-| **Autodominio Transhumanista** | Órganos bioimpresos. Interfaces neurales. Longevidad = derecho. La muerte es un bug. |
-| **Neutralidad Estratégica** | Extremo centro como Suiza. Derecha = orden. Izquierda = justicia. UTC = implementación que funciona. |
-| **IA como Bien Común** | Silicon Valleys sin gentrificación. Ecoparques tecnológicos. GPU para el campesino. Modelos abiertos. |
-| **Justicia Híbrida Humano-IA** | Jueces humanos para empatía. IA para consistencia. Penas escalonadas matemáticamente. |
-| **Las Corrientes: Tribus de la Convergencia** | Cypherpunks, netrunners, cyberpunks, adeptos del vacío, dropouts, matemáticos caóticos y cosmistas. Vida eterna como Tarea Común (Fyodorov), el espacio como su logística (Tsiolkovsky). Tecnomancia: realismo mágico computacional. |
+| **Soluciones que funcionan** | La pobreza es un problema de reparto. La corrupción es un problema de control. La violencia es falta de oportunidades. |
+| **Innovación sostenible** | Tecnología al servicio de la naturaleza: sensores que avisan, mapas digitales de cada municipio, registro de cada especie. |
+| **Salud digital preventiva universal** | Historia clínica única en el celular, citas sin filas, medicamentos a tiempo y medicina regenerativa. |
+| **Solución práctica y soberanía nacional** | Un criterio claro y acción. El orden y la justicia no están en lados opuestos. |
+| **Tecnificación agrícola y mercado directo** | El campesino vende directo, sin intermediarios. Centros de computación en las regiones. |
+| **Justicia rápida y cero impunidad** | Juicios en meses, no en años. Alertas tempranas y datos reales en lugar de prejuicios. |
+| **Gobernanza de alta eficiencia** | Antes de discutir, medimos. Datos abiertos, auditoría automática y metas con presupuesto y fecha. |
 
-**Objetivos máximos** (OBJ 7 y OBJ 8): **Vida Eterna para Todos** (Longevity Escape Velocity nacional, reprogramación epigenética, cohortes auditadas blockchain, META 2045) y **Conquista del Espacio desde Colombia** (Cuerpo Orbital de médicos e ingenieros, soporte vital MELiSSA, primera nave en órbita baja 2040, META 2050).
+**Metas científicas de largo plazo** (OBJ 7 y OBJ 8): **más años de vida en plenitud** (investigación médica nacional abierta, cobertura universal, META 2045) y **el programa espacial colombiano** (envío de médicos e ingenieros, primera nave en órbita baja 2040, META 2050). Son logros de largo plazo, no el objetivo central del partido.
 
 ---
 
@@ -79,6 +79,9 @@ union-tecnocratica-colombiana/
 ├── public/                     # Sitio estático (servido en dev)
 │   ├── index.html              # Página principal
 │   ├── manifiesto/             # Páginas por sección
+│   ├── caso-diario/            # Tu día a día con la UTC (5 personas)
+│   ├── buzon/                  # Buzón de problemas y soluciones
+│   ├── bogota/                 # El plan para Bogotá (8 bloques)
 │   ├── fundadores/
 │   ├── vision-mision/
 │   ├── objetivos/
@@ -87,6 +90,10 @@ union-tecnocratica-colombiana/
 │   ├── calculadoras/
 │   ├── newsletter/
 │   ├── inscripcion/
+│   ├── contacto/
+│   ├── prensa/
+│   ├── privacidad/
+│   └── terminos/
 │   ├── assets/
 │   │   ├── identity/           # SVGs: logo, iconos, bandera, escudo
 │   │   ├── images/
@@ -102,11 +109,17 @@ union-tecnocratica-colombiana/
 │   │   ├── stats-counter.js    # Contadores animados
 │   │   ├── inscripcion.js      # Formulario militancia
 │   │   ├── calculadoras.js     # Calculadoras tecnocráticas
+│   │   ├── caso-diario.js      # Expansor de casos de uso
+│   │   ├── buzon.js            # Formulario de reportes + respuesta UTC
+│   │   ├── bogota.js           # Calculadora de tiempo, votación, postulación
 │   │   └── estatutos-tabs.js   # Navegación pestañas estatutos
 │   └── styles/                 # CSS modular
 │       ├── tokens.css          # Design tokens (colores, spacing, tipografía)
 │       ├── global.css          # Reset + base + utilidades
 │       ├── components.css      # Componentes reutilizables
+│       ├── caso-diario.css
+│       ├── buzon.css
+│       ├── bogota.css
 │       └── *.css               # Estilos por página
 ├── scripts/
 │   ├── build.js                # Build pipeline completo
@@ -170,7 +183,7 @@ Paleta institucional: **BLANCO, NEGRO, MORADO OSCURO**. Los tokens semánticos d
 Ver [LICENSE](LICENSE) para detalles.
 
 > *La evolución no tiene release final. Versión 1.0. En beta permanente.*
-> *Cada militante es un contributor. Cada voto es un commit. Cada ley es un merge request auditado.*
+> *Cada militante aporta. Cada voto queda registrado. Cada ley se puede revisar.*
 
 ---
 

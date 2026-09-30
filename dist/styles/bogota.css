@@ -1,0 +1,209 @@
+/* Bogota: tarjetas de solucion, calculadora, encuesta por localidad y postulacion. */
+
+.bg-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.bg-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.bg-card-num {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  margin: 0 0 var(--space-2);
+}
+
+.bg-card-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  margin: 0 0 var(--space-3);
+}
+
+.bg-card-list {
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.bg-card-list li {
+  padding: var(--space-2) 0;
+}
+
+.bg-quote {
+  border-left: 4px solid var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  margin: 0 0 var(--space-6);
+  padding-left: var(--space-5);
+}
+
+.bg-2col {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.bg-2col-item h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  margin: 0 0 var(--space-2);
+}
+
+.bg-list {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.bg-list li {
+  padding: var(--space-3) 0;
+}
+
+.bg-note {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.bg-calc-form {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.bg-calc-row {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.bg-input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: inherit;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  padding: var(--space-3);
+  width: 100%;
+}
+
+.bg-input:focus-visible {
+  border-color: var(--color-border-focus);
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 1px;
+}
+
+.bg-calc-out {
+  background: var(--color-bg-muted);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+}
+
+.bg-calc-titulo {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  margin: 0 0 var(--space-2);
+}
+
+.bg-calc-sub {
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-4);
+}
+
+.bg-calc-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-calc-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) 0;
+}
+
+.bg-calc-formula {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  margin: var(--space-4) 0 0;
+}
+
+.bg-loc-grid {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-bottom: var(--space-5);
+}
+
+.bg-loc-btn {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.bg-loc-btn:hover {
+  background: var(--color-primary-light);
+}
+
+.bg-loc-btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.bg-vote-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.bg-vote-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  margin: 0 0 var(--space-2);
+}
+
+.bg-vote-sub {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  margin: 0 0 var(--space-4);
+}
+
+.bg-vote-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.bg-vote-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-vote-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) 0;
+}
+
+.bg-vacio {
+  color: var(--color-text-muted);
+  font-style: italic;
+}

@@ -14,7 +14,7 @@ const Models = {
       const baseAVAC = 1.2e6; // AVAC base/año
       const presupuestoFactor = presupuesto / 95;
       const preventivaFactor = 1 + (preventiva - 25) * 0.015; // Cada % preventiva +1.5% eficiencia
-      const gemeloFactor = 1 + (gemelo / 100) * 0.4; // Gemelo digital reduce muertes 40% a cobertura 100%
+      const gemeloFactor = 1 + (gemelo / 100) * 0.4; // El mapa digital reduce muertes 40% a cobertura 100%
 
       const avac = Math.round(baseAVAC * presupuestoFactor * preventivaFactor * gemeloFactor);
       const costo = Math.round((presupuesto * 1e12) / avac);
@@ -281,7 +281,7 @@ function openCalcModal(calcType, params) {
 
   // Generar contenido del modal
   const paramLabels = {
-    salud: { presupuesto: 'Presupuesto (billones COP)', preventiva: '% Preventiva', gemelo: '% Gemelo digital' },
+    salud: { presupuesto: 'Presupuesto (billones COP)', preventiva: '% Preventiva', gemelo: '% Mapa digital' },
     presupuesto: { total: 'Presupuesto total (billones COP)', auditoria: '% Auditoría IA', cb: 'Umbral costo-beneficio' },
     energia: { solar: 'Solar (GW)', baterias: 'Baterías (GWh)', h2: 'H₂ verde (GW)' },
     territorio: { conservacion: '% Conservación', densidad: 'Densidad urbana (hab/ha)', productivas: 'Ha productivas/100k hab' },
@@ -444,11 +444,11 @@ function formatKey(key) {
 function getModelDescription(calcType) {
   const descriptions = {
     salud: 'Modelo AVAC (Años de Vida Ajustados por Calidad) con optimización de asignación presupuestal por patología y región. Basado en OMS CHOICE + datos MinSalud.',
-    presupuesto: 'Programación lineal mixta entera para asignación óptima de presupuesto nacional. Función objetivo: maximizar AVAC/año per cápita. Restricciones: umbral costo-beneficio, auditoría IA, reglas fiscales.',
+    presupuesto: 'Modelo matemático para repartir el presupuesto nacional. Criterio claro: más años de vida sana por colombiano. Revisa el costo de cada medida.',
     energia: 'Despacho económico óptimo con restricciones de confiabilidad (LOLE < 0.1%). Integración renovables variables + almacenamiento + H₂ verde. Modelo based on OSeMOSYS / PyPSA.',
     territorio: 'Optimización multi-objetivo uso de suelo (NSGA-II). Objetivos: maximizar conservación, soberanía alimentaria, densidad urbana eficiente. Restricciones: corredores ecológicos, riesgo climático.',
     vivienda: 'Análisis costo ciclo de vida (LCCA) 50 años: CAPEX + OPEX + mantenimiento + fin de vida - valor residual circular. Basado en ISO 15686-5.',
-    'seguridad-vial': 'Modelo Vision Zero basado en Safe System Approach. Reducción muertes = f(vehículos autónomos, infraestructura, velocidad, post-crash care). Calibrado con datos ANSV 2015-2023.',
+    'seguridad-vial': 'Modelo Vision Zero. Menos muertes en la vía por mejores vehículos, mejor infraestructura y respuesta rápida tras un accidente. Calibrado con datos ANSV 2015-2023.',
     ciudades: 'Smart City Index compuesto: sensores/hab (40%), latencia respuesta (35%), huella ecológica (25%). Benchmark: Singapore 92, Barcelona 78, Medellín 67.',
     automatizacion: 'Coordinación V2X + semáforos adaptativos RL (Deep Q-Network). Función recompensa: α·fluidez + (1-α)·equidad. Simulación SUMO + RLlib.'
   };

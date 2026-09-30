@@ -19,6 +19,9 @@ const BASE_PATH = '/union-tecnocratica-colombiana/';
 const PAGES = [
   'index.html',
   'manifiesto/index.html',
+  'caso-diario/index.html',
+  'buzon/index.html',
+  'bogota/index.html',
   'fundadores/index.html',
   'vision-mision/index.html',
   'objetivos/index.html',
@@ -212,8 +215,8 @@ Allow: /
 Sitemap: https://cha0smagick.github.io/union-tecnocratica-colombiana/sitemap.xml
 
 # UTC - Unión Tecnocrática Colombiana
-# Partido político de extremo centro neutral
-# Tecnología como cura. Greenpunk. Fusión naturaleza-máquina.`;
+# Menos discursos políticos, más soluciones que funcionan
+# Salud, justicia, campo, transparencia y seguridad con resultados medibles`;
 
   fs.writeFileSync(path.join(DIST, 'robots.txt'), robots);
   log('Robots.txt generado', 'success');
@@ -258,6 +261,9 @@ function generateRedirects() {
 
 # Legacy URLs
 /manifiesto /manifiesto/ 301
+/caso-diario /caso-diario/ 301
+/buzon /buzon/ 301
+/bogota /bogota/ 301
 /fundadores /fundadores/ 301
 /vision-mision /vision-mision/ 301
 /objetivos /objetivos/ 301
