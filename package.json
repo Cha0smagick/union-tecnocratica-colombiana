@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx serve public -p 3000",
     "build": "node scripts/build.js",
-    "deploy": "npm run build && npx gh-pages -d public",
+    "deploy": "npm run build && npx gh-pages -d dist",
     "validate": "node scripts/validate.js",
     "lint:css": "node scripts/lint-css.js",
     "lint:html": "node scripts/lint-html.js"
